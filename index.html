@@ -17,7 +17,13 @@
 </head>
 <body>
 <main>
-<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p></header>
+<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p><nav class="top-links" aria-label="Recursos">
+<a href="gramatica.html">📘 Reglas del Español</a>
+<a href="#vocab">🗂️ Vocabulario</a>
+<a href="#conectores">🧩 Conectores</a>
+<a class="chat" href="https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7" target="_blank" rel="noopener">🗣️ Abrir chat de voz <span aria-hidden="true">↗</span></a>
+</nav><p class="muted small">Copia el texto, pégalo en el chat y activa la voz.</p></header>
+<div class="practice-layout"><section class="practice" aria-label="Práctica diaria">
 <section class="timer panel" aria-label="Temporizador">
 <div class="timer-heading"><span id="current">Oración</span><span class="badge">30 MIN</span></div>
 <div id="clock" class="clock" role="timer" aria-label="Tiempo restante">1:00</div>
@@ -27,16 +33,13 @@
 <p id="timer-status" class="muted small" role="status">Copia el texto de Oración y empieza.</p>
 </section>
 <div id="blocks" class="stack"></div>
-<a class="chat" href="https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7" target="_blank" rel="noopener">Abrir chat de voz <span aria-hidden="true">↗</span></a>
-<p class="muted small chat-help">Copia el texto, pégalo en el chat y activa la voz.</p>
-<section id="reference" class="reference"><p class="eyebrow">A MANO, CUANDO LO NECESITES</p><h2>Referencia</h2>
-<section class="panel"><h3>Mi vocabulario</h3><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status">Cargando vocabulario…</p><div id="vocab"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
-<section id="connectors" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
-<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
-</section>
-<details class="panel more"><summary>Más <span class="muted">Consejos y otras formas de practicar</span></summary><div id="tips" class="stack"></div>
+</section><section class="more" aria-labelledby="more-title"><h2 id="more-title">Más práctica y consejos</h2><div id="tips" class="stack"></div>
 <article class="tip"><h3>Repite: 4, 3, 2</h3><p>Los miércoles, en lugar del Debate: elige una historia, como tu mejor día de la misión. Cuéntala en 4 minutos, luego en 3 y al final en 2. No quites partes: dilo con más fluidez.</p><p id="drill-round">Vuelta 1 de 3 · la misma historia</p><div id="drill-clock" class="drill-clock" role="timer">4:00</div><div class="timer-actions"><button id="drill-start">Empezar</button><button id="drill-reset" class="secondary">Reiniciar</button></div></article>
-</details>
+<section id="conectores" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
+<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
+</section></div>
+<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p><div id="vocab-groups"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
+
 <footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
 <noscript>Activa JavaScript para usar el temporizador, los textos y la referencia.</noscript>
 </main>

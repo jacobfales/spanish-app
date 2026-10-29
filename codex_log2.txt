@@ -1,0 +1,1339 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: /Users/jacobgaryfales/Documents/Spanish/spanish-app
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: none
+reasoning summaries: none
+session id: 01a188ce-f21f-74d2-bcce-f4f17c9ea685
+--------
+user
+Read BRIEF2.md and apply all of it to this app. Work until done and checked.
+codex
+I’ll read BRIEF2.md and the project instructions, implement the requirements, and run the relevant checks.
+exec
+/bin/zsh -lc "pwd; rg --files -g 'BRIEF2.md' -g 'AGENTS.md' -g 'package.json' -g '*lock*' -g 'README*'" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+/Users/jacobgaryfales/Documents/Spanish/spanish-app
+BRIEF2.md
+README.md
+
+exec
+/bin/zsh -lc 'cat BRIEF2.md; ls -la; find .. -name AGENTS.md -print' in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+# Changes round 2 (Jacob's words: "I want the link there. I want the vocab on the app at the very bottom, simplified, in groups of five. Like the Consejos and other forms of practice, highlight, open on the right, below the actual practice thing.")
+
+1. LINKS (top, right under the title, one row of big pill buttons, open in a new tab):
+   - "📘 Reglas del Español" → https://claude.ai/artifact/8tWg6scQZyBo9GVpufW8xV  (his grammar page)
+   - "🗂️ Vocabulario" → jumps to the vocab section at the bottom (#vocab)
+   - "🧩 Conectores" → jumps to #conectores
+   - "🗣️ Abrir chat de voz" stays as the big blue button.
+2. ORDER of the page:
+   a. Title + links
+   b. THE PRACTICE (timer + the 6 block cards) — the main thing.
+   c. "Más práctica y consejos" — HIGHLIGHTED (accent border/background, not collapsed): the tip cards (Consejos), grammar book, 4-3-2 drill, real people, podcasts, Conectores (concept → words → examples) and the 15-question Práctica quiz.
+      On wide screens (≥ 900px, Mac) put section (c) in a RIGHT column next to (b) (two columns, practice left, consejos/práctica right, right column sticky-scroll is fine). On phones it goes BELOW the practice.
+   d. VOCAB at the VERY BOTTOM (id="vocab"), SIMPLIFIED: groups of 5 words. Each group = a small card titled "1 · <first word> a <last word>" with 5 rows "español — inglés" (Correcciones: "Dije → Mejor"). Groups collapsed by default except the first; tap to open. Keep the 3 filter chips (Vocabulario / Legal / Correcciones) and a small search above, nothing else. Remove any other vocab UI.
+3. Keep everything else working (copy, timer, offline). Bump CACHE version in sw.js. Check at 390px (load index.html inside a 390px-wide iframe; headless Chrome's min viewport is 500px) and at 1200px. Do not deploy.
+total 976
+drwxr-xr-x@ 24 jacobgaryfales  staff     768 Oct 29 11:57 .
+drwxr-xr-x@  6 jacobgaryfales  staff     192 Oct 29 11:50 ..
+drwxr-xr-x@ 13 jacobgaryfales  staff     416 Oct 29 11:51 .git
+-rw-r--r--@  1 jacobgaryfales  staff     118 Oct 29 11:51 .gitignore
+-rw-r--r--@  1 jacobgaryfales  staff    3700 Oct 29 11:32 BRIEF.md
+-rw-r--r--@  2 jacobgaryfales  staff    1823 Oct 29 11:57 BRIEF2.md
+-rw-------@  1 jacobgaryfales  staff       0 Oct 29 11:32 Icon
+-rw-r--r--@  1 jacobgaryfales  staff    1825 Oct 29 11:36 README.md
+-rw-r--r--@  1 jacobgaryfales  staff    6983 Oct 29 11:48 app.css
+-rw-r--r--@  1 jacobgaryfales  staff   27559 Oct 29 11:36 app.js
+-rw-r--r--@  1 jacobgaryfales  staff    2846 Oct 29 11:31 changes_1.txt
+-rw-r--r--@  1 jacobgaryfales  staff   11893 Oct 29 11:31 changes_2_referencia.txt
+drwxr-xr-x@  5 jacobgaryfales  staff     160 Oct 29 11:49 checks
+-rw-r--r--@  1 jacobgaryfales  staff     151 Oct 29 11:50 checks_frame.html
+-rw-r--r--@  1 jacobgaryfales  staff   47770 Oct 29 11:49 codex_fix_log.txt
+-rw-r--r--@  1 jacobgaryfales  staff  113339 Oct 29 11:38 codex_log.txt
+-rw-r--r--@  2 jacobgaryfales  staff     793 Oct 29 11:57 codex_log2.txt
+-rw-r--r--@  1 jacobgaryfales  staff   23848 Oct 29 11:31 icon-1024.png
+drwxr-xr-x@  6 jacobgaryfales  staff     192 Oct 29 11:33 icons
+-rw-r--r--@  1 jacobgaryfales  staff    3738 Oct 29 11:33 index.html
+-rw-r--r--@  1 jacobgaryfales  staff     344 Oct 29 11:33 manifest.webmanifest
+-rw-r--r--@  1 jacobgaryfales  staff   41770 Oct 29 11:31 reference_old_page.html
+-rw-r--r--@  1 jacobgaryfales  staff    1286 Oct 29 11:48 sw.js
+-rw-r--r--@  1 jacobgaryfales  staff    9583 Oct 29 11:31 vocab.json
+
+exec
+/bin/zsh -lc 'cat index.html app.css sw.js; cat /Users/jacobgaryfales/.agents/skills/surgical-patch/SKILL.md; cat README.md; ls checks' in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1a19">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Spanish">
+<meta name="description" content="Tu práctica diaria de español. Treinta minutos, un paso a la vez.">
+<title>Spanish · Práctica diaria</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p></header>
+<section class="timer panel" aria-label="Temporizador">
+<div class="timer-heading"><span id="current">Oración</span><span class="badge">30 MIN</span></div>
+<div id="clock" class="clock" role="timer" aria-label="Tiempo restante">1:00</div>
+<progress id="progress" max="1800" value="0" aria-label="Progreso de la sesión"></progress>
+<p id="next-action">Ora en voz alta. Pide ayuda para hablar con claridad y sentir el Espíritu.</p>
+<div class="timer-actions"><button id="start">Empezar</button><button id="skip" class="secondary">Saltar</button><button id="reset" class="secondary">Reiniciar</button></div>
+<p id="timer-status" class="muted small" role="status">Copia el texto de Oración y empieza.</p>
+</section>
+<div id="blocks" class="stack"></div>
+<a class="chat" href="https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7" target="_blank" rel="noopener">Abrir chat de voz <span aria-hidden="true">↗</span></a>
+<p class="muted small chat-help">Copia el texto, pégalo en el chat y activa la voz.</p>
+<section id="reference" class="reference"><p class="eyebrow">A MANO, CUANDO LO NECESITES</p><h2>Referencia</h2>
+<section class="panel"><h3>Mi vocabulario</h3><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status">Cargando vocabulario…</p><div id="vocab"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
+<section id="connectors" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
+<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
+</section>
+<details class="panel more"><summary>Más <span class="muted">Consejos y otras formas de practicar</span></summary><div id="tips" class="stack"></div>
+<article class="tip"><h3>Repite: 4, 3, 2</h3><p>Los miércoles, en lugar del Debate: elige una historia, como tu mejor día de la misión. Cuéntala en 4 minutos, luego en 3 y al final en 2. No quites partes: dilo con más fluidez.</p><p id="drill-round">Vuelta 1 de 3 · la misma historia</p><div id="drill-clock" class="drill-clock" role="timer">4:00</div><div class="timer-actions"><button id="drill-start">Empezar</button><button id="drill-reset" class="secondary">Reiniciar</button></div></article>
+</details>
+<footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
+<noscript>Activa JavaScript para usar el temporizador, los textos y la referencia.</noscript>
+</main>
+</body>
+</html>
+:root {
+  color-scheme:dark;
+  --bg:#1a1a19;
+  --card:#232422;
+  --inset:#2c2e2a;
+  --fg:#f2f1e9;
+  --muted:#b4b8ad;
+  --line:#41463c;
+  --green:#5fbf7f;
+  --ink:#112317;
+  --blue:#396ed0;
+  --gold:#ddbf7d;
+}
+*,*::before,*::after {
+  box-sizing:border-box;
+}
+html,body {
+  overflow-x:hidden;
+}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  padding: max(28px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+}
+main {
+  max-width:720px;
+  margin:auto;
+  overflow-wrap:anywhere;
+}
+/* Grid and flex items must shrink below their controls' intrinsic widths. */
+main *,main *::before,main *::after {
+  min-width:0;
+}
+header {
+  padding:12px 4px 26px;
+}
+h1,h2 {
+  font-family:Georgia,serif;
+  font-weight:500;
+  line-height:1.12;
+  letter-spacing:-.035em;
+}
+h1 {
+  font-size:clamp(36px,7vw,54px);
+  margin:12px 0;
+}
+h2 {
+  font-size:36px;
+  margin:8px 0 24px;
+}
+h3 {
+  font-size:21px;
+  line-height:1.3;
+  margin:0 0 12px;
+}
+h4 {
+  font-size:18px;
+  margin:0;
+}
+p {
+  margin:10px 0;
+}
+.eyebrow {
+  font-size:16px;
+  letter-spacing:.16em;
+  font-weight:700;
+  color:var(--green);
+}
+.muted {
+  color:var(--muted);
+}
+.small {
+  font-size:16px;
+}
+.panel {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  margin-bottom:16px;
+}
+.timer {
+  border-top:3px solid var(--green);
+}
+.timer-heading,.block-heading {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  font-weight:650;
+}
+.badge {
+  font-size:16px;
+  letter-spacing:.08em;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.clock {
+  font-size:clamp(70px,17vw,98px);
+  line-height:1.2;
+  font-weight:300;
+  letter-spacing:-.06em;
+  font-variant-numeric:tabular-nums;
+  color:var(--green);
+  margin:12px 0;
+}
+progress {
+  display:block;
+  width:100%;
+  height:6px;
+  border:none;
+  border-radius:8px;
+  overflow:hidden;
+  background:var(--inset);
+  accent-color:var(--green);
+}
+progress::-webkit-progress-bar {
+  background:var(--inset);
+}
+progress::-webkit-progress-value {
+  background:var(--green);
+}
+button,input,select,textarea {
+  font:inherit;
+  font-size:16px;
+  max-width:100%;
+}
+button {
+  overflow-wrap:anywhere;
+}
+button,.chat {
+  min-height:48px;
+  border-radius:10px;
+  border:1px solid transparent;
+  padding:12px 16px;
+  font-weight:650;
+  cursor:pointer;
+  background:var(--green);
+  color:var(--ink);
+}
+button:disabled {
+  cursor:default;
+  opacity:.65;
+}
+.secondary {
+  background:var(--inset);
+  color:var(--fg);
+  border-color:var(--line);
+}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+}
+.timer-actions {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.timer-actions button {
+  flex:1 1 80px;
+  padding-inline:10px;
+}
+.stack {
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:14px;
+}
+.block {
+  border-left:3px solid var(--line);
+  margin:0;
+}
+.block.active {
+  border-color:var(--green);
+}
+.block.active h3 {
+  color:var(--green);
+}
+.block.done .block-heading {
+  color:var(--muted);
+}
+.block-heading h3 {
+  margin:0;
+}
+.duration {
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+  color:var(--muted);
+}
+.topic {
+  font-family:Georgia,serif;
+  font-size:22px;
+  line-height:1.4;
+  margin:18px 0 12px;
+}
+.topic-change {
+  margin-bottom:16px;
+}
+label {
+  display:block;
+  color:var(--muted);
+  font-size:16px;
+  margin:12px 0 6px;
+}
+select,input,textarea {
+  width:100%;
+  min-width:0;
+  min-height:48px;
+  background:var(--inset);
+  color:var(--fg);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:12px;
+}
+select {
+  margin-bottom:16px;
+}
+.wide,.copy {
+  width:100%;
+}
+.copy {
+  margin-top:6px;
+}
+.prompt-view {
+  margin-top:6px;
+}
+summary {
+  cursor:pointer;
+  min-height:48px;
+  padding:12px 0;
+  color:var(--muted);
+}
+.prompt-view textarea {
+  height:260px;
+  line-height:1.6;
+  resize:vertical;
+}
+.copy-status {
+  min-height:0;
+  color:var(--green);
+  margin:0;
+}
+.copy-status:not(:empty) {
+  margin-top:8px;
+}
+.chat {
+  background:var(--blue);
+  color:#fff;
+  text-decoration:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:22px;
+  padding:18px 22px;
+  font-size:19px;
+}
+.chat-help {
+  text-align:center;
+  margin:8px 0 40px;
+}
+.reference>.panel {
+  margin-bottom:18px;
+}
+.chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+.chips button {
+  background:var(--inset);
+  border-color:var(--line);
+  color:var(--muted);
+  border-radius:30px;
+  padding:10px 13px;
+}
+.chips button[aria-pressed=true] {
+  color:var(--ink);
+  background:var(--green);
+  border-color:var(--green);
+}
+.vocab-row {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:16px;
+  border-top:1px solid var(--line);
+  padding:14px 0;
+  overflow-wrap:anywhere;
+}
+.vocab-row span:last-child {
+  color:var(--muted);
+}
+.vocab-head {
+  font-size:16px;
+  font-weight:650;
+  color:var(--muted);
+}
+.correction {
+  grid-template-columns:1fr;
+  gap:4px;
+}
+.connector-group {
+  margin-top:28px;
+}
+.connector {
+  padding:14px 0;
+  border-top:1px solid var(--line);
+}
+.connector p {
+  margin:4px 0;
+}
+.example {
+  color:var(--muted);
+  font-style:italic;
+}
+.question {
+  padding:18px;
+  background:var(--inset);
+  border-radius:12px;
+}
+.question p:first-child {
+  margin-top:0;
+}
+.answers {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.answers button {
+  background:var(--card);
+  color:var(--fg);
+  border-color:var(--line);
+  flex:1 1 100px;
+}
+.answers button.correct {
+  border-color:var(--green);
+  color:var(--green);
+}
+.answers button.wrong {
+  border-color:#ed9d91;
+  color:#ed9d91;
+}
+.feedback {
+  font-size:16px;
+}
+.more {
+  margin-top:30px;
+}
+.more>summary {
+  font-size:22px;
+  color:var(--fg);
+}
+.more>summary span {
+  display:block;
+  font-size:16px;
+}
+.tip {
+  border-top:1px solid var(--line);
+  padding-top:22px;
+  margin-top:16px;
+}
+.tip ul {
+  padding-left:22px;
+}
+.tip li {
+  margin:8px 0;
+}
+.drill-clock {
+  font-size:48px;
+  font-variant-numeric:tabular-nums;
+  color:var(--green);
+}
+footer {
+  text-align:center;
+  color:var(--muted);
+  font-size:16px;
+  margin:36px 0 12px;
+}
+[hidden] {
+  display:none!important;
+}
+@media(max-width:499px) {
+  .panel {
+    padding:18px;
+  }
+  .timer-actions {
+    gap:6px;
+  }
+  .timer-actions button {
+    padding-inline:8px;
+  }
+  .block-heading {
+    align-items:start;
+  }
+  .badge {
+    align-self:center;
+  }
+}
+@media(prefers-color-scheme:light) {
+  :root {
+    color-scheme:light;
+    --bg:#f5f5ef;
+    --card:#fff;
+    --inset:#edf0e8;
+    --fg:#232a22;
+    --muted:#56604f;
+    --line:#d2d9ca;
+    --green:#2e7d4b;
+    --ink:#fff;
+    --gold:#97691d;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  * {
+    scroll-behavior:auto;
+  }
+}
+'use strict';
+// Cambia esta versión cuando cambies el HTML, CSS, JS o los iconos.
+const CACHE = 'spanish-v2';
+const ASSETS = ['./','index.html','app.css','app.js','manifest.webmanifest','vocab.json','icons/icon-180.png','icons/icon-192.png','icons/icon-512.png'];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('spanish-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
+self.addEventListener('fetch',event=>{
+ const url=new URL(event.request.url);
+ if(event.request.method!=='GET'||url.origin!==self.location.origin)return;
+ if(url.pathname===new URL('vocab.json',self.registration.scope).pathname){
+  event.respondWith((async()=>{const cache=await caches.open(CACHE);try{const response=await fetch(event.request);if(!response.ok)throw Error('No disponible');await cache.put(event.request,response.clone());return response;}catch{return (await cache.match(event.request))||Response.error();}})());return;
+ }
+ event.respondWith(caches.open(CACHE).then(async cache=>(await cache.match(event.request))||fetch(event.request)));
+});
+---
+name: surgical-patch
+description: Fix bugs and small behavior changes at the narrowest responsible layer. Use when regression proof, preserved surrounding behavior, and task-relevant tests matter.
+---
+
+# Surgical patch
+
+Reproduce failure first when economical; otherwise capture strongest available evidence.
+
+- Trace symptom to responsible mechanism.
+- Change narrowest layer that owns incorrect behavior.
+- Preserve unrelated behavior and user changes.
+- Avoid cleanup, renaming, and abstraction outside fix.
+- Add only regression proof relevant to task.
+
+Run focused proof plus nearest affected gate. Stop when failure is fixed and regression proof passes.
+# Spanish
+
+App estática, sin dependencias ni compilación. Para probarla:
+
+```sh
+python3 -m http.server 8000
+```
+
+Abre `http://localhost:8000`. Para instalarla en iPhone, sirve estos archivos por **HTTPS**, abre la página en Safari y elige **Compartir → Añadir a pantalla de inicio → Abrir como app web**. En Mac, abre la página en Safari y elige **Archivo → Añadir al Dock**. El modo de instalación depende de la versión del sistema. No basta con abrir `index.html` desde Archivos: los service workers requieren HTTPS (o localhost para pruebas).
+
+Una primera visita con conexión guarda todos los archivos necesarios. Después la app funciona sin conexión. No envía datos ni hace solicitudes a terceros; el enlace del chat solo se abre al pulsarlo. El temporizador guarda su estado localmente y calcula el tiempo transcurrido al volver. El sistema puede silenciar el sonido y la vibración en segundo plano; Safari de iPhone no admite `navigator.vibrate`.
+
+## Actualizar vocabulario
+
+Edita `vocab.json`, una lista JSON de entradas:
+
+```json
+{"es":"el poder notarial","en":"power of attorney","grupo":"Legal"}
+```
+
+Cada entrada requiere `es`, `en` y `grupo`. Los grupos son `Vocabulario`, `Legal` y `Correcciones`. En Correcciones, `es` es lo que dijiste y `en` es la forma mejorada y su explicación. Conserva comillas dobles y separa las entradas con comas. Valida con `python3 -m json.tool vocab.json`. Recarga con conexión para ver los cambios; se consulta la red primero y se conserva una copia sin conexión.
+
+Al cambiar el código o los iconos, aumenta `CACHE` en `sw.js`. Cierra y vuelve a abrir la app después de cargar la nueva versión. Las palabras y correcciones de Anki se solicitan en el texto del chat; esta app no se conecta a Anki. El chat solo puede guardarlas si dispone de esa función.
+Icon
+mobile-layout.cjs
+self-check.cjs
+
+exec
+/bin/zsh -lc "cat checks/mobile-layout.cjs checks/self-check.cjs; rg -n 'vocab|count|connectors|tips|grammar|libro' app.js" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+// Run: node checks/mobile-layout.cjs [output-directory]
+// Requires Chrome; CHROME_BIN can override its executable path. No server/packages.
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {spawnSync}=require('node:child_process');
+const root=path.resolve(__dirname,'..');
+const output=path.resolve(process.argv[2]||fs.mkdtempSync(path.join(os.tmpdir(),'spanish-layout-')));
+fs.mkdirSync(output,{recursive:true});
+const chrome=process.env.CHROME_BIN||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const read=name=>fs.readFileSync(path.join(root,name),'utf8');
+// Inline the real app and vocabulary so file:// works without an HTTP server.
+const fixture=read('index.html')
+ .replace('<link rel="stylesheet" href="app.css">',()=>`<style>${read('app.css')}</style>`)
+ .replace('<script src="app.js" defer></script>','')
+ .replace('</body>',()=>`<script>window.fetch=async()=>new Response(${JSON.stringify(read('vocab.json'))});</script><script>${read('app.js')}</script><script>
+setTimeout(()=>{
+ document.querySelectorAll('details').forEach(e=>e.open=true);
+ // Test intrinsic sizing without the overflow safety net masking failures.
+ document.documentElement.style.overflowX='visible';
+ document.body.style.overflowX='visible';
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  const width=document.documentElement.clientWidth;
+  const outside=[...document.querySelectorAll('main *')].filter(e=>{
+   const r=e.getBoundingClientRect();return r.width&&(r.right>width+1||r.left< -1);
+  }).map(e=>e.id||e.className||e.tagName);
+  const result={clientWidth:width,scrollWidth:document.documentElement.scrollWidth,outside};
+  const proof=document.createElement('pre');proof.id='layout-result';proof.hidden=true;proof.textContent=JSON.stringify(result);document.body.append(proof);
+ }));
+},100);
+</script></body>`);
+const page=path.join(output,'fixture.html');fs.writeFileSync(page,fixture);
+for(const width of [320,375,390,430]){
+ const profile=fs.mkdtempSync(path.join(os.tmpdir(),'spanish-chrome-'));
+ try{
+  const args=['--headless','--no-sandbox','--disable-gpu',`--user-data-dir=${profile}`,`--window-size=${width},844`,'--hide-scrollbars','--virtual-time-budget=2000','--dump-dom'];
+  if(width===375||width===390)args.push(`--screenshot=${path.join(output,`${width}.png`)}`);
+  const run=spawnSync(chrome,[...args,`file://${page}`],{encoding:'utf8',timeout:30000,maxBuffer:5e6});
+  if(run.status!==0)throw Error(`Chrome failed at ${width}px (${run.signal||run.status}): ${run.stderr||run.error||''}`);
+  const match=run.stdout.match(/<pre id="layout-result">([^<]+)<\/pre>/);
+  if(!match)throw Error('Chrome did not produce layout measurements');
+  const result=JSON.parse(match[1]);
+  console.log(JSON.stringify(result));
+  if(result.clientWidth!==width||result.scrollWidth>result.clientWidth||result.outside.length)throw Error(`Overflow at ${width}px`);
+ }finally{fs.rmSync(profile,{recursive:true,force:true});}
+}
+console.log(`Layout checks passed; screenshots: ${output}`);
+// Run with: node checks/self-check.cjs (no packages required).
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+class Element {
+ constructor(tag='div'){this.tagName=tag;this.children=[];this.attributes={};this.style={};this.value='';this.textContent='';this.className='';this.classList={add:c=>{this.className+=' '+c;},toggle:()=>{}};}
+ append(...children){children.forEach(c=>{c.parent=this;this.children.push(c);});}
+ replaceChildren(...children){this.children=[];this.append(...children);}
+ setAttribute(k,v){this.attributes[k]=v;}
+ removeAttribute(k){delete this.attributes[k];}
+ closest(tag){return this.tagName===tag?this:this.parent?.closest(tag);}
+ focus(){} select(){} setSelectionRange(){} remove(){}
+ set innerHTML(value){this.html=value;}
+ get innerHTML(){return this.html;}
+}
+(async()=>{
+const ids=new Map();const storage=new Map();let now=100000,clipboard='',vibrations=0,execCopies=0;
+const document={body:new Element('body'),getElementById(id){if(!ids.has(id))ids.set(id,new Element());return ids.get(id);},createElement:tag=>new Element(tag),addEventListener(){},execCommand(command){assert.equal(command,'copy');execCopies++;return true;}};
+const context=vm.createContext({document,console,URL,Response,setTimeout:()=>{},setInterval:()=>{},Date:class extends Date{static now(){return now;}},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},navigator:{clipboard:{writeText:async text=>{clipboard=text;}},vibrate(){vibrations++;}},window:{},location:{protocol:'file:'},fetch:async()=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('vocab.json','utf8'))})});
+const run=code=>vm.runInContext(code,context);run(fs.readFileSync('app.js','utf8'));await new Promise(setImmediate);
+assert.equal(ids.get('blocks').children.length,6);assert.equal(ids.get('quiz').children.length,15);
+assert.equal(run('blocks.reduce((s,b)=>s+b.seconds,0)'),1800);
+assert.equal(run('blocks[2].prompt'),'Inglés → Español');assert.equal(run('blocks[3].prompt'),'Hazlo natural');
+assert.equal(run('blocks.every(b=>fullPrompt(b).split(WAIT).length===2)'),true);
+assert.equal(run('blocks.every(b=>fullPrompt(b).includes("Anki"))'),true);
+await ids.get('blocks').children[0].children.find(c=>c.className==='copy').onclick();assert(clipboard.includes('Antes de hablar'));
+run('navigator.clipboard.writeText=async()=>{throw Error("denied")}');await ids.get('blocks').children[1].children.find(c=>c.className==='copy').onclick();assert.equal(execCopies,1);
+assert.equal(ids.get('clock').textContent,'1:00');ids.get('start').onclick();assert.equal(vibrations,0,'No signal at start');
+now+=190000;run('timer.tick()');assert.equal(ids.get('current').textContent,'Tema 1');assert.equal(ids.get('clock').textContent,'7:50');assert.equal(vibrations,1);
+ids.get('start').onclick();now+=100000;run('timer.tick()');assert.equal(ids.get('clock').textContent,'7:50','Pause freezes remaining time');
+ids.get('start').onclick();now+=10000;run('timer.tick()');assert.equal(ids.get('clock').textContent,'7:40');
+run('const restored=makeTimer("spanish-timer-v1",blocks.map(b=>b.seconds),s=>globalThis.restoredState=s);restored.tick()');assert.equal(run('restoredState.remaining'),460);
+now+=1800000;run('timer.tick()');assert.equal(ids.get('current').textContent,'¡Terminaste!');assert.equal(ids.get('clock').textContent,'0:00');
+ids.get('reset').onclick();assert.equal(ids.get('clock').textContent,'1:00');
+ids.get('drill-start').onclick();now+=430000;run('drill.tick()');assert.equal(ids.get('drill-clock').textContent,'1:50');assert(ids.get('drill-round').textContent.includes('3 de 3'));
+assert.equal(run('vocabulary.length'),108);
+ids.get('search').value='lawyer';ids.get('search').oninput();assert(ids.get('count').textContent.startsWith('1 de'));
+ids.get('search').value='ORACION';ids.get('search').oninput();assert.equal(run('normalize("oración")'),'oracion');
+ids.get('search').value='';ids.get('filters').children[2].onclick();assert.equal(ids.get('vocab').children[1].className,'vocab-row correction');
+run('renderQuiz()');const quiz=ids.get('quiz').children;for(const item of quiz){const text=item.children[0].textContent;const answer=run(`questions.find(q=>q[0]===${JSON.stringify(text)})[2]`);item.children[1].children.find(b=>b.textContent===answer).onclick();}
+assert.equal(ids.get('score').textContent,'15 de 15 · 15 respuestas');ids.get('again').onclick();assert.equal(ids.get('score').textContent,'0 de 15 · 0 respuestas');
+const handlers={},cached=new Map();let offline=false,deleted=[];
+const cache={addAll:async assets=>{for(const asset of assets){assert(fs.existsSync(asset==='./'?'index.html':asset));cached.set(asset,new Response('cached'));}},match:async req=>cached.get(typeof req==='string'?req:req.url),put:async(req,res)=>cached.set(req.url,res)};
+const sw=vm.createContext({URL,Response,caches:{open:async()=>cache,keys:async()=>['spanish-v0','other-app'],delete:async key=>deleted.push(key)},self:{location:{origin:'https://test.local'},registration:{scope:'https://test.local/'},clients:{claim:async()=>{}},skipWaiting:async()=>{},addEventListener:(type,fn)=>handlers[type]=fn},fetch:async()=>{if(offline)throw Error('offline');return new Response('fresh');}});vm.runInContext(fs.readFileSync('sw.js','utf8'),sw);
+let work;handlers.install({waitUntil:p=>work=p});await work;assert.equal(cached.size,9);handlers.activate({waitUntil:p=>work=p});await work;assert.deepEqual(deleted,['spanish-v0']);
+const request={method:'GET',url:'https://test.local/vocab.json'};handlers.fetch({request,respondWith:p=>work=p});assert.equal(await(await work).text(),'fresh');offline=true;handlers.fetch({request,respondWith:p=>work=p});assert.equal(await(await work).text(),'fresh','Vocab falls back to cache offline');
+cached.set('https://test.local/app.js',new Response('offline app'));handlers.fetch({request:{method:'GET',url:'https://test.local/app.js'},respondWith:p=>work=p});assert.equal(await(await work).text(),'offline app');
+const manifest=JSON.parse(fs.readFileSync('manifest.webmanifest'));assert.equal(manifest.display,'standalone');for(const icon of manifest.icons)assert(fs.existsSync(icon.src));
+assert(!/https?:\/\//.test(fs.readFileSync('index.html','utf8').replace(/https:\/\/claude\.ai\/chat\/[^" ]+/g,'')));
+console.log('PASS: six blocks, 30-minute timer, sleep/reload/pause recovery, no start chime, clipboard + fallback, 108 vocab entries, search/filters, 15 quiz answers/reset, drill catch-up, cache installation/isolation/offline fallback, manifest and local assets.');
+})().catch(error=>{console.error(error);process.exitCode=1;});
+102:let vocabulary=[],filter='';
+105:function renderVocab(){const term=normalize($('search').value.trim());const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));$('count').textContent=`${rows.length} de ${vocabulary.length} entradas`;$('vocab').replaceChildren();
+106: const head=document.createElement('div');head.className='vocab-row vocab-head';head.innerHTML=filter==='Correcciones'?'<span>Dije → Mejor</span>':'<span>Español / Dije</span><span>Inglés / Mejor</span>';$('vocab').append(head);
+107: rows.forEach(v=>{const row=document.createElement('div');row.className='vocab-row'+(v.grupo==='Correcciones'?' correction':'');const es=document.createElement('span'),en=document.createElement('span');es.textContent=v.grupo==='Correcciones'?'Dije: '+v.es:v.es;en.textContent=v.grupo==='Correcciones'?'→ Mejor: '+v.en:v.en;row.append(es,en);$('vocab').append(row);});if(!rows.length)$('count').textContent+=' · No hay coincidencias.';
+109:async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else $('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';$('retry-vocab').hidden=false;}}
+110:$('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();
+115: ['que','Para personas o cosas.','El libro que leo es interesante.'],['quien','Solo una persona; después de una preposición o entre comas.','La abogada con quien hablé me ayudó.'],['quienes','Solo dos o más personas; después de preposición o entre comas.','Los misioneros, quienes llegaron ayer, nos visitan.'],['el que / la que / los que / las que','Señalan una persona o cosa; concuerdan en género y número.','La que firma es mi madre.'],['lo que','Una idea o algo sin nombre concreto.','No entiendo lo que dice el contrato.'],['cuyo / cuya / cuyos / cuyas','Posesión: concuerda con la cosa poseída, no con su dueño.','El cliente cuya casa vendimos está contento.'],['donde','Un lugar.','Esta es la capilla donde me bauticé.']]],
+119:connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('connectors').append(section);});
+140:const tips=[
+154:tips.forEach(([title,lines])=>{const item=document.createElement('article');item.className='tip';const h=document.createElement('h3');h.textContent=title;const list=document.createElement('ul');lines.forEach(line=>{const li=document.createElement('li');li.textContent=line;list.append(li);});item.append(h,list);$('tips').append(item);});
+
+codex
+The app already has the timers, quiz, connectors, and tips. The main changes are the layout and navigation, plus vocabulary groups of five. I’m using the surgical-patch skill to keep those changes focused and preserve the existing behavior.
+exec
+/bin/zsh -lc "sed -n '98,112p' app.js; sed -n '140,158p' app.js; git status --short" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+$('start').onclick=()=>timer.toggle();$('skip').onclick=()=>timer.skip();$('reset').onclick=()=>timer.reset();
+const drill=makeTimer('spanish-drill-v1',[240,180,120],s=>{$('drill-clock').textContent=format(s.remaining);$('drill-round').textContent=s.finished?'¡Listo! ¿Fue más fácil la última vuelta?':`Vuelta ${s.index+1} de 3 · la misma historia`;$('drill-start').textContent=s.startedAt!==null?'Pausar':s.finished?'Otra vez':s.remaining<[240,180,120][s.index]?'Continuar':'Empezar';});
+$('drill-start').onclick=()=>drill.toggle();$('drill-reset').onclick=()=>drill.reset();
+timer.tick();drill.tick();setInterval(()=>{timer.tick();drill.tick();},250);document.addEventListener('visibilitychange',()=>{timer.tick();drill.tick();});
+let vocabulary=[],filter='';
+const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
+function renderVocab(){const term=normalize($('search').value.trim());const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));$('count').textContent=`${rows.length} de ${vocabulary.length} entradas`;$('vocab').replaceChildren();
+ const head=document.createElement('div');head.className='vocab-row vocab-head';head.innerHTML=filter==='Correcciones'?'<span>Dije → Mejor</span>':'<span>Español / Dije</span><span>Inglés / Mejor</span>';$('vocab').append(head);
+ rows.forEach(v=>{const row=document.createElement('div');row.className='vocab-row'+(v.grupo==='Correcciones'?' correction':'');const es=document.createElement('span'),en=document.createElement('span');es.textContent=v.grupo==='Correcciones'?'Dije: '+v.es:v.es;en.textContent=v.grupo==='Correcciones'?'→ Mejor: '+v.en:v.en;row.append(es,en);$('vocab').append(row);});if(!rows.length)$('count').textContent+=' · No hay coincidencias.';
+}
+async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else $('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';$('retry-vocab').hidden=false;}}
+$('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();
+const connectorGroups=[
+ ['Preposiciones','Relacionan una palabra con otra. Úsalas para decir lugar, tiempo, causa o destino.',[
+const tips=[
+ ['Mientras hablas',['Sigue hablando. Si no sabes una palabra, explícala con otras palabras en español.','Haz una pausa en silencio en vez de decir «este» o «eh».','Habla desde la parte delantera de la boca. Al descansar, deja la punta de la lengua detrás de los dientes inferiores.','Usa vocales claras y cortas: a, e, i, o, u. Sonríe con i y e; redondea los labios con o y u.','Une las palabras. Usa un conector como aunque, sin embargo o por eso.','Usa a propósito la regla de gramática de esta semana.']],
+ ['Hablar con la IA',['Busca el error antes de que te diga la respuesta.','Pide respuestas cortas para hablar tú más tiempo.','Practica un tiempo verbal: «Pregúntame del futuro».','Ensaya una entrevista de trabajo, una consulta médica o una reunión con un cliente.','Al terminar, lee el texto de la charla y busca errores que repites.']],
+ ['Podcasts · en el coche o al caminar',['Escucha en español: primero busca la idea principal, luego repite las partes difíciles.','Anota frases que usa la gente y úsalas esa semana. Pausa y repite una frase con el mismo ritmo.','Prueba Radio Ambulante (historias de América Latina), El Hilo (noticias) o Hoy Hablamos (España).','Elige temas que te gusten para seguir escuchando.']],
+ ['Tus grabaciones · los sábados',['Usa Notas de Voz en el iPhone o Mac. Habla dos minutos sobre tu semana sin parar.','Escucha una vez: busca muletillas, palabras en inglés y palabras que repites mucho.','Elige solo tres cosas para mejorar y vuelve a grabar el mismo tema.','Guarda tus grabaciones en Notas de Voz y compáralas después de un mes. Poco a poco, llega a cuatro o cinco minutos.']],
+ ['Libro de gramática · los lunes, 10 minutos',['Lee los ejemplos e intenta descubrir la regla. Luego lee la explicación.','Haz los ejercicios en voz alta y revisa las respuestas.','Crea cinco frases tuyas con la regla y úsala al hablar ese día.','Lleva una lista de los errores que repites. Diez minutos bastan.']],
+ ['Piensa en español · durante el día',['Narra lo que haces: «Ahora abro la puerta…». Planea tu día en español.','Habla contigo mismo al conducir o al ducharte.','Anota las palabras que no sabes; búscalas después y mándalas a Claude para Anki.','Ora una vez al día en español. Pon tu teléfono en español. Antes de dormir, cuenta tu día en tu mente.']],
+ ['Personas reales · cuando puedas',['Habla con una persona que hable español cada vez que tengas oportunidad. Ese día puede reemplazar la charla con la IA.','Practicar un poco cada día ayuda más que hacer mucho de una vez. Ponte de pie y usa las manos. Equivocarte está bien: sigue hablando.']],
+ ['Sonidos claros y naturales',['Vocales puras: di «no, se, mi, tu» frente a un espejo. Los labios y la mandíbula no deben moverse al final de la vocal. Si la barbilla se mueve al terminar «no», estás cambiando el sonido.','Sin soplo fuerte en p, t, k: sostén un papel frente a la boca y di «papá, taco, casa». El papel casi no debe moverse.','La r de «pero» y «caro» es un toque rápido, como el sonido central de butter en inglés americano. Vibra para rr en «perro» y r inicial en «rojo».','Suaviza d, b y g entre vocales. En «nada», la d se parece al th de this. En «lobo», los labios casi se tocan. En «lago», la lengua casi toca el paladar.','Para t y d, toca con la punta de la lengua la parte de atrás de los dientes superiores: «tú, dos, todo».']],
+ ['Ritmo y fluidez',['Une vocales entre palabras: «mi amigo está en casa» → «mia-mi-goes-táen-ca-sa».','Une una consonante con la vocal siguiente: «los otros» → «lo-so-tros».','Da un tiempo parecido a cada sílaba, sin pausas entre palabras.','Imita cinco minutos de una grabación: misma velocidad, ritmo y tono.']],
+ ['Personas a quienes imitar · 5 a 10 minutos',['Easy Spanish: entrevistas en la calle en México, América Latina y España, con subtítulos en español. Empieza con entrevistas en México.','Dreaming Spanish: usa los videos avanzados, con habla clara y natural.','Butterfly Spanish: formas de hablar y diferencias entre países. María Español: entrevistas y lenguaje coloquial.','Reproduce una frase, pausa y repítela con la misma melodía. Primero el ritmo, luego las palabras. Si va muy rápido, usa 0,75 de velocidad. Repite el mismo video toda la semana.']],
+ ['Palabras de la gente',['Muletillas naturales: pues, bueno, o sea, la verdad, es que, ¿no?','Reacciones: ¡qué padre! (México), ¡qué bueno!, ¿en serio?, no manches (México), ¡ándale!','Diminutivos: ahorita, un ratito, cafecito, poquito.','Elige un acento y mantenlo. El de tu misión está bien.']],
+ ['Trampas del inglés',['realize → darse cuenta; realizar significa hacer o llevar a cabo.','Para un trabajo: solicitar, en vez de aplicar.','Di «tiene sentido», «estoy emocionado», «por otro lado» y «devolver la llamada». Evita «hace sentido», «estoy excitado», «en la otra mano» y «llamar para atrás».']]
+];
+tips.forEach(([title,lines])=>{const item=document.createElement('article');item.className='tip';const h=document.createElement('h3');h.textContent=title;const list=document.createElement('ul');lines.forEach(line=>{const li=document.createElement('li');li.textContent=line;list.append(li);});item.append(h,list);$('tips').append(item);});
+if('serviceWorker' in navigator && /^https?:$/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(()=>{ /* Una primera visita sin conexión no puede instalar la caché. */ });
+?? BRIEF2.md
+?? "Icon\r"
+?? codex_log2.txt
+?? "icons/Icon\r"
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+p=Path('index.html'); s=p.read_text(); a=s.index('<a class=\"chat\"'); b=s.index('<section id=\"reference\"'); chat=s[a:b]; s=s[:a]+s[b:]; s=s.replace('</header>','''<nav class=\"top-links\" aria-label=\"Recursos\">
+<a href=\"https://claude.ai/artifact/8tWg6scQZyBo9GVpufW8xV\" target=\"_blank\" rel=\"noopener\">📘 Reglas del Español</a>
+<a href=\"#vocab\">🗂️ Vocabulario</a>
+<a href=\"#conectores\">🧩 Conectores</a>
+'''+chat.replace('Abrir chat de voz','🗣️ Abrir chat de voz').split('<p class=\"muted')[0]+'''</nav><p class=\"muted small\">Copia el texto, pégalo en el chat y activa la voz.</p></header>
+<div class=\"practice-layout\"><section class=\"practice\" aria-label=\"Práctica diaria\">'''); a=s.index('<section id=\"reference\"'); b=s.index('<section id=\"connectors\"'); vocab=s[a:b]; vocab=vocab[vocab.index('<section class=\"panel\">'):].replace('<section class=\"panel\">','<section id=\"vocab\" class=\"panel vocabulary\">',1).replace('<h3>Mi vocabulario</h3>','<h2>Vocabulario</h2>').replace('<div id=\"vocab\">','<div id=\"vocab-groups\">').replace('<p id=\"count\" class=\"muted small\" role=\"status\">Cargando vocabulario…</p>','<p id=\"count\" class=\"muted small\" role=\"status\" hidden>Cargando vocabulario…</p>'); s=s[:a]+s[b:]; a=s.index('<section id=\"connectors\"'); b=s.index('<details class=\"panel more\">'); refs=s[a:b].replace('id=\"connectors\"','id=\"conectores\"'); refs=refs.removesuffix('</section>\\n'); s=s[:a]+s[b:]; s=s.replace('<details class=\"panel more\"><summary>Más <span class=\"muted\">Consejos y otras formas de practicar</span></summary>','</section><section class=\"more\" aria-labelledby=\"more-title\"><h2 id=\"more-title\">Más práctica y consejos</h2>'); s=s.replace('</details>\\n<footer>',''+refs+'</section></div>\\n'+vocab+'\\n<footer>'); p.write_text(s)
+p=Path('app.js');s=p.read_text(); a=s.index('function renderVocab()');b=s.index('async function loadVocab()',a);s=s[:a]+'''function renderVocab(){
+ const term=normalize("'$('"'search').value.trim());
+ const rows=vocabulary.filter(v=>("'!filter||v.grupo===filter)&&normalize(v.es+'"' '+v.en).includes(term));
+ "'$('"'count').textContent=rows.length?'': 'No hay coincidencias.';
+ "'$('"'count').hidden=rows.length>0;
+ "'$('"'vocab-groups').replaceChildren();
+ for(let i=0;i<rows.length;i+=5){
+  const group=rows.slice(i,i+5),card=document.createElement('details'),title=document.createElement('summary');
+  card.className='vocab-group';card.open=i===0;
+  title.textContent="'`${i/5+1} · ${group[0].es} a ${group[group.length-1].es}`;card.append(title);
+  group.forEach(v=>{const row=document.createElement('"'p');row.className='vocab-row';row.textContent=v.grupo==='Correcciones'?"'`Dije: ${v.es} → Mejor: ${v.en}`:`${v.es} — ${v.en}`;card.append(row);});
+  $('"'vocab-groups').append(card);
+ }
+}
+'''+s[b:];s=s.replace(\"else "'$('"'count').textContent=\", \"else {"'$('"'count').hidden=false;"'$('"'count').textContent=\").replace(\"conexión.';"'$('"'retry-vocab')\",\"conexión.';}"'$('"'retry-vocab')\");s=s.replace(\""'$('"'connectors')\",\""'$('"'conectores')\");p.write_text(s)
+p=Path('sw.js');p.write_text(p.read_text().replace('spanish-v2','spanish-v3'))
+PY" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+exec
+/bin/zsh -lc "cat index.html; sed -n '103,126p' app.js; which node; ls '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1a19">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Spanish">
+<meta name="description" content="Tu práctica diaria de español. Treinta minutos, un paso a la vez.">
+<title>Spanish · Práctica diaria</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p><nav class="top-links" aria-label="Recursos">
+<a href="https://claude.ai/artifact/8tWg6scQZyBo9GVpufW8xV" target="_blank" rel="noopener">📘 Reglas del Español</a>
+<a href="#vocab">🗂️ Vocabulario</a>
+<a href="#conectores">🧩 Conectores</a>
+<a class="chat" href="https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7" target="_blank" rel="noopener">🗣️ Abrir chat de voz <span aria-hidden="true">↗</span></a>
+</nav><p class="muted small">Copia el texto, pégalo en el chat y activa la voz.</p></header>
+<div class="practice-layout"><section class="practice" aria-label="Práctica diaria">
+<section class="timer panel" aria-label="Temporizador">
+<div class="timer-heading"><span id="current">Oración</span><span class="badge">30 MIN</span></div>
+<div id="clock" class="clock" role="timer" aria-label="Tiempo restante">1:00</div>
+<progress id="progress" max="1800" value="0" aria-label="Progreso de la sesión"></progress>
+<p id="next-action">Ora en voz alta. Pide ayuda para hablar con claridad y sentir el Espíritu.</p>
+<div class="timer-actions"><button id="start">Empezar</button><button id="skip" class="secondary">Saltar</button><button id="reset" class="secondary">Reiniciar</button></div>
+<p id="timer-status" class="muted small" role="status">Copia el texto de Oración y empieza.</p>
+</section>
+<div id="blocks" class="stack"></div>
+</section><section class="more" aria-labelledby="more-title"><h2 id="more-title">Más práctica y consejos</h2><div id="tips" class="stack"></div>
+<article class="tip"><h3>Repite: 4, 3, 2</h3><p>Los miércoles, en lugar del Debate: elige una historia, como tu mejor día de la misión. Cuéntala en 4 minutos, luego en 3 y al final en 2. No quites partes: dilo con más fluidez.</p><p id="drill-round">Vuelta 1 de 3 · la misma historia</p><div id="drill-clock" class="drill-clock" role="timer">4:00</div><div class="timer-actions"><button id="drill-start">Empezar</button><button id="drill-reset" class="secondary">Reiniciar</button></div></article>
+<section id="conectores" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
+<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
+</section></div>
+<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p><div id="vocab-groups"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
+
+<footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
+<noscript>Activa JavaScript para usar el temporizador, los textos y la referencia.</noscript>
+</main>
+</body>
+</html>
+const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
+function renderVocab(){
+ const term=normalize($('search').value.trim());
+ const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));
+ $('count').textContent=rows.length?'': 'No hay coincidencias.';
+ $('count').hidden=rows.length>0;
+ $('vocab-groups').replaceChildren();
+ for(let i=0;i<rows.length;i+=5){
+  const group=rows.slice(i,i+5),card=document.createElement('details'),title=document.createElement('summary');
+  card.className='vocab-group';card.open=i===0;
+  title.textContent=`${i/5+1} · ${group[0].es} a ${group[group.length-1].es}`;card.append(title);
+  group.forEach(v=>{const row=document.createElement('p');row.className='vocab-row';row.textContent=v.grupo==='Correcciones'?`Dije: ${v.es} → Mejor: ${v.en}`:`${v.es} — ${v.en}`;card.append(row);});
+  $('vocab-groups').append(card);
+ }
+}
+async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else {$('count').hidden=false;$('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';}$('retry-vocab').hidden=false;}}
+$('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();
+const connectorGroups=[
+ ['Preposiciones','Relacionan una palabra con otra. Úsalas para decir lugar, tiempo, causa o destino.',[
+ ['a','Dirección, hora o persona que recibe una acción.','Voy a la iglesia a las nueve.'],['con','Compañía o instrumento.','Hablo con mi abogado.'],['en','Lugar o momento.','El contrato está en la mesa.'],['de','Origen, posesión o tema.','Hablamos de la fe.'],['para','Meta, destino o para quién.','Este poder es para mi madre.'],['por','Causa, medio, a cambio o por dónde. Para = meta; por = causa o camino.','Te lo envío por correo por tu seguridad.'],['sin','Algo que falta.','No firmes sin leer.'],['sobre','Tema o posición encima.','La lección es sobre la oración.'],['entre','En medio de dos o más.','Es un acuerdo entre dos personas.'],['hasta','Límite de tiempo o lugar.','Trabajo hasta las cinco.'],['desde','Punto de inicio.','Vivo aquí desde enero.'],['hacia','Dirección aproximada.','Camino hacia el templo.'],['contra','Oposición o contacto.','Votaron contra la propuesta.']]],
+ ['Relativos','Unen frases sobre personas o cosas para no repetir sus nombres. Úsalos para añadir información.',[
+ ['que','Para personas o cosas.','El libro que leo es interesante.'],['quien','Solo una persona; después de una preposición o entre comas.','La abogada con quien hablé me ayudó.'],['quienes','Solo dos o más personas; después de preposición o entre comas.','Los misioneros, quienes llegaron ayer, nos visitan.'],['el que / la que / los que / las que','Señalan una persona o cosa; concuerdan en género y número.','La que firma es mi madre.'],['lo que','Una idea o algo sin nombre concreto.','No entiendo lo que dice el contrato.'],['cuyo / cuya / cuyos / cuyas','Posesión: concuerda con la cosa poseída, no con su dueño.','El cliente cuya casa vendimos está contento.'],['donde','Un lugar.','Esta es la capilla donde me bauticé.']]],
+ ['Conjunciones','Unen palabras o ideas. Úsalas para sumar, elegir, explicar o mostrar un contraste.',[
+/usr/local/bin/node
+/Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+p=Path('app.css');s=p.read_text().replace('max-width:720px;','max-width:1200px;',1);a=s.index('.vocab-row {');b=s.index('.connector-group {',a);s=s[:a]+'''.vocab-group {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:4px 16px;
+  margin-top:10px;
+}
+.vocab-group summary {
+  color:var(--fg);
+  font-weight:650;
+}
+.vocab-row {
+  border-top:1px solid var(--line);
+  padding:10px 0;
+  margin:0;
+}
+'''+s[b:];a=s.index('.more {');b=s.index('.tip {',a);s=s[:a]+'''.top-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+.top-links a {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:14px 18px;
+  min-height:52px;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:var(--inset);
+  color:var(--fg);
+  font-size:17px;
+  font-weight:650;
+  text-decoration:none;
+}
+.top-links .chat {
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+  margin:0;
+}
+.practice-layout {
+  display:grid;
+  gap:24px;
+  align-items:start;
+}
+.more {
+  padding:22px;
+  background:color-mix(in srgb,var(--green) 8%,var(--bg));
+  border:2px solid var(--green);
+  border-radius:18px;
+}
+.more h2 {
+  font-size:30px;
+}
+.more>.panel {
+  margin-top:24px;
+}
+.more>.panel:last-child {
+  margin-bottom:0;
+}
+.vocabulary {
+  margin-top:32px;
+  scroll-margin-top:16px;
+}
+.vocabulary input {
+  max-width:360px;
+}
+#conectores {
+  scroll-margin-top:16px;
+}
+@media(min-width:900px) {
+  .top-links {
+    flex-wrap:nowrap;
+  }
+  .top-links a {
+    flex:1 1 auto;
+    padding-inline:12px;
+    font-size:16px;
+  }
+  .practice-layout {
+    grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+  }
+  .more {
+    position:sticky;
+    top:16px;
+    max-height:calc(100vh - 32px);
+    overflow-y:auto;
+    overscroll-behavior-y:contain;
+    scrollbar-gutter:stable;
+  }
+}
+'''+s[b:];s=s.replace('  .panel {\\n    padding:18px;','  .panel,.more {\\n    padding:18px;');p.write_text(s)
+p=Path('checks/self-check.cjs');s=p.read_text();s=s.replace(\"assert(ids.get('count').textContent.startsWith('1 de'));\", \"assert.equal(ids.get('vocab-groups').children.length,1);assert.equal(ids.get('vocab-groups').children[0].children.length,2);\");s=s.replace(\"assert.equal(ids.get('vocab').children[1].className,'vocab-row correction');\", \"assert(ids.get('vocab-groups').children[0].children[1].textContent.startsWith('Dije: '));\");s=s.replace(\"assert.equal(run('vocabulary.length'),108);\", \"\"\"assert.equal(run('vocabulary.length'),108);
+const groups=ids.get('vocab-groups').children;
+assert.equal(groups.length,22);assert.equal(groups[0].open,true);assert(groups.slice(1).every(g=>g.open===false));
+assert(groups.every(g=>g.children.length<=6));assert.equal(groups.reduce((n,g)=>n+g.children.length-1,0),108);
+assert.equal(groups[0].children[0].textContent,run('"'`1 · ${vocabulary[0].es} a ${vocabulary[4].es}`'"'));
+\"\"\");s=s.replace(\"assert("'!/https?:'"\\\\/\\\\//.test(fs.readFileSync('index.html','utf8').replace(/https:\\\\/\\\\/claude\\\\.ai\\\\/chat\\\\/["'^'"\\\" ]+/g,'')));\", \"assert("'!/https?:'"\\\\/\\\\//.test(fs.readFileSync('index.html','utf8').replace(/https:\\\\/\\\\/claude\\\\.ai\\\\/(?:chat|artifact)\\\\/["'^'"\\\" ]+/g,'')));\");p.write_text(s)
+PY
+node --check app.js
+node checks/self-check.cjs" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+PASS: six blocks, 30-minute timer, sleep/reload/pause recovery, no start chime, clipboard + fallback, 108 vocab entries, search/filters, 15 quiz answers/reset, drill catch-up, cache installation/isolation/offline fallback, manifest and local assets.
+
+codex
+The new layout is in place: practice stays on the left on wide screens, the highlighted tips section stays open on the right, and vocabulary is at the bottom in expandable groups of five. The functional checks pass for copying, both timers, search, filters, the quiz, and offline caching. I’m now checking the rendered page at 390px in an iframe and at 1200px.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+p=Path('checks/brief2-layout.cjs');s=p.read_text();s=s.replace(\",http=require('node:http')\",'');s=s.replace('src=\"/index.html\"','src=\"file://"'${root}/index.html"'"');a=s.index('const server=http.createServer');b=s.index(' for(const width',a);s=s[:a]+'(async()=>{\\n'+s[b:];s=s.replace(\"  try{\\n   const args=\", \"  try{\\n   const page=path.join(output,width+'-frame.html');fs.writeFileSync(page,fixture(width));\\n   const args=\");s=s.replace(\"'--headless','--no-sandbox'\", \"'--headless','--allow-file-access-from-files','--disable-web-security','--no-sandbox'\");s=s.replace('"'`http://127.0.0.1:${port}/check?width=${width}`'"','"'`file://${page}`'"');s=s.replace('.finally(()=>server.close())','');p.write_text(s)
+PY
+node checks/brief2-layout.cjs /tmp/spanish-brief2-check" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ exited 1 in 0ms:
+Error: Missing browser result: 
+    at /Users/jacobgaryfales/Documents/Spanish/spanish-app/checks/brief2-layout.cjs:55:90
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+exec
+/bin/zsh -lc "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --no-sandbox --disable-gpu --user-data-dir=/tmp/spanish-chrome-debug --dump-dom about:blank" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ exited 134 in 0ms:
+exec
+/bin/zsh -lc 'ls /Applications; ls /Users/jacobgaryfales/Library/Caches/ms-playwright /Users/jacobgaryfales/.cache/puppeteer /tmp 2>/dev/null | head -65; git diff --stat; git diff --check; cat checks/brief2-layout.cjs' in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+Amazon Kindle.app
+Anki.app
+Applications.app
+Brave Browser.app
+Busylight4RingCentralUnified.app
+Claude.app
+Clicky.app
+D. Mastery.app
+DisplayWidget Center.app
+DuckDuckGo.app
+GarageBand.app
+Ghostty.app
+Google Chrome.app
+Google Docs.app
+Google Drive.app
+Google Sheets.app
+Google Slides.app
+Gramatico.app
+Grok Bot.app
+GroupMe.app
+Hammerspoon.app
+Haptyk.app
+Keynote.app
+Library.app
+LibreOffice.app
+Loom.app
+Messenger.localized
+Microsoft 365 Copilot.app
+Microsoft Excel.app
+Microsoft Word.app
+MonitorControl.app
+Numbers.app
+Obsidian.app
+Opera.app
+Pages.app
+Plaud.app
+ProtonVPN.app
+PrusaSlicer.app
+Pure.app
+RingCentral.app
+Safari.app
+ScanSnap Online Update.localized
+ScanSnapHomeMain.app
+Self-Talk+.app
+Sentient OS.app
+Slack.app
+Speechify.app
+Spotify.app
+T3 Code (Beta).app
+Tailscale.app
+Trust.Zone-VPN-V2.app
+Utilities
+Vinyl.app
+WhatsApp.app
+Whisper Transcription.app
+Wispr Flow.app
+iMovie.app
+macOS InstantView.app
+zoom.us.app
+/tmp:
+PFU_711F5E50-978C-41FC-B06E-E77D40F6064C
+a1.png
+a2.png
+a3.png
+aa_bp.js
+aa_btn.js
+aa_c1.js
+aa_c10.js
+aa_c11.js
+aa_c12.js
+aa_c13.js
+aa_c14.js
+aa_c2.js
+aa_c3.js
+aa_c4.js
+aa_c5.js
+aa_c6.js
+aa_c7.js
+aa_c8.js
+aa_c9.js
+aa_click.js
+aa_fill.js
+aa_find.js
+aa_go.js
+aa_links.js
+aa_nav.js
+aa_pax.js
+aa_pr.js
+aa_read.js
+aa_run.sh
+aa_s2.js
+aa_s3.js
+aa_scan.js
+aa_seats.js
+aa_sub.js
+allspeakers.err
+allspeakers.log
+amr.scpt
+amz.scpt
+bobb-verify-runs
+c.txt
+cc-socks
+cc-socks-502
+cdpjs
+ch.txt
+ch2.txt
+ch3.txt
+chk.out
+chk.py
+claude-501
+claude-502
+claude-mcp-browser-bridge-jacobgaryfales
+com.openai.sky.CUAService
+d.b64
+d3.txt
+d4.txt
+done.txt
+done2.txt
+drivefs_ipc.501
+drivefs_ipc.501_shell
+err.txt
+gary_week.bak
+grok-file-lock-501
+gwtest.log
+ app.css    | 113 +++++++++++++++++++++++++++++++++++++++++++++++--------------
+ app.js     |  20 ++++++++---
+ index.html |  23 +++++++------
+ sw.js      |   2 +-
+ 4 files changed, 117 insertions(+), 41 deletions(-)
+// Run: node checks/brief2-layout.cjs [screenshot-directory]
+// Loads the actual index.html in an iframe to avoid Chrome's minimum window width.
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os');
+const {spawn}=require('node:child_process');
+const root=path.resolve(__dirname,'..');
+const output=path.resolve(process.argv[2]||fs.mkdtempSync(path.join(os.tmpdir(),'spanish-brief2-')));
+fs.mkdirSync(output,{recursive:true});
+const chrome=process.env.CHROME_BIN||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+function fixture(width){return `<!doctype html><style>body{margin:0}iframe{border:0;width:${width}px;height:1000px;display:block}</style><iframe src="file://${root}/index.html"></iframe><script>
+const frame=document.querySelector('iframe');
+frame.onload=async()=>{
+ const d=frame.contentDocument,w=frame.contentWindow,errors=[];
+ const check=(ok,message)=>{if(!ok)errors.push(message)};
+ for(let i=0;i<100&&!d.querySelector('.vocab-group');i++)await new Promise(r=>setTimeout(r,20));
+ const rect=s=>d.querySelector(s).getBoundingClientRect();
+ check(w.innerWidth===${width},'Wrong iframe width');
+ check(d.querySelectorAll('#blocks>.block').length===6,'Six practice blocks');
+ check(d.querySelectorAll('#quiz>.question').length===15,'15 quiz questions');
+ check(d.querySelector('.more').tagName==='SECTION','Tips must stay open');
+ check(w.getComputedStyle(d.querySelector('.more')).borderTopColor===w.getComputedStyle(d.documentElement).getPropertyValue('--green').trim()||w.getComputedStyle(d.querySelector('.more')).borderTopWidth==='2px','Accent border');
+ const p=rect('.practice'),m=rect('.more'),v=rect('#vocab');
+ check(${width}>=900 ? m.left>=p.right&&Math.abs(m.top-p.top)<2 : m.top>=p.bottom,'Responsive practice/tips order');
+ check(v.top>=Math.max(p.bottom,m.bottom),'Vocabulary at bottom');
+ const links=[...d.querySelectorAll('.top-links>a')];
+ check(links.length===4,'Four top links');
+ check(links[0].href==='https://claude.ai/artifact/8tWg6scQZyBo9GVpufW8xV'&&links[0].target==='_blank','Grammar link');
+ check(links[1].hash==='#vocab'&&links[2].hash==='#conectores','Section links');
+ if(${width}>=900)check(links.every(a=>Math.abs(a.getBoundingClientRect().top-links[0].getBoundingClientRect().top)<2),'Single row of links');
+ const groups=[...d.querySelectorAll('.vocab-group')];
+ check(groups.length===22&&groups[0].open&&groups.slice(1).every(g=>!g.open),'Initial vocabulary groups');
+ check(groups.reduce((n,g)=>n+g.querySelectorAll('.vocab-row').length,0)===108,'All vocabulary retained');
+ check(groups.every(g=>g.querySelectorAll('.vocab-row').length<=5),'Five words per group');
+ groups[1].querySelector('summary').click();check(groups[1].open,'Group opens on click');groups[1].querySelector('summary').click();check(!groups[1].open,'Group closes on click');
+ d.querySelectorAll('details').forEach(e=>e.open=true);
+ d.documentElement.style.overflowX='visible';d.body.style.overflowX='visible';
+ const outside=[...d.querySelectorAll('main *')].filter(e=>{const r=e.getBoundingClientRect();return r.width&&(r.right>${width}+1||r.left< -1)}).map(e=>e.id||e.className||e.tagName);
+ check(!outside.length,'Overflow: '+outside.join(','));
+ check(d.documentElement.scrollWidth===${width},'Horizontal scroll');
+ // Anchor navigation must reveal connectors inside the desktop scroll area.
+ links[2].click();await new Promise(r=>setTimeout(r,50));
+ const c=rect('#conectores'),sc=rect('.more');
+ check(${width}>=900 ? c.top>=sc.top&&c.top<sc.bottom : c.top>=0&&c.top<w.innerHeight,'Connectors anchor visible');
+ links[1].click();await new Promise(r=>setTimeout(r,50));check(rect('#vocab').top>=0&&rect('#vocab').top<w.innerHeight,'Vocab anchor visible');
+ w.scrollTo(0,0);d.querySelector('.more').scrollTop=0;
+ d.querySelectorAll('details').forEach(e=>e.open=e===groups[0]);
+ const result=document.createElement('pre');result.id='result';result.hidden=true;result.textContent=JSON.stringify({width:${width},errors});document.body.append(result);
+};</script>`}
+(async()=>{
+ for(const width of [390,1200]){
+  const profile=fs.mkdtempSync(path.join(os.tmpdir(),'spanish-chrome-'));
+  try{
+   const page=path.join(output,width+'-frame.html');fs.writeFileSync(page,fixture(width));
+   const args=['--headless','--allow-file-access-from-files','--disable-web-security','--no-sandbox','--disable-gpu',`--user-data-dir=${profile}`,`--window-size=${Math.max(500,width)},1000`,'--hide-scrollbars','--virtual-time-budget=5000','--dump-dom',`--screenshot=${path.join(output,width+'.png')}`,`file://${page}`];
+   const result=await new Promise((resolve,reject)=>{const child=spawn(chrome,args);let stdout='',stderr='';child.stdout.on('data',v=>stdout+=v);child.stderr.on('data',v=>stderr+=v);child.on('error',reject);child.on('close',code=>code?reject(Error(stderr)):resolve(stdout));});
+   const match=result.match(/<pre id="result" hidden="">([^<]+)<\/pre>/);if(!match)throw Error('Missing browser result: '+result.slice(-1500));
+   const proof=JSON.parse(match[1].replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&'));console.log(proof);if(proof.errors.length)throw Error('Layout checks failed');
+  }finally{fs.rmSync(profile,{recursive:true,force:true});}
+ }
+ console.log('PASS: real app at 390px and 1200px; screenshots: '+output);
+})().catch(e=>{console.error(e);process.exitCode=1});
+
+exec
+/bin/zsh -lc "cat .gitignore; git ls-files checks; CHROME_BIN='/Applications/Brave Browser.app/Contents/MacOS/Brave Browser' node checks/brief2-layout.cjs /tmp/spanish-brief2-brave" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ exited 1 in 4881ms:
+reference_old_page.html
+changes_*.txt
+BRIEF.md
+codex_*log.txt
+checks/
+checks_frame.html
+icon-1024.png
+*.png.tmp
+Icon
+Error: Missing browser result: 
+    at /Users/jacobgaryfales/Documents/Spanish/spanish-app/checks/brief2-layout.cjs:55:90
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+codex
+The functional checks pass, including the new vocabulary grouping checks. Browser verification is blocked here: Chrome and Brave both exit before rendering, and the sandbox denies a local HTTP server. I’ve added the 390px iframe and 1200px browser check, and I’m finishing the source review. I can’t yet claim those visual checks passed.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+p=Path('checks/brief2-layout.cjs');s=p.read_text();s=s.replace(\"'--allow-file-access-from-files','--disable-web-security'\",\"'--allow-file-access-from-files'\");s=s.replace(\"child.on('close',code=>code?reject(Error(stderr)):resolve(stdout));\", \"child.on('close',(code,signal)=>code"'!==0?reject(Error('"'Browser exited '+(signal||code)+': '+stderr)):resolve(stdout));\");p.write_text(s)
+PY
+node checks/brief2-layout.cjs /tmp/spanish-brief2-check
+node checks/self-check.cjs
+node --check sw.js
+node --check checks/brief2-layout.cjs
+python3 -m json.tool vocab.json > /dev/null
+git diff --check
+git diff -- app.js index.html sw.js" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 185ms:
+Error: Browser exited SIGABRT: 
+    at ChildProcess.<anonymous> (/Users/jacobgaryfales/Documents/Spanish/spanish-app/checks/brief2-layout.cjs:54:256)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+PASS: six blocks, 30-minute timer, sleep/reload/pause recovery, no start chime, clipboard + fallback, 108 vocab entries, search/filters, 15 quiz answers/reset, drill catch-up, cache installation/isolation/offline fallback, manifest and local assets.
+diff --git a/app.js b/app.js
+index 97e7ac2..4a4b247 100644
+--- a/app.js
++++ b/app.js
+@@ -102,11 +102,21 @@ timer.tick();drill.tick();setInterval(()=>{timer.tick();drill.tick();},250);docu
+ let vocabulary=[],filter='';
+ const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ ['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
+-function renderVocab(){const term=normalize($('search').value.trim());const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));$('count').textContent=`${rows.length} de ${vocabulary.length} entradas`;$('vocab').replaceChildren();
+- const head=document.createElement('div');head.className='vocab-row vocab-head';head.innerHTML=filter==='Correcciones'?'<span>Dije → Mejor</span>':'<span>Español / Dije</span><span>Inglés / Mejor</span>';$('vocab').append(head);
+- rows.forEach(v=>{const row=document.createElement('div');row.className='vocab-row'+(v.grupo==='Correcciones'?' correction':'');const es=document.createElement('span'),en=document.createElement('span');es.textContent=v.grupo==='Correcciones'?'Dije: '+v.es:v.es;en.textContent=v.grupo==='Correcciones'?'→ Mejor: '+v.en:v.en;row.append(es,en);$('vocab').append(row);});if(!rows.length)$('count').textContent+=' · No hay coincidencias.';
++function renderVocab(){
++ const term=normalize($('search').value.trim());
++ const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));
++ $('count').textContent=rows.length?'': 'No hay coincidencias.';
++ $('count').hidden=rows.length>0;
++ $('vocab-groups').replaceChildren();
++ for(let i=0;i<rows.length;i+=5){
++  const group=rows.slice(i,i+5),card=document.createElement('details'),title=document.createElement('summary');
++  card.className='vocab-group';card.open=i===0;
++  title.textContent=`${i/5+1} · ${group[0].es} a ${group[group.length-1].es}`;card.append(title);
++  group.forEach(v=>{const row=document.createElement('p');row.className='vocab-row';row.textContent=v.grupo==='Correcciones'?`Dije: ${v.es} → Mejor: ${v.en}`:`${v.es} — ${v.en}`;card.append(row);});
++  $('vocab-groups').append(card);
++ }
+ }
+-async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else $('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';$('retry-vocab').hidden=false;}}
++async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else {$('count').hidden=false;$('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';}$('retry-vocab').hidden=false;}}
+ $('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();
+ const connectorGroups=[
+  ['Preposiciones','Relacionan una palabra con otra. Úsalas para decir lugar, tiempo, causa o destino.',[
+@@ -116,7 +126,7 @@ const connectorGroups=[
+  ['Conjunciones','Unen palabras o ideas. Úsalas para sumar, elegir, explicar o mostrar un contraste.',[
+  ['y / e','Suma ideas. Usa e antes del sonido i (i-/hi-); no ante el sonido de hielo.','Estudiamos español e historia.'],['o / u','Da opciones. Usa u antes del sonido o (o-/ho-).','¿Mañana u hoy?'],['pero','Contraste entre dos ideas.','Es difícil, pero puedo hacerlo.'],['sino','Corrige una idea después de un no.','No es un testamento, sino un poder.'],['porque','Explica una causa.','Oro porque necesito ayuda.'],['aunque','Algo no impide la otra acción.','Voy aunque llueva.'],['entonces','Resultado o siguiente momento.','Terminó la reunión; entonces salimos.'],['así que','Resultado de lo que acabas de decir.','Ya leí el contrato, así que puedo firmar.'],['mientras','Dos acciones al mismo tiempo.','Escucho mientras camino.'],['cuando','El momento de una acción.','Te llamo cuando llegue.'],['si','Una condición; sin tilde.','Si tienes dudas, pregunta.']]]
+ ];
+-connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('connectors').append(section);});
++connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('conectores').append(section);});
+ const questions=[
+  ['Voy ___ la iglesia.',['a','de','sin'],'a','A indica el destino.'],
+  ['Este regalo es ___ mi madre.',['por','para','contra'],'para','Para indica para quién es algo.'],
+diff --git a/index.html b/index.html
+index 838728c..d131769 100644
+--- a/index.html
++++ b/index.html
+@@ -17,7 +17,13 @@
+ </head>
+ <body>
+ <main>
+-<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p></header>
++<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p><nav class="top-links" aria-label="Recursos">
++<a href="https://claude.ai/artifact/8tWg6scQZyBo9GVpufW8xV" target="_blank" rel="noopener">📘 Reglas del Español</a>
++<a href="#vocab">🗂️ Vocabulario</a>
++<a href="#conectores">🧩 Conectores</a>
++<a class="chat" href="https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7" target="_blank" rel="noopener">🗣️ Abrir chat de voz <span aria-hidden="true">↗</span></a>
++</nav><p class="muted small">Copia el texto, pégalo en el chat y activa la voz.</p></header>
++<div class="practice-layout"><section class="practice" aria-label="Práctica diaria">
+ <section class="timer panel" aria-label="Temporizador">
+ <div class="timer-heading"><span id="current">Oración</span><span class="badge">30 MIN</span></div>
+ <div id="clock" class="clock" role="timer" aria-label="Tiempo restante">1:00</div>
+@@ -27,16 +33,13 @@
+ <p id="timer-status" class="muted small" role="status">Copia el texto de Oración y empieza.</p>
+ </section>
+ <div id="blocks" class="stack"></div>
+-<a class="chat" href="https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7" target="_blank" rel="noopener">Abrir chat de voz <span aria-hidden="true">↗</span></a>
+-<p class="muted small chat-help">Copia el texto, pégalo en el chat y activa la voz.</p>
+-<section id="reference" class="reference"><p class="eyebrow">A MANO, CUANDO LO NECESITES</p><h2>Referencia</h2>
+-<section class="panel"><h3>Mi vocabulario</h3><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status">Cargando vocabulario…</p><div id="vocab"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
+-<section id="connectors" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
+-<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
+-</section>
+-<details class="panel more"><summary>Más <span class="muted">Consejos y otras formas de practicar</span></summary><div id="tips" class="stack"></div>
++</section><section class="more" aria-labelledby="more-title"><h2 id="more-title">Más práctica y consejos</h2><div id="tips" class="stack"></div>
+ <article class="tip"><h3>Repite: 4, 3, 2</h3><p>Los miércoles, en lugar del Debate: elige una historia, como tu mejor día de la misión. Cuéntala en 4 minutos, luego en 3 y al final en 2. No quites partes: dilo con más fluidez.</p><p id="drill-round">Vuelta 1 de 3 · la misma historia</p><div id="drill-clock" class="drill-clock" role="timer">4:00</div><div class="timer-actions"><button id="drill-start">Empezar</button><button id="drill-reset" class="secondary">Reiniciar</button></div></article>
+-</details>
++<section id="conectores" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
++<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
++</section></div>
++<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p><div id="vocab-groups"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
++
+ <footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
+ <noscript>Activa JavaScript para usar el temporizador, los textos y la referencia.</noscript>
+ </main>
+diff --git a/sw.js b/sw.js
+index 18a97d8..902d565 100644
+--- a/sw.js
++++ b/sw.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ // Cambia esta versión cuando cambies el HTML, CSS, JS o los iconos.
+-const CACHE = 'spanish-v2';
++const CACHE = 'spanish-v3';
+ const ASSETS = ['./','index.html','app.css','app.js','manifest.webmanifest','vocab.json','icons/icon-180.png','icons/icon-192.png','icons/icon-512.png'];
+ self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
+ self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('spanish-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from html.parser import HTMLParser
+from pathlib import Path
+import re
+class Check(HTMLParser):
+ def __init__(self): super().__init__();self.ids=set();self.stack=[];self.anchors=[]
+ def handle_starttag(self,tag,attrs):
+  attrs=dict(attrs)
+  if 'id' in attrs:
+   assert attrs['id'] not in self.ids,attrs['id'];self.ids.add(attrs['id'])
+  if tag=='a':self.anchors.append(attrs)
+  if tag not in {'meta','link','br','input','img','hr','source','area','base','embed','param','track','wbr'}:self.stack.append(tag)
+ def handle_endtag(self,tag):
+  assert self.stack and self.stack.pop()==tag,tag
+p=Check();p.feed(Path('index.html').read_text());assert not p.stack
+for a in p.anchors:
+ if a.get('href','').startswith('#'):assert a['href'][1:] in p.ids
+js=Path('app.js').read_text()
+for name in re.findall(r\"\\"'$'"\\('(["'^'"']+)'\\)\",js):assert name in p.ids,name
+assert Path('index.html').read_text().count('id=\"vocab\"')==1
+assert 'spanish-v3' in Path('sw.js').read_text()
+print('PASS: HTML nesting, unique IDs, all JS element references, anchor targets, cache version.')
+PY
+git diff --check
+git status --short" in /Users/jacobgaryfales/Documents/Spanish/spanish-app
+ succeeded in 0ms:
+PASS: HTML nesting, unique IDs, all JS element references, anchor targets, cache version.
+ M app.css
+ M app.js
+ M index.html
+ M sw.js
+?? BRIEF2.md
+?? "Icon\r"
+?? codex_log2.txt
+?? "icons/Icon\r"
+
+codex
+Applied BRIEF2.md: top links, responsive practice/tips columns, highlighted open tips, bottom vocabulary groups of five, and cache version bump. Nothing deployed.
+
+Functional, HTML, syntax, and offline-cache checks pass. Visual checks at 390px and 1200px remain unverified: browsers abort in this sandbox. Added a repeatable check at `checks/brief2-layout.cjs`.
+tokens used
+45,740
+Applied BRIEF2.md: top links, responsive practice/tips columns, highlighted open tips, bottom vocabulary groups of five, and cache version bump. Nothing deployed.
+
+Functional, HTML, syntax, and offline-cache checks pass. Visual checks at 390px and 1200px remain unverified: browsers abort in this sandbox. Added a repeatable check at `checks/brief2-layout.cjs`.

@@ -102,11 +102,21 @@ timer.tick();drill.tick();setInterval(()=>{timer.tick();drill.tick();},250);docu
 let vocabulary=[],filter='';
 const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 ['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
-function renderVocab(){const term=normalize($('search').value.trim());const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));$('count').textContent=`${rows.length} de ${vocabulary.length} entradas`;$('vocab').replaceChildren();
- const head=document.createElement('div');head.className='vocab-row vocab-head';head.innerHTML=filter==='Correcciones'?'<span>Dije → Mejor</span>':'<span>Español / Dije</span><span>Inglés / Mejor</span>';$('vocab').append(head);
- rows.forEach(v=>{const row=document.createElement('div');row.className='vocab-row'+(v.grupo==='Correcciones'?' correction':'');const es=document.createElement('span'),en=document.createElement('span');es.textContent=v.grupo==='Correcciones'?'Dije: '+v.es:v.es;en.textContent=v.grupo==='Correcciones'?'→ Mejor: '+v.en:v.en;row.append(es,en);$('vocab').append(row);});if(!rows.length)$('count').textContent+=' · No hay coincidencias.';
+function renderVocab(){
+ const term=normalize($('search').value.trim());
+ const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));
+ $('count').textContent=rows.length?'': 'No hay coincidencias.';
+ $('count').hidden=rows.length>0;
+ $('vocab-groups').replaceChildren();
+ for(let i=0;i<rows.length;i+=5){
+  const group=rows.slice(i,i+5),card=document.createElement('details'),title=document.createElement('summary');
+  card.className='vocab-group';card.open=i===0;
+  title.textContent=`${i/5+1} · ${group[0].es} a ${group[group.length-1].es}`;card.append(title);
+  group.forEach(v=>{const row=document.createElement('p');row.className='vocab-row';row.textContent=v.grupo==='Correcciones'?`Dije: ${v.es} → Mejor: ${v.en}`:`${v.es} — ${v.en}`;card.append(row);});
+  $('vocab-groups').append(card);
+ }
 }
-async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else $('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';$('retry-vocab').hidden=false;}}
+async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else {$('count').hidden=false;$('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';}$('retry-vocab').hidden=false;}}
 $('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();
 const connectorGroups=[
  ['Preposiciones','Relacionan una palabra con otra. Úsalas para decir lugar, tiempo, causa o destino.',[
@@ -116,7 +126,7 @@ const connectorGroups=[
  ['Conjunciones','Unen palabras o ideas. Úsalas para sumar, elegir, explicar o mostrar un contraste.',[
  ['y / e','Suma ideas. Usa e antes del sonido i (i-/hi-); no ante el sonido de hielo.','Estudiamos español e historia.'],['o / u','Da opciones. Usa u antes del sonido o (o-/ho-).','¿Mañana u hoy?'],['pero','Contraste entre dos ideas.','Es difícil, pero puedo hacerlo.'],['sino','Corrige una idea después de un no.','No es un testamento, sino un poder.'],['porque','Explica una causa.','Oro porque necesito ayuda.'],['aunque','Algo no impide la otra acción.','Voy aunque llueva.'],['entonces','Resultado o siguiente momento.','Terminó la reunión; entonces salimos.'],['así que','Resultado de lo que acabas de decir.','Ya leí el contrato, así que puedo firmar.'],['mientras','Dos acciones al mismo tiempo.','Escucho mientras camino.'],['cuando','El momento de una acción.','Te llamo cuando llegue.'],['si','Una condición; sin tilde.','Si tienes dudas, pregunta.']]]
 ];
-connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('connectors').append(section);});
+connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('conectores').append(section);});
 const questions=[
  ['Voy ___ la iglesia.',['a','de','sin'],'a','A indica el destino.'],
  ['Este regalo es ___ mi madre.',['por','para','contra'],'para','Para indica para quién es algo.'],

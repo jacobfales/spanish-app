@@ -1,0 +1,708 @@
+<!doctype html><html lang="es"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Reglas del Español</title>
+<meta name="theme-color" content="#1a1a19">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Spanish">
+<meta name="description" content="Reglas del Español: diez reglas con dibujos, ejemplos y práctica.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+/* Layout: same as Spanish Midterm 2 Help. One column: rules cheat sheet on top, practice, then one color bar per rule with a picture first. */
+:root{
+  --bg:#f7f8f7; --card:#ffffff; --fg:#1d2321; --muted:#5b6662; --line:#dfe4e2;
+  --se:#c2410c; --ser:#1f6fb2; --por:#2e7d32; --pas:#7b4bb3; --sub:#b23b3b; --pro:#a8730a; --gus:#0e7c86; --gen:#c2185b; --ace:#56636e; --ver:#3b4a8c;
+  --t-se:#fbe9de; --t-ser:#e4eef8; --t-por:#e5f2e6; --t-pas:#efe8f7; --t-sub:#f7e6e6; --t-pro:#f8efd9; --t-gus:#dff2f3; --t-gen:#f9e3ee; --t-ace:#eceff1; --t-ver:#e6e9f5;
+  --ok:#2e7d32; --ok-bg:#e3f3e4; --bad:#c62828; --bad-bg:#fbe5e5;
+  --display:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151918; --card:#1e2422; --fg:#e8ecea; --muted:#a3aeaa; --line:#323b38;
+  --se:#f0915a; --ser:#6aa8e0; --por:#6cc070; --pas:#b597e0; --sub:#e07a7a; --pro:#e0b44a; --gus:#5cc8d0; --gen:#f07aae; --ace:#a7b4bf; --ver:#8f9fe0;
+  --t-se:#33221a; --t-ser:#1b2836; --t-por:#1c2d1d; --t-pas:#272035; --t-sub:#311d1d; --t-pro:#2f2818; --t-gus:#17292b; --t-gen:#321c27; --t-ace:#232a2f; --t-ver:#1e2235;
+  --ok:#7fd08a; --ok-bg:#1d3320; --bad:#f08a8a; --bad-bg:#3a1f1f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151918; --card:#1e2422; --fg:#e8ecea; --muted:#a3aeaa; --line:#323b38;
+  --se:#f0915a; --ser:#6aa8e0; --por:#6cc070; --pas:#b597e0; --sub:#e07a7a; --pro:#e0b44a; --gus:#5cc8d0; --gen:#f07aae; --ace:#a7b4bf; --ver:#8f9fe0;
+  --t-se:#33221a; --t-ser:#1b2836; --t-por:#1c2d1d; --t-pas:#272035; --t-sub:#311d1d; --t-pro:#2f2818; --t-gus:#17292b; --t-gen:#321c27; --t-ace:#232a2f; --t-ver:#1e2235;
+  --ok:#7fd08a; --ok-bg:#1d3320; --bad:#f08a8a; --bad-bg:#3a1f1f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:17px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 60px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+header h1{font:800 clamp(30px,6vw,46px)/1.05 var(--display);margin:0 0 6px;text-wrap:balance}
+header p{margin:0;color:var(--muted)}
+.navgroups{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.ng{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center}
+.ng>span{font:800 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+nav a{font:700 14px var(--display);text-decoration:none;color:var(--fg);border:2px solid var(--c);padding:5px 12px;border-radius:999px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+@media (max-width:520px){.ng{grid-template-columns:1fr;gap:4px}}
+section{display:flex;flex-direction:column;gap:20px;scroll-margin-top:12px}
+.bar{background:var(--c);color:#fff;font:800 22px/1.2 var(--display);letter-spacing:.02em;padding:12px 16px;border-radius:8px;text-transform:uppercase}
+.bar small{display:block;font:600 14px var(--body);letter-spacing:0;text-transform:none;opacity:.92}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .bar{color:#151918}}
+:root[data-theme="dark"] .bar{color:#151918}
+h3{font:800 19px/1.25 var(--display);margin:4px 0 0;color:var(--c);text-wrap:balance}
+figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.cap{font:800 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:560px){.vs{grid-template-columns:1fr}}
+.box{background:var(--tint);border:2px solid var(--c);border-radius:8px;padding:14px 16px;min-width:0}
+.box b.t{display:block;font:800 17px/1.25 var(--display);color:var(--c);margin-bottom:8px}
+.box ul{margin:0;padding-left:20px}
+.box li{margin:0 0 6px}
+.box li:last-child{margin-bottom:0}
+.ex{color:var(--muted);font-size:15px}
+.trick{background:var(--card);border:2px dashed var(--c);border-radius:8px;padding:12px 16px}
+.trick b{color:var(--c)}
+.bigidea{background:var(--tint);border:2px solid var(--c);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.bigidea p{margin:0;font-size:19px}
+.jobs{display:flex;flex-wrap:wrap;gap:8px}
+.jobs span{background:var(--card);border:2px solid var(--k);color:var(--fg);font:800 15px var(--display);padding:6px 12px;border-radius:999px}
+.path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+.path>li{position:relative;padding-bottom:22px}
+.path>li:not(:last-child)::after{content:"↓  si no, sigue";position:absolute;left:12px;bottom:2px;font:800 13px var(--display);color:var(--muted)}
+.pq{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:12px 12px 0 0;padding:12px 14px}
+.pn{width:42px;height:42px;border-radius:50%;background:var(--se);color:var(--card);font:800 22px/42px var(--display);text-align:center}
+.pq b{font:800 19px/1.3 var(--display);display:block}
+.pq small{color:var(--muted);font-weight:600}
+.pa{background:var(--tint);border:2px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:17px;border-left:8px solid var(--k)}
+.pa b{font:800 17px var(--display);color:var(--k)}
+.pa em{font-style:normal;color:var(--muted)}
+.pa.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-left-width:2px}
+.pa.split.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pa.split>div{background:var(--card);border-left:6px solid var(--k);border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.yes2{font:800 12px var(--display);letter-spacing:.06em;text-transform:uppercase;background:var(--k);color:var(--card);padding:2px 8px;border-radius:999px;align-self:flex-start}
+@media (max-width:620px){.pa.split,.pa.split.three{grid-template-columns:1fr}}
+.use dl{margin:0;padding:12px 14px;display:grid;grid-template-columns:92px 1fr;gap:6px 10px;font-size:15px}
+.use dt{font:800 12px/1.6 var(--display);letter-spacing:.05em;text-transform:uppercase;color:var(--u)}
+.use dd{margin:0;font-weight:600}
+.fix{display:flex;flex-direction:column;gap:6px}
+.fix div{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.ar2{font:800 20px var(--display);color:var(--muted)}
+@media (max-width:520px){.fix div{grid-template-columns:1fr}.ar2{display:none}}
+.more{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.more summary{cursor:pointer;font:800 15px var(--display);color:var(--c)}
+.more ul{margin:8px 0 0;padding-left:20px}
+/* ---- SE v3: textbook layout (council 10/26) ---- */
+#se h3{margin-top:12px}
+.f{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px}
+.t{font:700 16px/1 var(--display);font-style:normal;padding:7px 11px;border-radius:7px;border:1.5px solid var(--line);background:var(--card);color:var(--fg)}
+.t.se{background:var(--se);border-color:var(--se);color:#fff}
+.t.v{background:var(--t-ace);border-color:var(--ace)}
+.t.v b{color:var(--se)}
+.t.thing{background:var(--t-por);border-color:var(--por);color:var(--por)}
+.t.obj{background:var(--t-ser);border-color:var(--ser);color:var(--ser)}
+.t.none{border-style:dashed;color:var(--muted);font-weight:600}
+.f.sm .t{font-size:13px;padding:4px 8px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .t.se{color:#151918}}
+:root[data-theme="dark"] .t.se{color:#151918}
+.gold{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--se);border-radius:14px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.05)}
+.gold-h{display:flex;flex-direction:column;gap:6px}
+.gold-h h3{margin:0;font-size:24px;color:var(--fg)}
+.gold-h h3 u{text-decoration-color:var(--se);text-decoration-thickness:3px;text-underline-offset:4px}
+.badge{align-self:flex-start;font:800 11px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--se);background:var(--t-se);padding:4px 10px;border-radius:999px}
+.gold-q{margin:0;font:700 22px/1.3 var(--display);text-align:center;padding:12px;border-radius:10px;background:var(--bg)}
+.gold-q b{color:var(--se)}
+.fork{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;position:relative}
+@media (max-width:620px){.fork{grid-template-columns:1fr}}
+.branch{border:1.5px solid var(--k);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.bh{background:var(--kt);padding:10px 14px;display:flex;flex-direction:column;gap:4px;border-bottom:1.5px solid var(--k)}
+.bh b{font:800 21px var(--display);color:var(--k)}
+.ans{align-self:flex-start;font:800 11px var(--display);letter-spacing:.08em;text-transform:uppercase;background:var(--k);color:var(--card);padding:3px 9px;border-radius:999px}
+.rule{margin:12px 14px 0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-weight:600}
+.demo{display:flex;flex-direction:column;gap:8px;padding:12px 14px}
+.branch .en{margin:0 14px 12px;color:var(--muted);font-size:15px}
+.note{background:var(--bg);border-radius:10px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.calm{margin:0;font-size:17px;padding-top:4px;border-top:1px solid var(--line)}
+.tbl{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.tbl>div{display:grid;grid-template-columns:34px 140px minmax(0,1.2fr) minmax(0,1fr);gap:12px;align-items:center;padding:10px 14px;border-top:1px solid var(--line)}
+.tbl>div:first-child{border-top:0}
+.tbl .th{background:var(--bg);font:800 11px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-block:8px}
+.tbl>div>i{font:800 14px/26px var(--display);font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--k);color:var(--card);text-align:center}
+.tbl>div>b{font:800 16px var(--display);color:var(--k)}
+.exl{font-weight:700;display:flex;flex-direction:column}
+.exl small{font-weight:400;color:var(--muted);font-size:14px}
+@media (max-width:620px){.tbl>div{grid-template-columns:30px 1fr}.tbl .th{display:none}.tbl .f,.tbl .exl{grid-column:2}}
+.flow2{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.flow2 li{display:grid;grid-template-columns:minmax(0,1fr) 44px 230px;gap:10px;align-items:center;position:relative;padding-bottom:26px}
+.flow2 li:not(.last)::after{content:"no ↓";position:absolute;left:18px;bottom:4px;font:800 12px var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.flow2 .fq2{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;font-weight:600;display:flex;gap:10px;align-items:center}
+.flow2 .fq2 i{flex:none;font:800 14px/26px var(--display);font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);text-align:center}
+.go{font:800 13px var(--display);color:var(--ok);text-align:center;text-transform:uppercase}
+.res{justify-self:start;font:800 16px var(--display);background:var(--card);border:2px solid var(--k);color:var(--k);border-radius:999px;padding:7px 14px;white-space:nowrap}
+.res.duo{display:flex;flex-direction:column;gap:6px;border:0;padding:0;background:none;border-radius:0}
+.res.duo>span{border:2px solid var(--k);border-radius:999px;padding:5px 12px;background:var(--card)}
+.res small{font:600 12px var(--body);color:var(--muted)}
+@media (max-width:620px){.flow2 li{grid-template-columns:1fr}.go{text-align:left}.res{justify-self:start}}
+.uses2{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.use2{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--u);border-radius:12px;display:flex;flex-direction:column;gap:12px;padding:14px 16px 16px;min-width:0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.use2 header{display:flex;gap:10px;align-items:center}
+.use2 header i{flex:none;font:800 16px/32px var(--display);font-style:normal;width:32px;height:32px;border-radius:50%;background:var(--u);color:var(--card);text-align:center}
+.use2 header b{display:block;font:800 19px/1.15 var(--display);color:var(--u)}
+.use2 header small{color:var(--muted);font-weight:600}
+.use2 .scene{border-radius:10px;min-height:84px;padding:10px}
+.use2 .ar{color:var(--u)}
+.exs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.exs li{border-left:3px solid var(--u);padding-left:10px;display:flex;flex-direction:column}
+.exs b{font-weight:700}
+.exs small{color:var(--muted);font-size:14px}
+.use2:last-child{grid-column:1/-1}
+.clue{margin:auto 0 0;font-size:15px;background:var(--bg);border-radius:8px;padding:8px 10px}
+.clue span{font:800 11px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--u);margin-right:8px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.tile{background:var(--card);border:2px solid var(--c);border-top-width:8px;border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile b{font:800 18px var(--display);color:var(--c)}
+.tile span{font-weight:600}
+.tile small{color:var(--muted)}
+.tile ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.tile li{font-weight:600}
+.tile.big{grid-column:1/-1;background:var(--tint)}
+.serows{display:flex;flex-direction:column;gap:6px}
+.serows div{display:grid;grid-template-columns:30px minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:center;background:var(--card);border-left:6px solid var(--k);border-radius:6px;padding:7px 10px}
+.serows i{font:800 15px/26px var(--display);font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--k);color:var(--card);text-align:center}
+.serows span{font-weight:600}
+.serows em{font:800 16px var(--display);font-style:normal;color:var(--k)}
+.serows small{color:var(--muted);font-size:15px}
+@media (max-width:620px){.serows div{grid-template-columns:30px 1fr}.serows em,.serows small{grid-column:2}}
+.flow{display:flex;flex-direction:column}
+.fq{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;background:var(--tint);border-radius:10px;padding:12px}
+.fq .n{width:40px;height:40px;border-radius:50%;background:var(--c);color:var(--bg);font:800 20px/40px var(--display);text-align:center}
+.fq b{font:800 18px var(--display)}
+.fyes{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+.pill{display:inline-block;font:800 13px var(--display);padding:4px 10px;border-radius:999px;color:#fff;background:var(--p);white-space:nowrap}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pill{color:#151918}}
+:root[data-theme="dark"] .pill{color:#151918}
+.fno{font:800 14px var(--display);color:var(--muted);padding:5px 0 5px 22px}
+@media (max-width:620px){.fq{grid-template-columns:44px 1fr}.fyes{grid-column:1/-1;align-items:flex-start}}
+.uses{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.use{background:var(--card);border:2px solid var(--u);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.use h4{margin:0;background:var(--u);color:#fff;font:800 16px var(--display);padding:8px 12px;text-transform:uppercase;letter-spacing:.02em}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .use h4{color:#151918}}
+:root[data-theme="dark"] .use h4{color:#151918}
+.scene{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;padding:14px 10px;background:var(--bg);min-height:96px}
+.who{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:54px}
+.who .e{font-size:32px;line-height:1}
+.who small{font:800 12px var(--display);color:var(--u);text-align:center}
+.ar{font:800 26px var(--display);color:var(--u)}
+.brk{flex-basis:100%;height:0}
+.sign{background:#fff7d6;color:#3b2f00;border:3px solid #7a5b00;border-radius:6px;padding:6px 10px;font:800 14px var(--display);letter-spacing:.05em;transform:rotate(-2deg)}
+.use .txt{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.use .txt b{font:800 16px var(--display)}
+.use .txt ul{margin:2px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:3px;font-size:15px}
+.no{text-decoration:line-through;color:var(--bad);font-weight:800}
+.yes{color:var(--ok);font-weight:800}
+.lego{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end;justify-content:center;padding-top:8px}
+.brick{display:flex;flex-direction:column;align-items:center;gap:4px}
+.brick span.p{font:800 22px var(--display);color:#fff;background:var(--b);padding:8px 14px;border-radius:6px;position:relative;box-shadow:inset 0 -5px 0 rgba(0,0,0,.18)}
+.brick span.p::before,.brick span.p::after{content:"";position:absolute;top:-7px;width:12px;height:7px;background:var(--b);border-radius:3px 3px 0 0}
+.brick span.p::before{left:10px}.brick span.p::after{right:10px}
+.brick small{font:800 12px var(--display);color:var(--muted);text-align:center;line-height:1.2}
+.eq{font:800 26px var(--display);color:var(--muted);align-self:center}
+.arrows{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;text-align:center}
+.arrows .side{background:var(--tint);border:2px solid var(--k);border-radius:10px;padding:12px;min-width:0}
+.arrows .side b{display:block;font:800 26px var(--display);color:var(--k)}
+.arrows .mid{font:800 16px var(--display);background:var(--fg);color:var(--bg);border-radius:10px;padding:12px}
+@media (max-width:560px){.arrows{grid-template-columns:1fr}}
+.acr{display:flex;flex-direction:column;gap:4px}
+.acr div{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:8px;background:var(--card);border-radius:6px;padding:4px 8px}
+.acr div b{font:800 22px var(--display);color:var(--c)}
+.weirdo{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.weirdo div{background:var(--tint);border:2px solid var(--c);border-radius:10px;padding:8px 4px;text-align:center}
+.weirdo b{display:block;font:800 30px var(--display);color:var(--c)}
+.weirdo small{display:block;font-size:13px;line-height:1.25;color:var(--muted);font-weight:600}
+@media (max-width:560px){.weirdo{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.syl{display:flex;flex-direction:column;gap:10px}
+.syl .row{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center}
+.syl .row>b{font:800 17px var(--display)}
+.blocks{display:flex;gap:5px;flex-wrap:wrap}
+.blocks span{font:800 20px var(--display);padding:6px 12px;border-radius:6px;background:var(--tint);border:2px solid var(--line)}
+.blocks span.st{background:var(--c);border-color:var(--c);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .blocks span.st{color:#151918}}
+:root[data-theme="dark"] .blocks span.st{color:#151918}
+.tl svg{width:100%;height:auto;display:block}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center}
+.step{background:var(--tint);border:2px solid var(--c);border-radius:8px;padding:6px 10px;text-align:center;font-weight:700}
+.step .e{display:block;font-size:28px}
+.to{color:var(--c);font:800 22px var(--display)}
+.test{background:var(--card);border:2px solid var(--c);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.pbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:700 14px var(--display);background:var(--card);color:var(--fg);border:2px solid var(--k);padding:6px 12px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--k);color:var(--bg)}
+.score{font:800 16px var(--display);color:var(--c);margin-left:auto;font-variant-numeric:tabular-nums}
+.qwrap{display:flex;flex-direction:column;gap:12px}
+.q{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--k);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.q .kind{font:800 12px var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--k)}
+.q .stem{font-weight:600;font-size:18px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:600 16px var(--body);background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.opt:hover{border-color:var(--k)}
+.opt.right{background:var(--ok-bg);border-color:var(--ok)}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.opt:disabled{cursor:default}
+.fb{border-radius:6px;padding:8px 12px;font-size:16px}
+.fb.ok{background:var(--ok-bg);border:1px solid var(--ok)}
+.fb.no{background:var(--bad-bg);border:1px solid var(--bad)}
+.btn{font:700 15px var(--display);background:transparent;color:var(--c);border:2px solid var(--c);border-radius:8px;padding:8px 14px;cursor:pointer}
+.tips{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px}
+.tips b{font-family:var(--display)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+<style>
+/* App navigation; the original grammar content remains below. */
+.app-bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;gap:16px;max-width:860px;margin:0 auto 24px;padding:12px 0;background:var(--bg);border-bottom:1px solid var(--line);font:700 15px/1.4 var(--display)}
+.app-bar a{color:var(--fg);text-decoration:none;white-space:nowrap}
+.app-bar span{margin-left:auto;text-align:right}
+section{scroll-margin-top:80px}
+</style>
+</head><body>
+<div class="app-bar"><a href="index.html">← Práctica</a><span>Reglas del Español</span></div>
+<div class="wrap">
+<header>
+  <h1>Reglas del Español</h1>
+  <p>Las reglas grandes en una página. Arriba: todas las reglas. Después: cada regla con su dibujo y ejemplos. Al final: la práctica.</p>
+  <div class="navgroups">
+    <div class="ng"><span>Empieza aquí</span><nav><a href="#reglas" style="--c:var(--fg)">Todas las reglas</a></nav></div>
+    <div class="ng"><span>SE primero</span><nav><a href="#se" style="--c:var(--se)">1. Los 7 SE</a></nav></div>
+    <div class="ng"><span>Gramática</span><nav><a href="#serestar" style="--c:var(--ser)">2. Ser / estar</a><a href="#porpara" style="--c:var(--por)">3. Por / para</a><a href="#pasado" style="--c:var(--pas)">4. Pasado</a><a href="#subj" style="--c:var(--sub)">5. Subjuntivo</a><a href="#pron" style="--c:var(--pro)">6. Lo / le</a><a href="#gustar" style="--c:var(--gus)">7. Gustar</a><a href="#genero" style="--c:var(--gen)">8. Género</a><a href="#acentos" style="--c:var(--ace)">9. Acentos</a></nav></div>
+    <div class="ng"><span>Al final</span><nav><a href="#verguenza" style="--c:var(--ver)">10. Sin vergüenza</a><a href="#practica" style="--c:var(--ver)">Práctica</a></nav></div>
+  </div>
+</header>
+
+<section id="reglas" style="--c:var(--fg)">
+  <div class="bar">Todas las reglas<small>Una línea por regla. Toca una para ver el dibujo y los ejemplos.</small></div>
+  <div class="tiles">
+    <a class="tile big" href="#se" style="--c:var(--se);--tint:var(--t-se)"><b>1. SE · revisa en este orden</b>
+      <div class="serows">
+        <div style="--k:var(--ser)"><i>1</i><span>se + <b>lo / la</b></span><em>Le disfrazado</em><small>Se lo di</small></div>
+        <div style="--k:var(--sub)"><i>2</i><span>se + <b>me / te / le</b>, sin querer</span><em>Accidental</em><small>Se me cayó</small></div>
+        <div style="--k:var(--por)"><i>3</i><span>"la gente" + <b>una cosa</b>; el verbo va con la cosa</span><em>Pasiva</em><small>Se venden casas</small></div>
+        <div style="--k:var(--pro)"><i>4</i><span>"la gente", <b>sin cosa</b>; verbo siempre singular</span><em>Impersonal</em><small>Se vive bien</small></div>
+        <div style="--k:var(--gus)"><i>5</i><span>a <b>sí mismo</b></span><em>Reflexivo</em><small>Se lava</small></div>
+        <div style="--k:var(--pas)"><i>6</i><span><b>el uno al otro</b></span><em>Recíproco</em><small>Se abrazan</small></div>
+        <div style="--k:var(--gen)"><i>7</i><span>el verbo <b>cambia de sentido</b></span><em>Verbo con se</em><small>Me voy</small></div>
+      </div></a>
+    <a class="tile" href="#serestar" style="--c:var(--ser)"><b>2. Ser / estar</b><ul><li>🪪 <b>SER</b> = lo que es (DOCTOR)</li><li>📍 <b>ESTAR</b> = cómo o dónde está (PLACE)</li><li><span class="ex">Soy abogado · Estoy cansado</span></li></ul></a>
+    <a class="tile" href="#porpara" style="--c:var(--por)"><b>3. Por / para</b><ul><li>⬅️ <b>POR</b> = la causa, el camino</li><li>➡️ <b>PARA</b> = la meta, el destino</li><li><span class="ex">Gracias por todo · Es para el viernes</span></li></ul></a>
+    <a class="tile" href="#pasado" style="--c:var(--pas)"><b>4. Pretérito / imperfecto</b><ul><li>📸 <b>Pretérito</b> = la foto, terminó</li><li>🎞️ <b>Imperfecto</b> = la película de fondo</li><li><span class="ex">Llovía cuando llegué</span></li></ul></a>
+    <a class="tile" href="#subj" style="--c:var(--sub)"><b>5. Subjuntivo</b><ul><li>💭 <b>WEIRDO</b> + que + otra persona</li><li>✅ Si estás seguro, no hay subjuntivo</li><li><span class="ex">Quiero que vengas · Creo que es</span></li></ul></a>
+    <a class="tile" href="#pron" style="--c:var(--pro)"><b>6. Lo / le</b><ul><li>📕 <b>LO</b> = la cosa</li><li>👩 <b>LE</b> = la persona que la recibe</li><li>🔄 le + lo = <b>se lo</b></li></ul></a>
+    <a class="tile" href="#gustar" style="--c:var(--gus)"><b>7. Gustar</b><ul><li>🌮 La <b>cosa</b> manda el verbo</li><li>1 cosa → <b>gusta</b> · 2+ → <b>gustan</b></li><li><span class="ex">Me gustan los tacos</span></li></ul></a>
+    <a class="tile" href="#genero" style="--c:var(--gen)"><b>8. Género</b><ul><li>♂️ <b>-ma</b> griega = el (el problema)</li><li>♀️ <b>-ción, -dad, -tud</b> = la</li><li>💧 el agua (a tónica) · la mano</li></ul></a>
+    <a class="tile" href="#acentos" style="--c:var(--ace)"><b>9. Acentos</b><ul><li>Aguda: tilde si termina en <b>N, S o vocal</b></li><li>Llana: tilde si <b>NO</b></li><li>Esdrújula: <b>siempre</b> (médico)</li></ul></a>
+  </div>
+</section>
+
+<section id="se" style="--c:var(--se);--tint:var(--t-se)">
+  <div class="bar">1. SE<small>Una palabra, 7 trabajos. Aquí está cada uno, sin complicarlo.</small></div>
+
+  <!-- ===== A. LA REGLA QUE MÁS IMPORTA ===== -->
+  <div class="gold">
+    <div class="gold-h"><span class="badge">La regla más importante</span><h3>Pasiva o impersonal: <u>una sola pregunta</u></h3></div>
+    <p class="gold-q">Después del verbo, <b>¿hay una COSA?</b></p>
+    <div class="fork">
+      <div class="branch" style="--k:var(--por);--kt:var(--t-por)">
+        <div class="bh"><span class="ans">SÍ, hay cosa</span><b>🏷️ Pasiva</b></div>
+        <ul class="rule">
+          <li>El verbo <b>copia</b> a la cosa</li>
+          <li>1 cosa → singular · 2+ → plural</li>
+        </ul>
+        <div class="demo">
+          <div><span class="f"><i class="t se">se</i><i class="t v">vend<b>e</b></i><i class="t thing">una casa</i></span></div>
+          <div><span class="f"><i class="t se">se</i><i class="t v">vend<b>en</b></i><i class="t thing">dos casas</i></span></div>
+        </div>
+        <p class="en">houses <b>are</b> sold</p>
+      </div>
+      <div class="branch" style="--k:var(--pro);--kt:var(--t-pro)">
+        <div class="bh"><span class="ans">NO hay cosa</span><b>👥 Impersonal</b></div>
+        <ul class="rule">
+          <li>El verbo va <b>siempre en singular</b></li>
+          <li>Significa "la gente" / "uno"</li>
+        </ul>
+        <div class="demo">
+          <div><span class="f"><i class="t se">se</i><i class="t v">viv<b>e</b></i><i class="t none">bien aquí</i></span></div>
+          <div><span class="f"><i class="t se">se</i><i class="t v">trabaj<b>a</b></i><i class="t none">mucho</i></span></div>
+        </div>
+        <p class="en">people live well here</p>
+      </div>
+    </div>
+    <div class="note"><span><b>Un solo caso raro:</b> una <b>persona con "a"</b> no cuenta como cosa, así que el verbo queda singular.</span>
+      <span class="f sm"><i class="t se">se</i><i class="t v">busc<b>a</b></i><i class="t none">a los niños</i></span></div>
+    <p class="calm">✅ Eso es todo. No necesitas saber el nombre técnico para hablar bien: <b>si hay cosa, copia; si no, singular.</b></p>
+  </div>
+
+  <!-- ===== B. LOS 7 DE UN VISTAZO ===== -->
+  <h3>Los 7 de un vistazo</h3>
+  <div class="tbl">
+    <div class="th"><span>#</span><span>Trabajo</span><span>Fórmula</span><span>Ejemplo</span></div>
+    <div style="--k:var(--ser)"><i>1</i><b>Le disfrazado</b><span class="f sm"><i class="t se">se</i><i class="t obj">lo / la</i></span><span class="exl">Se lo di.<small>I gave it to him.</small></span></div>
+    <div style="--k:var(--sub)"><i>2</i><b>Accidental</b><span class="f sm"><i class="t se">se</i><i class="t obj">me / te / le</i><i class="t v">verbo</i></span><span class="exl">Se me cayó.<small>I dropped it.</small></span></div>
+    <div style="--k:var(--por)"><i>3</i><b>Pasiva</b><span class="f sm"><i class="t se">se</i><i class="t v">verbo</i><i class="t thing">cosa</i></span><span class="exl">Se venden casas.<small>Houses are sold.</small></span></div>
+    <div style="--k:var(--pro)"><i>4</i><b>Impersonal</b><span class="f sm"><i class="t se">se</i><i class="t v">verbo singular</i></span><span class="exl">Se vive bien.<small>People live well.</small></span></div>
+    <div style="--k:var(--gus)"><i>5</i><b>Reflexivo</b><span class="f sm"><i class="t se">se</i><i class="t v">verbo</i><i class="t none">a sí mismo</i></span><span class="exl">Se lava.<small>He washes himself.</small></span></div>
+    <div style="--k:var(--pas)"><i>6</i><b>Recíproco</b><span class="f sm"><i class="t se">se</i><i class="t v">verbo</i><i class="t none">el uno al otro</i></span><span class="exl">Se abrazan.<small>They hug each other.</small></span></div>
+    <div style="--k:var(--gen)"><i>7</i><b>Verbo con se</b><span class="f sm"><i class="t se">se</i><i class="t v">verbo nuevo</i></span><span class="exl">Se fue.<small>He left.</small></span></div>
+  </div>
+
+  <!-- ===== C. ¿CUÁL ES? ===== -->
+  <h3>¿Cuál es? Sigue las flechas</h3>
+  <ol class="flow2">
+    <li style="--k:var(--ser)"><span class="fq2"><i>1</i><span>¿Sigue <b>lo / la</b>?</span></span><span class="go">Sí →</span><span class="res">🎭 Le disfrazado</span></li>
+    <li style="--k:var(--sub)"><span class="fq2"><i>2</i><span>¿Sigue <b>me / te / le</b> y fue <b>sin querer</b>?</span></span><span class="go">Sí →</span><span class="res">🙅 Accidental</span></li>
+    <li style="--k:var(--por)"><span class="fq2"><i>3</i><span>¿Significa <b>"la gente"</b>? → usa la pregunta de arriba</span></span><span class="go">Sí →</span><span class="res duo"><span>🏷️ Pasiva <small>hay cosa</small></span><span style="--k:var(--pro)">👥 Impersonal <small>no hay cosa</small></span></span></li>
+    <li style="--k:var(--gus)"><span class="fq2"><i>4</i><span>¿Tiene sentido <b>"a sí mismo"</b>?</span></span><span class="go">Sí →</span><span class="res">🪃 Reflexivo</span></li>
+    <li style="--k:var(--pas)"><span class="fq2"><i>5</i><span>¿Tiene sentido <b>"el uno al otro"</b>?</span></span><span class="go">Sí →</span><span class="res">🙌 Recíproco</span></li>
+    <li style="--k:var(--gen)" class="last"><span class="fq2"><i>6</i><span>¿Nada de lo anterior?</span></span><span class="go">→</span><span class="res">📖 Verbo con se</span></li>
+  </ol>
+
+  <!-- ===== D. CADA UNO ===== -->
+  <h3>Cada uno, paso a paso</h3>
+  <div class="uses2">
+    <article class="use2" style="--u:var(--ser)">
+      <header><i>1</i><div><b>Le disfrazado</b><small>le turns into se</small></div></header>
+      <div class="f"><i class="t obj">le</i><span class="ar">→</span><i class="t se">se</i><i class="t obj">lo / la</i></div>
+      <div class="scene"><span class="who"><span class="e">🙋‍♂️</span><small>yo</small></span><span class="ar">→</span><span class="who"><span class="e">📕</span><small>lo</small></span><span class="ar">→</span><span class="who"><span class="e">👩</span><small>le → se</small></span></div>
+      <ul class="exs"><li><b>Le di el libro → Se lo di.</b><small>I gave it to her.</small></li><li><b>Se la mandé.</b><small>I sent it to him.</small></li></ul>
+      <p class="clue"><span>Pista</span>ves <b>se + lo / la</b></p>
+    </article>
+    <article class="use2" style="--u:var(--sub)">
+      <header><i>2</i><div><b>Accidental</b><small>it happened to me</small></div></header>
+      <div class="f"><i class="t se">se</i><i class="t obj">me / te / le</i><i class="t v">verbo</i><i class="t thing">cosa</i></div>
+      <div class="scene"><span class="who"><span class="e">📱</span><small>el celular</small></span><span class="ar">↓</span><span class="who"><span class="e">💥</span><small>se cayó</small></span><span class="ar">+</span><span class="who"><span class="e">😩</span><small>a mí</small></span></div>
+      <ul class="exs"><li><b>Se me cayó el vaso.</b><small>I dropped the glass.</small></li><li><b>Se me olvidaron las llaves.</b><small>I forgot my keys.</small></li></ul>
+      <p class="clue"><span>Pista</span>fue <b>sin querer</b>; el verbo copia a la cosa</p>
+    </article>
+    <article class="use2" style="--u:var(--por)">
+      <header><i>3</i><div><b>Pasiva</b><small>is / are + -ed</small></div></header>
+      <div class="f"><i class="t se">se</i><i class="t v">verbo</i><i class="t thing">cosa</i></div>
+      <div class="scene"><span class="sign">SE VENDEN CASAS</span><span class="who"><span class="e">🏠🏠</span><small>2 casas → venden</small></span></div>
+      <ul class="exs"><li><b>Se venden casas.</b><small>Houses are sold.</small></li><li><b>Se habla español.</b><small>Spanish is spoken.</small></li></ul>
+      <p class="clue"><span>Pista</span><b>hay una cosa</b> → el verbo la copia</p>
+    </article>
+    <article class="use2" style="--u:var(--pro)">
+      <header><i>4</i><div><b>Impersonal</b><small>people / you / one</small></div></header>
+      <div class="f"><i class="t se">se</i><i class="t v">verbo singular</i></div>
+      <div class="scene"><span class="who"><span class="e">👥</span><small>la gente</small></span><span class="ar">→</span><span class="who"><span class="e">🏙️</span><small>vive bien</small></span></div>
+      <ul class="exs"><li><b>Se vive bien aquí.</b><small>People live well here.</small></li><li><b>¿Cómo se dice…?</b><small>How do you say…?</small></li></ul>
+      <p class="clue"><span>Pista</span><b>no hay cosa</b> → siempre singular</p>
+    </article>
+    <article class="use2" style="--u:var(--gus)">
+      <header><i>5</i><div><b>Reflexivo</b><small>himself / herself</small></div></header>
+      <div class="f"><i class="t se">se</i><i class="t v">verbo</i><i class="t none">a sí mismo</i></div>
+      <div class="scene"><span class="who"><span class="e">🧍‍♂️</span><small>él</small></span><span class="ar">↻</span><span class="who"><span class="e">🪞</span><small>a sí mismo</small></span></div>
+      <ul class="exs"><li><b>Se lava las manos.</b><small>He washes his hands.</small></li><li><b>Me levanto a las 7.</b><small>I get up at 7.</small></li></ul>
+      <p class="clue"><span>Pista</span>tiene sentido <b>"a sí mismo"</b></p>
+    </article>
+    <article class="use2" style="--u:var(--pas)">
+      <header><i>6</i><div><b>Recíproco</b><small>each other</small></div></header>
+      <div class="f"><i class="t se">se</i><i class="t v">verbo plural</i><i class="t none">el uno al otro</i></div>
+      <div class="scene"><span class="who"><span class="e">🧍‍♂️</span><small>Jacob</small></span><span class="ar">⇄</span><span class="who"><span class="e">🧍‍♀️</span><small>Sydney</small></span></div>
+      <ul class="exs"><li><b>Se abrazan.</b><small>They hug each other.</small></li><li><b>Nos escribimos.</b><small>We write each other.</small></li></ul>
+      <p class="clue"><span>Pista</span><b>2 o más</b> personas</p>
+    </article>
+    <article class="use2" style="--u:var(--gen)">
+      <header><i>7</i><div><b>Verbo con se</b><small>a new verb</small></div></header>
+      <div class="f"><i class="t v">ir</i><span class="ar">≠</span><i class="t v">ir<b>se</b></i></div>
+      <div class="scene"><span class="who"><span class="e">🚶‍♂️</span><small>ir = go</small></span><span class="ar">≠</span><span class="who"><span class="e">🚪</span><small>irse = leave</small></span></div>
+      <ul class="exs"><li><b>Me voy.</b><small>I am leaving.</small></li><li><b>Me dormí.</b><small>I fell asleep.</small></li></ul>
+      <p class="clue"><span>Pista</span>nada de lo anterior; apréndelo como <b>palabra nueva</b></p>
+    </article>
+  </div>
+
+  <!-- ===== E. ERRORES ===== -->
+  <h3>Errores comunes</h3>
+  <div class="fix">
+    <div><span class="no">le lo di</span><span class="ar2">→</span><span class="yes">se lo di</span></div>
+    <div><span class="no">se voy</span><span class="ar2">→</span><span class="yes">me voy</span></div>
+    <div><span class="no">se me caí las llaves</span><span class="ar2">→</span><span class="yes">se me cayeron las llaves</span></div>
+    <div><span class="no">se alquila casas</span><span class="ar2">→</span><span class="yes">se alquilan casas</span></div>
+    <div><span class="no">se buscan a los niños</span><span class="ar2">→</span><span class="yes">se busca a los niños</span></div>
+  </div>
+
+  <details class="more"><summary>Para aprender más (gratis)</summary><ul>
+    <li><a href="https://elon.io/grammar/spanish-spain/pronouns/uses-of-se" target="_blank" rel="noopener">Elon.io: todos los usos de se</a></li>
+    <li><a href="https://www.spanishdict.com/guide/impersonal-se-vs-passive-se" target="_blank" rel="noopener">SpanishDict: impersonal vs. passive se</a></li>
+    <li><a href="https://progress.lawlessspanish.com/revision/lessons/different-uses-of-se-in-spanish" target="_blank" rel="noopener">Lawless Spanish: different uses of se</a></li>
+  </ul></details>
+</section>
+
+<section id="serestar" style="--c:var(--ser);--tint:var(--t-ser)">
+  <div class="bar">2. Ser y estar<small>Lo que algo ES, o cómo y dónde ESTÁ</small></div>
+  <figure><div class="cap">DOCTOR y PLACE</div>
+    <div class="vs">
+      <div class="box"><b class="t">SER 🪪 = DOCTOR</b><div class="acr">
+        <div><b>D</b>Descripción · es alto</div><div><b>O</b>Ocupación · es abogado</div><div><b>C</b>Característica · es amable</div><div><b>T</b>Tiempo · son las tres</div><div><b>O</b>Origen · es de Utah</div><div><b>R</b>Relación · es mi esposa</div></div></div>
+      <div class="box" style="--c:var(--por);--tint:var(--t-por)"><b class="t">ESTAR 📍 = PLACE</b><div class="acr">
+        <div><b>P</b>Posición · está sentado</div><div><b>L</b>Lugar · está en Provo</div><div><b>A</b>Acción · está hablando</div><div><b>C</b>Condición · está cansado</div><div><b>E</b>Emoción · está feliz</div></div></div>
+    </div></figure>
+  <div class="vs">
+    <div class="box"><b class="t">Cambian de sentido</b><ul><li>ser listo = smart · estar listo = ready</li><li>ser aburrido = boring · estar aburrido = bored</li><li>ser malo = bad · estar malo = sick</li></ul></div>
+    <div class="box"><b class="t">La trampa</b><ul><li>Un evento usa SER aunque sea lugar</li><li>La fiesta <b>es</b> en mi casa</li><li>Pero: mi casa <b>está</b> en Provo</li></ul></div>
+  </div>
+  <div class="trick"><b>Truco:</b> "Cómo te sientes y dónde estás, siempre usas estar."</div>
+</section>
+
+<section id="porpara" style="--c:var(--por);--tint:var(--t-por)">
+  <div class="bar">3. Por y para<small>De dónde viene, o adónde va</small></div>
+  <figure><div class="cap">La flecha</div>
+    <div class="arrows">
+      <div class="side" style="--k:var(--sub);--tint:var(--t-sub)"><b>← POR</b>la causa, el camino</div>
+      <div class="mid">LA ACCIÓN</div>
+      <div class="side" style="--k:var(--por)"><b>PARA →</b>la meta, el destino</div>
+    </div></figure>
+  <div class="vs">
+    <div class="box" style="--c:var(--sub);--tint:var(--t-sub)"><b class="t">POR</b><ul><li>Razón: gracias <b>por</b> todo</li><li>Medio: <b>por</b> teléfono</li><li>Cambio: $20 <b>por</b> el libro</li><li>Tiempo: <b>por</b> dos horas</li><li>A través: caminé <b>por</b> el parque</li></ul></div>
+    <div class="box"><b class="t">PARA</b><ul><li>Meta: estudio <b>para</b> ser abogado</li><li>Fecha límite: <b>para</b> el viernes</li><li>Destino: salgo <b>para</b> Provo</li><li>Para quién: es <b>para</b> ti</li><li>Opinión: <b>para</b> mí, es fácil</li></ul></div>
+  </div>
+</section>
+
+<section id="pasado" style="--c:var(--pas);--tint:var(--t-pas)">
+  <div class="bar">4. Pretérito e imperfecto<small>La foto o la película</small></div>
+  <figure class="tl"><div class="cap">La línea del tiempo</div>
+    <svg viewBox="0 0 600 150" role="img" aria-label="El imperfecto es una banda larga de fondo; el pretérito es un punto dentro de ella">
+      <line x1="20" y1="95" x2="580" y2="95" stroke="var(--muted)" stroke-width="2"/>
+      <polygon points="580,95 570,89 570,101" fill="var(--muted)"/>
+      <rect x="60" y="78" width="420" height="34" rx="17" fill="var(--pas)" opacity=".3"/>
+      <text x="270" y="66" text-anchor="middle" fill="var(--pas)" font-family="Archivo,Arial,sans-serif" font-weight="800" font-size="16">IMPERFECTO · llovía (la película)</text>
+      <circle cx="330" cy="95" r="12" fill="var(--se)"/>
+      <text x="330" y="138" text-anchor="middle" fill="var(--se)" font-family="Archivo,Arial,sans-serif" font-weight="800" font-size="16">PRETÉRITO · llegué (la foto)</text>
+    </svg></figure>
+  <div class="vs">
+    <div class="box" style="--c:var(--se);--tint:var(--t-se)"><b class="t">Pretérito 📸</b><ul><li>Terminó, con principio o fin</li><li>ayer, una vez, de repente</li><li>Ayer <b>jugué</b> dos horas</li></ul></div>
+    <div class="box"><b class="t">Imperfecto 🎞️</b><ul><li>El fondo: lo que pasaba</li><li>siempre, cada día, de niño</li><li>Edad, hora, cómo era</li><li>De niño <b>jugaba</b> fútbol</li></ul></div>
+  </div>
+</section>
+
+<section id="subj" style="--c:var(--sub);--tint:var(--t-sub)">
+  <div class="bar">5. Subjuntivo<small>No es un hecho: es un deseo, una emoción o una duda</small></div>
+  <figure><div class="cap">WEIRDO + que + otra persona</div>
+    <div class="weirdo">
+      <div><b>W</b><small>Wishes<br>quiero que</small></div><div><b>E</b><small>Emoción<br>me alegra que</small></div><div><b>I</b><small>Impersonal<br>es importante que</small></div>
+      <div><b>R</b><small>Recomendar<br>te pido que</small></div><div><b>D</b><small>Duda<br>dudo que</small></div><div><b>O</b><small>Ojalá<br>ojalá que</small></div>
+    </div>
+    <div class="lego">
+      <div class="brick" style="--b:var(--sub)"><span class="p">Quiero</span><small>WEIRDO</small></div>
+      <div class="brick" style="--b:var(--ace)"><span class="p">que</span><small>QUE</small></div>
+      <div class="brick" style="--b:var(--ser)"><span class="p">tú</span><small>OTRA PERSONA</small></div>
+      <div class="brick" style="--b:var(--por)"><span class="p">vengas</span><small>SUBJUNTIVO</small></div>
+    </div></figure>
+  <div class="vs">
+    <div class="box"><b class="t">Sí subjuntivo</b><ul><li>Espero que <b>tengas</b> un buen día</li><li>Dudo que <b>sea</b> verdad</li><li>Cuando <b>llegues</b>, llámame (futuro)</li></ul></div>
+    <div class="box" style="--c:var(--por);--tint:var(--t-por)"><b class="t">No subjuntivo</b><ul><li>Misma persona: Quiero <b>ir</b></li><li>Estás seguro: Creo que <b>es</b> verdad</li><li>Hábito: Cuando <b>llego</b>, como</li></ul></div>
+  </div>
+</section>
+
+<section id="pron" style="--c:var(--pro);--tint:var(--t-pro)">
+  <div class="bar">6. Lo y le<small>Qué cosa, o a quién le llega</small></div>
+  <figure><div class="cap">Quién da · qué cosa · a quién</div>
+    <div class="lego">
+      <div class="brick" style="--b:var(--ace)"><span class="p">🙋‍♂️ Yo</span><small>QUIEN DA</small></div>
+      <div class="brick" style="--b:var(--pro)"><span class="p">📕 LO</span><small>LA COSA</small></div>
+      <div class="brick" style="--b:var(--pas)"><span class="p">👩 LE</span><small>LA PERSONA</small></div>
+    </div>
+    <div class="lego">
+      <div class="brick" style="--b:var(--pas)"><span class="p">le</span><small>A ANA</small></div><span class="eq">+</span>
+      <div class="brick" style="--b:var(--pro)"><span class="p">lo</span><small>EL LIBRO</small></div><span class="eq">=</span>
+      <div class="brick" style="--b:var(--se)"><span class="p">se lo</span><small>SE LO DI</small></div>
+    </div></figure>
+  <div class="vs">
+    <div class="box"><b class="t">LO / LA / LOS / LAS = la cosa</b><ul><li>Pregunta: ¿qué? ¿a quién veo, llamo?</li><li>Cambia: lo (m), la (f), los, las</li><li>Compré el carro → <b>Lo</b> compré</li><li>Veo a María → <b>La</b> veo</li></ul></div>
+    <div class="box" style="--c:var(--pas);--tint:var(--t-pas)"><b class="t">LE / LES = la persona que recibe</b><ul><li>Pregunta: ¿a quién le doy, digo, mando?</li><li>No cambia con hombre o mujer</li><li>Di el libro a Juan → <b>Le</b> di el libro</li><li>Escribí a mis papás → <b>Les</b> escribí</li></ul></div>
+  </div>
+  <div class="vs">
+    <div class="box"><b class="t">Verbos con lo / la</b><ul><li>ver, llamar, conocer, ayudar, buscar</li><li>¿Llamaste a tu mamá? Sí, <b>la</b> llamé</li></ul></div>
+    <div class="box" style="--c:var(--pas);--tint:var(--t-pas)"><b class="t">Verbos con le</b><ul><li>dar, decir, mandar, preguntar, pedir, explicar, gustar</li><li>¿Le dijiste la verdad? Sí, <b>se la</b> dije</li></ul></div>
+  </div>
+  <div class="trick"><b>Truco:</b> LO es la cosa en tus manos. LE es la persona que la recibe. Orden: persona primero, cosa después (me lo, te la, se los).</div>
+</section>
+
+<section id="gustar" style="--c:var(--gus);--tint:var(--t-gus)">
+  <div class="bar">7. Verbos como gustar<small>La cosa manda el verbo</small></div>
+  <figure><div class="cap">La cosa → el verbo → la persona</div>
+    <div class="lego">
+      <div class="brick" style="--b:var(--gus)"><span class="p">🌮🌮 los tacos</span><small>LA COSA (2)</small></div><span class="eq">→</span>
+      <div class="brick" style="--b:var(--sub)"><span class="p">gustan</span><small>PLURAL</small></div><span class="eq">→</span>
+      <div class="brick" style="--b:var(--ace)"><span class="p">me</span><small>A MÍ</small></div>
+    </div></figure>
+  <div class="vs">
+    <div class="box"><b class="t">Una cosa → gusta</b><ul><li>Me <b>gusta</b> el fútbol</li><li>Le <b>duele</b> la cabeza</li><li>Nos <b>falta</b> tiempo</li></ul></div>
+    <div class="box"><b class="t">Varias → gustan</b><ul><li>Me <b>gustan</b> los tacos</li><li>Le <b>duelen</b> los pies</li><li>Igual: encantar, importar, molestar, interesar</li></ul></div>
+  </div>
+</section>
+
+<section id="genero" style="--c:var(--gen);--tint:var(--t-gen)">
+  <div class="bar">8. Género<small>El, la y las trampas</small></div>
+  <figure><div class="cap">Las terminaciones mandan</div>
+    <div class="lego">
+      <div class="brick" style="--b:var(--ser)"><span class="p">-ma</span><small>EL<br>problema, tema</small></div>
+      <div class="brick" style="--b:var(--gen)"><span class="p">-ción</span><small>LA<br>canción</small></div>
+      <div class="brick" style="--b:var(--gen)"><span class="p">-dad</span><small>LA<br>verdad</small></div>
+      <div class="brick" style="--b:var(--gen)"><span class="p">-tud</span><small>LA<br>actitud</small></div>
+      <div class="brick" style="--b:var(--ser)"><span class="p">á-</span><small>EL agua<br>(a tónica)</small></div>
+    </div></figure>
+  <div class="vs">
+    <div class="box" style="--c:var(--ser);--tint:var(--t-ser)"><b class="t">EL ♂ (aunque termine en -a)</b><ul><li>el problema, el sistema, el idioma, el programa</li><li>el día, el mapa, el planeta</li><li>el agua, el alma, el águila</li></ul></div>
+    <div class="box"><b class="t">LA ♀ (aunque termine en -o)</b><ul><li>la mano, la foto, la moto, la radio</li><li>las aguas: en plural vuelve a "las"</li></ul></div>
+  </div>
+  <div class="trick"><b>Truco:</b> "-ma griega, masculina": el problema del sistema es el tema.</div>
+</section>
+
+<section id="acentos" style="--c:var(--ace);--tint:var(--t-ace)">
+  <div class="bar">9. Acentos<small>Dónde cae el golpe de voz y cuándo va la tilde</small></div>
+  <figure class="syl"><div class="cap">La sílaba fuerte</div>
+    <div class="row"><b>Aguda</b><div class="blocks"><span>can</span><span class="st">ción</span></div></div>
+    <div class="row"><b>Llana</b><div class="blocks"><span class="st">ár</span><span>bol</span></div></div>
+    <div class="row"><b>Esdrújula</b><div class="blocks"><span class="st">mé</span><span>di</span><span>co</span></div></div>
+  </figure>
+  <div class="vs">
+    <div class="box"><b class="t">La regla NSV</b><ul><li><b>Aguda:</b> tilde si termina en N, S o vocal (canción, café)</li><li><b>Llana:</b> tilde si NO termina en N, S o vocal (árbol, fácil)</li><li><b>Esdrújula:</b> siempre (médico, rápido)</li></ul></div>
+    <div class="box"><b class="t">Tilde que cambia el sentido</b><ul><li>tú / tu · él / el · sí / si</li><li>sé / se · más / mas · mí / mi</li><li>Preguntas: qué, cómo, dónde, cuándo</li></ul></div>
+  </div>
+</section>
+
+<section id="verguenza" style="--c:var(--ver);--tint:var(--t-ver)">
+  <div class="bar">10. Hablar sin vergüenza<small>Los mejores consejos</small></div>
+  <figure><div class="cap">El ciclo</div>
+    <div class="ladder">
+      <div class="step"><span class="e">😬</span>Vergüenza</div><span class="to">→</span>
+      <div class="step"><span class="e">🗣️</span>Hablo igual</div><span class="to">→</span>
+      <div class="step"><span class="e">🙂</span>Me entienden</div><span class="to">→</span>
+      <div class="step"><span class="e">💪</span>Menos miedo</div>
+    </div></figure>
+  <ol class="tips">
+    <li><b>A nadie le importan tus errores tanto como a ti.</b> Los nativos están contentos de que hables su idioma. Quedarte callado te frena más que un error.</li>
+    <li><b>Di al empezar: "Voy a cometer errores y está bien".</b> Le quitas la presión antes de hablar.</li>
+    <li><b>Ten frases de rescate:</b> "¿Cómo se dice...?", "No sé cómo decirlo, pero...", "O sea...", "Déjame pensar".</li>
+    <li><b>Grábate una vez a la semana.</b> Vas a oír que suenas mejor de lo que crees.</li>
+    <li><b>Conversaciones pequeñas todos los días:</b> llama a Emita, pide la comida en español, habla con los hispanos del barrio.</li>
+    <li><b>Acuérdate de tu misión.</b> Ya enseñaste el evangelio en español a cientos de personas. Estás desempolvando algo que ya sabes.</li>
+    <li><b>La meta es que te entiendan, no hablar perfecto.</b> Cada error es la prueba de que estás aprendiendo.</li>
+  </ol>
+  <div class="trick"><b>Recuerda:</b> la vergüenza te dice que te importa. Úsala para practicar más, no para hablar menos.</div>
+</section>
+
+<section id="practica" style="--c:var(--ver);--tint:var(--t-ver)">
+  <div class="bar">Práctica<small>Escoge un tema. Toca la respuesta y te dice por qué. "Mis errores" guarda las que fallaste.</small></div>
+  <div class="test">
+    <div class="pbar" role="group" aria-label="Tema de práctica" id="chips"></div>
+    <div class="pbar"><button class="btn" id="reset" type="button">Empezar de nuevo</button><span class="score" id="score">0 / 0</span></div>
+    <div class="qwrap" id="qs"></div>
+  </div>
+</section>
+</div>
+
+<script>
+const T=[['se','SE','var(--se)'],['ser','Ser / estar','var(--ser)'],['por','Por / para','var(--por)'],['pas','Pasado','var(--pas)'],['sub','Subjuntivo','var(--sub)'],['pro','Lo / le','var(--pro)'],['gus','Gustar','var(--gus)'],['gen','Género','var(--gen)'],['ace','Acentos','var(--ace)']];
+const SE7=['Le disfrazado','Reflexivo','Recíproco','Accidental','Impersonal','Pasiva','Verbo con se'];
+const Q=[
+ {t:'se',s:'Se lo expliqué al cliente ayer.',o:SE7,a:'Le disfrazado',w:'Viene "lo" después del se. Era "le lo", y se cambió a "se lo".'},
+ {t:'se',s:'Mi hermano se ducha por la noche.',o:SE7,a:'Reflexivo',w:'Se ducha a sí mismo.'},
+ {t:'se',s:'Mis papás se llaman todos los días.',o:SE7,a:'Recíproco',w:'Se llaman el uno al otro.'},
+ {t:'se',s:'Se me cayó el celular en la calle.',o:SE7,a:'Accidental',w:'Pasó sin querer, y "me" es la víctima.'},
+ {t:'se',s:'En Provo se come temprano.',o:SE7,a:'Impersonal',w:'La gente come temprano. No hay una cosa, verbo singular.'},
+ {t:'se',s:'Se buscan misioneros que hablen español.',o:SE7,a:'Pasiva',w:'Hay una cosa (misioneros) y el verbo va en plural con ella.'},
+ {t:'se',s:'Ya me voy, se hace tarde.',o:SE7,a:'Verbo con se',w:'Irse = to leave. El verbo cambia de sentido.'},
+ {t:'se',s:'Se la di a mi esposa.',o:SE7,a:'Le disfrazado',w:'Viene "la" después del se. Era "le la".'},
+ {t:'se',s:'Se nos acabó la leche.',o:SE7,a:'Accidental',w:'Sin querer. "Nos" son las víctimas.'},
+ {t:'se',s:'¿Cómo se escribe "abogado"?',o:SE7,a:'Impersonal',w:'Cualquier persona, en general.'},
+ {t:'se',s:'Se venden libros usados.',o:SE7,a:'Pasiva',w:'La cosa (libros) es plural y el verbo también.'},
+ {t:'se',s:'Me dormí durante la película.',o:SE7,a:'Verbo con se',w:'Dormirse = to fall asleep.'},
+ {t:'se',s:'Los dos abogados se saludaron.',o:SE7,a:'Recíproco',w:'Se saludaron el uno al otro.'},
+ {t:'se',s:'Ella se maquilla antes de salir.',o:SE7,a:'Reflexivo',w:'Se maquilla a sí misma.'},
+ {t:'se',s:'Se le olvidaron las llaves.',o:SE7,a:'Accidental',w:'Sin querer; el verbo va con las llaves (plural).'},
+ {t:'se',s:'No me acuerdo de su nombre.',o:SE7,a:'Verbo con se',w:'Acordarse = to remember. Sin se es "to agree".'},
+ {t:'se',s:'Se busca a los culpables.',o:SE7,a:'Impersonal',w:'Hay "a" + personas: es impersonal y el verbo queda singular.'},
+ {t:'se',s:'Se me cayeron las llaves.',o:SE7,a:'Accidental',w:'Sin querer. "Cayeron" va con las llaves (plural), no con "me".'},
+ {t:'se',s:'Se habla español aquí.',o:SE7,a:'Pasiva',w:'La cosa es "español" y el verbo va con ella (singular). Piensa en el letrero.'},
+ {t:'se',s:'¿Cuál está bien? "Ya ___ voy, adiós."',o:['se','me'],a:'me',w:'Irse cambia con la persona: me voy, te vas, se va.'},
+ {t:'se',s:'Se buscan actores para la obra.',o:SE7,a:'Pasiva',w:'Sin "a": actores es el sujeto y el verbo va en plural con ellos.'},
+ {t:'se',s:'Se habla de política en la cena.',o:SE7,a:'Impersonal',w:'"De" bloquea el sujeto: no hay cosa que mande el verbo.'},
+ {t:'se',s:'¿Cuál está bien? "Se ____ cuartos."',o:['alquila','alquilan'],a:'alquilan',w:'Pasiva: cuartos es plural, el verbo también.'},
+ {t:'se',s:'¿Cuál está bien? "Se ____ a los culpables."',o:['busca','buscan'],a:'busca',w:'Con "a" + persona es impersonal: siempre singular.'},
+ {t:'ser',s:'Mi esposa ____ de Utah.',o:['es','está'],a:'es',w:'Origen = DOCTOR = ser.'},
+ {t:'ser',s:'Hoy ____ muy cansado.',o:['soy','estoy'],a:'estoy',w:'Condición = PLACE = estar.'},
+ {t:'ser',s:'La reunión ____ en la capilla.',o:['es','está'],a:'es',w:'Un evento usa SER aunque hable de lugar.'},
+ {t:'ser',s:'¿Ya ____ listo para salir? (ready)',o:['eres','estás'],a:'estás',w:'Estar listo = ready. Ser listo = smart.'},
+ {t:'ser',s:'Mi papá ____ abogado.',o:['es','está'],a:'es',w:'Ocupación = ser.'},
+ {t:'ser',s:'Provo ____ en Utah.',o:['es','está'],a:'está',w:'Lugar de una cosa = estar.'},
+ {t:'por',s:'Gracias ____ la ayuda.',o:['por','para'],a:'por',w:'Razón, mira atrás: ← POR.'},
+ {t:'por',s:'Estudio ____ ser abogado.',o:['por','para'],a:'para',w:'Meta: PARA →.'},
+ {t:'por',s:'La tarea es ____ el viernes.',o:['por','para'],a:'para',w:'Fecha límite = para.'},
+ {t:'por',s:'Te llamo ____ teléfono.',o:['por','para'],a:'por',w:'Medio = por.'},
+ {t:'por',s:'Pagué $20 ____ el libro.',o:['por','para'],a:'por',w:'Intercambio = por.'},
+ {t:'por',s:'____ mí, el subjuntivo es lo más difícil.',o:['Por','Para'],a:'Para',w:'Opinión = para mí.'},
+ {t:'pas',s:'Cuando ____ niño, jugaba fútbol.',o:['fui','era'],a:'era',w:'Edad y fondo = imperfecto.'},
+ {t:'pas',s:'Ayer ____ a la biblioteca.',o:['fui','iba'],a:'fui',w:'Una vez, terminó = pretérito.'},
+ {t:'pas',s:'____ cuando llegué a casa.',o:['Llovió','Llovía'],a:'Llovía',w:'La escena de fondo = imperfecto; "llegué" interrumpe.'},
+ {t:'pas',s:'En la misión siempre ____ a las 6:30.',o:['me levanté','me levantaba'],a:'me levantaba',w:'Siempre = hábito = imperfecto.'},
+ {t:'pas',s:'De repente, el teléfono ____.',o:['sonó','sonaba'],a:'sonó',w:'De repente = pretérito.'},
+ {t:'sub',s:'Quiero que tú ____ conmigo.',o:['vienes','vengas'],a:'vengas',w:'W (wish) + que + otra persona.'},
+ {t:'sub',s:'Creo que ____ verdad.',o:['es','sea'],a:'es',w:'Creer = estás seguro = indicativo.'},
+ {t:'sub',s:'Dudo que ____ verdad.',o:['es','sea'],a:'sea',w:'D (duda) = subjuntivo.'},
+ {t:'sub',s:'Ojalá que mañana no ____.',o:['llueve','llueva'],a:'llueva',w:'O (ojalá) = subjuntivo.'},
+ {t:'sub',s:'Cuando ____ a Provo, llámame.',o:['llegas','llegues'],a:'llegues',w:'Cuando + futuro = subjuntivo.'},
+ {t:'sub',s:'Es importante que ____ cada día.',o:['estudias','estudies'],a:'estudies',w:'I (impersonal) + que.'},
+ {t:'pro',s:'Compré el carro → ____ compré.',o:['Lo','Le'],a:'Lo',w:'El carro es la cosa = lo.'},
+ {t:'pro',s:'Di el libro a Juan → ____ di el libro.',o:['Lo','Le'],a:'Le',w:'Juan es la persona que recibe = le.'},
+ {t:'pro',s:'Di el libro a Juan → ____ di.',o:['Le lo','Se lo','Lo le'],a:'Se lo',w:'Le + lo = se lo. Persona primero.'},
+ {t:'pro',s:'¿Llamaste a tu mamá? Sí, ____ llamé.',o:['la','le'],a:'la',w:'Llamar lleva lo/la: ella es el objeto directo.'},
+ {t:'pro',s:'¿Le dijiste la verdad? Sí, ____ dije.',o:['se la','le la','la le'],a:'se la',w:'La verdad = la; a ella = le → se.'},
+ {t:'pro',s:'Quiero ver la película → Quiero ____.',o:['verla','verle','laver'],a:'verla',w:'Se pega al infinitivo: verla.'},
+ {t:'gus',s:'Me ____ los tacos.',o:['gusta','gustan'],a:'gustan',w:'Los tacos = plural.'},
+ {t:'gus',s:'A mi esposa le ____ la cabeza.',o:['duele','duelen'],a:'duele',w:'La cabeza = una cosa.'},
+ {t:'gus',s:'Nos ____ las películas de acción.',o:['encanta','encantan'],a:'encantan',w:'Las películas = plural.'},
+ {t:'gen',s:'____ problema es grave.',o:['El','La'],a:'El',w:'-ma griega = masculina.'},
+ {t:'gen',s:'____ canción es bonita.',o:['El','La'],a:'La',w:'-ción = femenina.'},
+ {t:'gen',s:'____ agua está fría.',o:['El','La'],a:'El',w:'Á tónica: el agua, pero "fría" sigue femenina.'},
+ {t:'gen',s:'Levanta ____ mano.',o:['el','la'],a:'la',w:'Excepción: la mano.'},
+ {t:'gen',s:'____ idioma español.',o:['El','La'],a:'El',w:'-ma griega: el idioma.'},
+ {t:'ace',s:'¿Cuál está bien escrita?',o:['cancion','canción'],a:'canción',w:'Aguda que termina en N = tilde.'},
+ {t:'ace',s:'¿Cuál está bien escrita?',o:['arbol','árbol'],a:'árbol',w:'Llana que termina en L (no N, S, vocal) = tilde.'},
+ {t:'ace',s:'¿Cuál está bien escrita?',o:['medico','médico'],a:'médico',w:'Esdrújula = siempre tilde.'},
+ {t:'ace',s:'¿Cuál está bien escrita?',o:['reloj','relój'],a:'reloj',w:'Aguda que termina en J = sin tilde.'},
+ {t:'ace',s:'____ eres mi mejor amigo.',o:['Tu','Tú'],a:'Tú',w:'Tú (pronombre) lleva tilde; tu (posesivo) no.'}
+];
+const K='reglas-misses';
+let miss=new Set(); try{miss=new Set(JSON.parse(localStorage.getItem(K)||'[]'))}catch(e){}
+let cur='se',right=0,done=0;
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem(K,JSON.stringify([...miss]))}catch(e){}}
+function chips(){
+  const c=$('chips');c.innerHTML='';
+  [...T,['miss','Mis errores','var(--bad)']].forEach(([id,name,col])=>{
+    const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=name;b.style.setProperty('--k',col);
+    b.setAttribute('aria-pressed',id===cur);b.onclick=()=>{cur=id;chips();render()};c.appendChild(b)});
+}
+function render(){
+  const w=$('qs');w.innerHTML='';
+  const list=Q.map((q,i)=>[q,i]).filter(([q,i])=>cur==='miss'?miss.has(i):q.t===cur);
+  if(!list.length){w.innerHTML='<p class="ex">No tienes errores guardados. ¡Bien!</p>';return}
+  list.forEach(([q,i])=>{
+    const tt=T.find(t=>t[0]===q.t);
+    const d=document.createElement('div');d.className='q';d.style.setProperty('--k',tt[2]);
+    d.innerHTML='<span class="kind">'+tt[1]+'</span><span class="stem"></span><div class="opts"></div>';
+    d.querySelector('.stem').textContent=q.s;
+    const o=d.querySelector('.opts');
+    q.o.forEach(x=>{const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=x;
+      b.onclick=()=>{
+        [...o.children].forEach(c=>{c.disabled=true;if(c.textContent===q.a)c.classList.add('right')});
+        const ok=x===q.a;if(!ok)b.classList.add('wrong');
+        done++;if(ok){right++;miss.delete(i)}else miss.add(i);save();
+        const f=document.createElement('div');f.className='fb '+(ok?'ok':'no');
+        f.innerHTML='<b>'+(ok?'¡Correcto!':'Es "'+q.a+'".')+'</b> ';f.append(q.w);d.appendChild(f);
+        $('score').textContent=right+' / '+done;
+      };o.appendChild(b)});
+    w.appendChild(d)});
+}
+$('reset').onclick=()=>{right=0;done=0;$('score').textContent='0 / 0';render()};
+chips();render();
+</script>
+
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+</script>
+</body></html>
