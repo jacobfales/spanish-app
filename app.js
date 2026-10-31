@@ -50,7 +50,7 @@ async function copyText(text, area, status, button) {
  if(copied){const label=button.dataset.label||(button.dataset.label=button.textContent);status.textContent='¡Copiado!';button.textContent='¡Copiado!';setTimeout(()=>{button.textContent=label;status.textContent='';},2200);}
  else {area.closest('details').open=true;area.focus();area.select();status.textContent='Mantén pulsado el texto y elige Copiar.';}
 }
-blocks.forEach((b,i)=>{
+if($('blocks'))blocks.forEach((b,i)=>{
  const card=document.createElement('article');card.className='panel block';card.id=`block-${i}`;
  card.innerHTML=`<div class="block-heading"><h3>${b.name}</h3><span class="duration">${format(b.seconds)}</span></div><p class="muted">${b.instruction}</p>`;
  if(b.topic){
@@ -100,7 +100,7 @@ function makeTimer(key,durations,onPaint){
  const api={tick,apply(remote){if(!valid(remote)||(remote.at||0)<=(state.at||0))return;state={index:remote.index,left:remote.left,startedAt:remote.startedAt,at:remote.at};save(key,state);tick();},toggle(){unlockAudio();tick();if(state.startedAt!==null){state.left=Math.max(0,remaining());state.startedAt=null;}else{if(state.index===durations.length)state=initial();state.startedAt=Date.now();}persist(true);paint();},skip(){unlockAudio();tick();if(state.index>=durations.length)return;const running=state.startedAt!==null;state.index++;state.left=durations[state.index]||0;state.startedAt=running&&state.index<durations.length?Date.now():null;persist(true);signal();paint();},reset(){state=initial();persist(true);paint();}};
  timers[key]=api;return api;
 }
-const timer=makeTimer('spanish-timer-v1',blocks.map(b=>b.seconds),s=>{
+const timer=$('clock')&&makeTimer('spanish-timer-v1',blocks.map(b=>b.seconds),s=>{
  $('clock').textContent=format(s.remaining);$('current').textContent=s.finished?'¡Terminaste!':blocks[s.index].name;
  $('next-action').textContent=s.finished?'Buen trabajo. Vuelve mañana.':blocks[s.index].instruction;
  $('start').textContent=s.startedAt!==null?'Pausar':s.finished?'Empezar de nuevo':s.remaining<blocks[s.index].seconds?'Continuar':'Empezar';
@@ -109,14 +109,14 @@ const timer=makeTimer('spanish-timer-v1',blocks.map(b=>b.seconds),s=>{
  $('timer-status').textContent=s.finished?'Sesión completa.':s.startedAt!==null?'En marcha · un paso a la vez.':'Copia el texto de '+blocks[s.index].name+' y empieza.';
  blocks.forEach((b,i)=>{const card=$(`block-${i}`);card.classList.toggle('active',i===s.index);card.classList.toggle('done',i<s.index);if(i===s.index)card.setAttribute('aria-current','step');else card.removeAttribute('aria-current');});
 });
-$('start').onclick=()=>timer.toggle();$('skip').onclick=()=>timer.skip();$('reset').onclick=()=>timer.reset();
-const drill=makeTimer('spanish-drill-v1',[240,180,120],s=>{$('drill-clock').textContent=format(s.remaining);$('drill-round').textContent=s.finished?'¡Listo! ¿Fue más fácil la última vuelta?':`Vuelta ${s.index+1} de 3 · la misma historia`;$('drill-start').textContent=s.startedAt!==null?'Pausar':s.finished?'Otra vez':s.remaining<[240,180,120][s.index]?'Continuar':'Empezar';});
-$('drill-start').onclick=()=>drill.toggle();$('drill-reset').onclick=()=>drill.reset();
-timer.tick();drill.tick();setInterval(()=>{timer.tick();drill.tick();},250);document.addEventListener('visibilitychange',()=>{timer.tick();drill.tick();if(!document.hidden)pullSync();});
+if(timer){$('start').onclick=()=>timer.toggle();$('skip').onclick=()=>timer.skip();$('reset').onclick=()=>timer.reset();}
+const drill=$('drill-clock')&&makeTimer('spanish-drill-v1',[240,180,120],s=>{$('drill-clock').textContent=format(s.remaining);$('drill-round').textContent=s.finished?'¡Listo! ¿Fue más fácil la última vuelta?':`Vuelta ${s.index+1} de 3 · la misma historia`;$('drill-start').textContent=s.startedAt!==null?'Pausar':s.finished?'Otra vez':s.remaining<[240,180,120][s.index]?'Continuar':'Empezar';});
+if(drill){$('drill-start').onclick=()=>drill.toggle();$('drill-reset').onclick=()=>drill.reset();}
+timer&&timer.tick();drill&&drill.tick();setInterval(()=>{timer&&timer.tick();drill&&drill.tick();},250);document.addEventListener('visibilitychange',()=>{timer&&timer.tick();drill&&drill.tick();if(!document.hidden)pullSync();});
 pullSync();listenSync();window.addEventListener('focus',pullSync);
 let vocabulary=[],filter='';
 const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
+if($('filters'))['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
 function renderVocab(){
  const term=normalize($('search').value.trim());
  const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));
@@ -132,7 +132,7 @@ function renderVocab(){
  }
 }
 async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else {$('count').hidden=false;$('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';}$('retry-vocab').hidden=false;}}
-$('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();
+if($('search')){$('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();}
 const connectorGroups=[
  ['Preposiciones','Relacionan una palabra con otra. Úsalas para decir lugar, tiempo, causa o destino.',[
  ['a','Dirección, hora o persona que recibe una acción.','Voy a la iglesia a las nueve.'],['con','Compañía o instrumento.','Hablo con mi abogado.'],['en','Lugar o momento.','El contrato está en la mesa.'],['de','Origen, posesión o tema.','Hablamos de la fe.'],['para','Meta, destino o para quién.','Este poder es para mi madre.'],['por','Causa, medio, a cambio o por dónde. Para = meta; por = causa o camino.','Te lo envío por correo por tu seguridad.'],['sin','Algo que falta.','No firmes sin leer.'],['sobre','Tema o posición encima.','La lección es sobre la oración.'],['entre','En medio de dos o más.','Es un acuerdo entre dos personas.'],['hasta','Límite de tiempo o lugar.','Trabajo hasta las cinco.'],['desde','Punto de inicio.','Vivo aquí desde enero.'],['hacia','Dirección aproximada.','Camino hacia el templo.'],['contra','Oposición o contacto.','Votaron contra la propuesta.']]],
@@ -141,7 +141,7 @@ const connectorGroups=[
  ['Conjunciones','Unen palabras o ideas. Úsalas para sumar, elegir, explicar o mostrar un contraste.',[
  ['y / e','Suma ideas. Usa e antes del sonido i (i-/hi-); no ante el sonido de hielo.','Estudiamos español e historia.'],['o / u','Da opciones. Usa u antes del sonido o (o-/ho-).','¿Mañana u hoy?'],['pero','Contraste entre dos ideas.','Es difícil, pero puedo hacerlo.'],['sino','Corrige una idea después de un no.','No es un testamento, sino un poder.'],['porque','Explica una causa.','Oro porque necesito ayuda.'],['aunque','Algo no impide la otra acción.','Voy aunque llueva.'],['entonces','Resultado o siguiente momento.','Terminó la reunión; entonces salimos.'],['así que','Resultado de lo que acabas de decir.','Ya leí el contrato, así que puedo firmar.'],['mientras','Dos acciones al mismo tiempo.','Escucho mientras camino.'],['cuando','El momento de una acción.','Te llamo cuando llegue.'],['si','Una condición; sin tilde.','Si tienes dudas, pregunta.']]]
 ];
-connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('conectores').append(section);});
+if($('conectores'))connectorGroups.forEach(([name,concept,words])=>{const section=document.createElement('section');section.className='connector-group';const heading=document.createElement('h4');heading.textContent=name;const intro=document.createElement('p');intro.textContent=concept;section.append(heading,intro);words.forEach(([word,meaning,example])=>{const item=document.createElement('div');item.className='connector';const strong=document.createElement('strong');strong.textContent=word;const p=document.createElement('p');p.textContent=meaning;const ex=document.createElement('p');ex.className='example';ex.textContent=example;item.append(strong,p,ex);section.append(item);});$('conectores').append(section);});
 const questions=[
  ['Voy ___ la iglesia.',['a','de','sin'],'a','A indica el destino.'],
  ['Este regalo es ___ mi madre.',['por','para','contra'],'para','Para indica para quién es algo.'],
@@ -161,7 +161,7 @@ const questions=[
 ];
 function shuffle(items){const copy=[...items];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
 function renderQuiz(){let score=0,answered=0;$('score').textContent='0 de 15 · 0 respuestas';$('quiz').replaceChildren();shuffle(questions).forEach(([text,options,answer,why])=>{const item=document.createElement('article');item.className='question';const sentence=document.createElement('p');sentence.textContent=text;const answers=document.createElement('div');answers.className='answers';const feedback=document.createElement('p');feedback.className='feedback';feedback.setAttribute('role','status');shuffle(options).forEach(option=>{const b=document.createElement('button');b.textContent=option;b.setAttribute('aria-label',text.replace('___',option));b.onclick=()=>{answered++;const right=option===answer;if(right)score++;[...answers.children].forEach(c=>{c.disabled=true;if(c.textContent===answer)c.classList.add('correct');});b.classList.add(right?'correct':'wrong');feedback.textContent=`${right?'✅':'❌'} ${right?'Bien.':`La respuesta es «${answer}».`} ${why}`;$('score').textContent=`${score} de 15 · ${answered} respuestas`;};answers.append(b);});item.append(sentence,answers,feedback);$('quiz').append(item);});}
-$('again').onclick=renderQuiz;renderQuiz();
+if($('quiz')){$('again').onclick=renderQuiz;renderQuiz();}
 const tips=[
  ['Mientras hablas',['Sigue hablando. Si no sabes una palabra, explícala con otras palabras en español.','Haz una pausa en silencio en vez de decir «este» o «eh».','Habla desde la parte delantera de la boca. Al descansar, deja la punta de la lengua detrás de los dientes inferiores.','Usa vocales claras y cortas: a, e, i, o, u. Sonríe con i y e; redondea los labios con o y u.','Une las palabras. Usa un conector como aunque, sin embargo o por eso.','Usa a propósito la regla de gramática de esta semana.']],
  ['Hablar con la IA',['Busca el error antes de que te diga la respuesta.','Pide respuestas cortas para hablar tú más tiempo.','Practica un tiempo verbal: «Pregúntame del futuro».','Ensaya una entrevista de trabajo, una consulta médica o una reunión con un cliente.','Al terminar, lee el texto de la charla y busca errores que repites.']],
@@ -176,5 +176,5 @@ const tips=[
  ['Palabras de la gente',['Muletillas naturales: pues, bueno, o sea, la verdad, es que, ¿no?','Reacciones: ¡qué padre! (México), ¡qué bueno!, ¿en serio?, no manches (México), ¡ándale!','Diminutivos: ahorita, un ratito, cafecito, poquito.','Elige un acento y mantenlo. El de tu misión está bien.']],
  ['Trampas del inglés',['realize → darse cuenta; realizar significa hacer o llevar a cabo.','Para un trabajo: solicitar, en vez de aplicar.','Di «tiene sentido», «estoy emocionado», «por otro lado» y «devolver la llamada». Evita «hace sentido», «estoy excitado», «en la otra mano» y «llamar para atrás».']]
 ];
-tips.forEach(([title,lines])=>{const item=document.createElement('article');item.className='tip';const h=document.createElement('h3');h.textContent=title;const list=document.createElement('ul');lines.forEach(line=>{const li=document.createElement('li');li.textContent=line;list.append(li);});item.append(h,list);$('tips').append(item);});
+if($('tips'))tips.forEach(([title,lines])=>{const item=document.createElement('article');item.className='tip';const h=document.createElement('h3');h.textContent=title;const list=document.createElement('ul');lines.forEach(line=>{const li=document.createElement('li');li.textContent=line;list.append(li);});item.append(h,list);$('tips').append(item);});
 if('serviceWorker' in navigator && /^https?:$/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(()=>{ /* Una primera visita sin conexión no puede instalar la caché. */ });

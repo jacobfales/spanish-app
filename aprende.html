@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1a19">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Spanish">
+<meta name="description" content="Tu práctica diaria de español. Treinta minutos, un paso a la vez.">
+<title>Spanish · Gramática y vocabulario</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+<header><p class="eyebrow">PARA REPASAR</p><h1>Gramática y<br>Vocabulario</h1><nav class="top-links" aria-label="Recursos">
+<a href="index.html">← Volver a hablar</a>
+<a href="gramatica.html">📘 Reglas del Español</a>
+<a href="#vocab">🗂️ Vocabulario</a>
+<a href="#conectores">🧩 Conectores</a>
+<a href="gramatica.html#verguenza">😬 Sin vergüenza</a>
+</nav></header>
+<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p><div id="vocab-groups"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
+<section class="more" aria-labelledby="more-title"><h2 id="more-title">Más práctica y consejos</h2><div id="tips" class="stack"></div>
+<article class="tip"><h3>Repite: 4, 3, 2</h3><p>Los miércoles, en lugar del Debate: elige una historia, como tu mejor día de la misión. Cuéntala en 4 minutos, luego en 3 y al final en 2. No quites partes: dilo con más fluidez.</p><p id="drill-round">Vuelta 1 de 3 · la misma historia</p><div id="drill-clock" class="drill-clock" role="timer">4:00</div><div class="timer-actions"><button id="drill-start">Empezar</button><button id="drill-reset" class="secondary">Reiniciar</button></div></article>
+<section id="conectores" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
+<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
+</section>
+<footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
+</main>
+</body>
+</html>
