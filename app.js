@@ -73,19 +73,29 @@ function format(s){s=Math.max(0,Math.ceil(s));return `${Math.floor(s/60)}:${Stri
 let audio;
 function unlockAudio(){try{audio??=new(window.AudioContext||window.webkitAudioContext)();audio.resume().catch(()=>{});}catch{/* El temporizador funciona sin sonido. */}}
 function signal(){try{navigator.vibrate?.([160,80,160]);}catch{}try{if(!audio||audio.state!=='running')return;[0,.32].forEach(delay=>{const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime+delay;o.frequency.value=740;g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.2,t+.03);g.gain.exponentialRampToValueAtTime(.001,t+.3);o.connect(g).connect(audio.destination);o.start(t);o.stop(t+.32);});}catch{}}
+// Sincroniza el temporizador entre el teléfono y la Mac (ntfy.sh, gratis, sin cuenta).
+const SYNC='https://ntfy.sh/jf-espanol-7455b5f7188f309eda8f';
+const DEVICE=Math.random().toString(36).slice(2);
+const timers={};
+function pushSync(key,state){try{fetch(SYNC,{method:'POST',body:JSON.stringify({key,state,from:DEVICE})}).catch(()=>{});}catch{}}
+function applySync(text){try{const m=JSON.parse(text);if(m&&m.from!==DEVICE&&timers[m.key])timers[m.key].apply(m.state);}catch{}}
+async function pullSync(){try{const r=await fetch(SYNC+'/json?poll=1&since=12h',{cache:'no-store'});if(!r.ok)return;(await r.text()).split('\n').forEach(line=>{try{const e=JSON.parse(line);if(e.event==='message')applySync(e.message);}catch{}});}catch{}}
+function listenSync(){try{const es=new EventSource(SYNC+'/sse');es.onmessage=e=>{try{const d=JSON.parse(e.data);if(d.event==='message')applySync(d.message);}catch{}};}catch{}}
 // Un inicio absoluto por bloque evita perder tiempo al dormir o recargar.
 function makeTimer(key,durations,onPaint){
  const initial=()=>({index:0,left:durations[0],startedAt:null});
  let state=read(key,initial());
  if(!state||!Number.isInteger(state.index)||state.index<0||state.index>durations.length||!Number.isFinite(state.left)||state.left<0||state.left>(durations[state.index]??0)||(state.startedAt!==null&&(!Number.isFinite(state.startedAt)||state.startedAt<=0)))state=initial();
- function persist(){save(key,state);}
+ function valid(st){return st&&Number.isInteger(st.index)&&st.index>=0&&st.index<=durations.length&&Number.isFinite(st.left)&&st.left>=0&&st.left<=(durations[st.index]??0)&&(st.startedAt===null||(Number.isFinite(st.startedAt)&&st.startedAt>0));}
+ function persist(share){if(share){state.at=Date.now();pushSync(key,state);}save(key,state);}
  function remaining(){return state.startedAt===null?state.left:state.left-(Date.now()-state.startedAt)/1000;}
  function tick(){let changed=false;
   while(state.startedAt!==null&&remaining()<=0&&state.index<durations.length){const boundary=state.startedAt+state.left*1000;state.index++;state.left=durations[state.index]||0;state.startedAt=state.index<durations.length?boundary:null;changed=true;}
   if(changed){persist();signal();}paint();
  }
  function paint(){onPaint({...state,remaining:Math.max(0,remaining()),finished:state.index===durations.length});}
- return {tick,toggle(){unlockAudio();tick();if(state.startedAt!==null){state.left=Math.max(0,remaining());state.startedAt=null;}else{if(state.index===durations.length)state=initial();state.startedAt=Date.now();}persist();paint();},skip(){unlockAudio();tick();if(state.index>=durations.length)return;const running=state.startedAt!==null;state.index++;state.left=durations[state.index]||0;state.startedAt=running&&state.index<durations.length?Date.now():null;persist();signal();paint();},reset(){state=initial();persist();paint();}};
+ const api={tick,apply(remote){if(!valid(remote)||(remote.at||0)<=(state.at||0))return;state={index:remote.index,left:remote.left,startedAt:remote.startedAt,at:remote.at};save(key,state);tick();},toggle(){unlockAudio();tick();if(state.startedAt!==null){state.left=Math.max(0,remaining());state.startedAt=null;}else{if(state.index===durations.length)state=initial();state.startedAt=Date.now();}persist(true);paint();},skip(){unlockAudio();tick();if(state.index>=durations.length)return;const running=state.startedAt!==null;state.index++;state.left=durations[state.index]||0;state.startedAt=running&&state.index<durations.length?Date.now():null;persist(true);signal();paint();},reset(){state=initial();persist(true);paint();}};
+ timers[key]=api;return api;
 }
 const timer=makeTimer('spanish-timer-v1',blocks.map(b=>b.seconds),s=>{
  $('clock').textContent=format(s.remaining);$('current').textContent=s.finished?'¡Terminaste!':blocks[s.index].name;
@@ -99,7 +109,8 @@ const timer=makeTimer('spanish-timer-v1',blocks.map(b=>b.seconds),s=>{
 $('start').onclick=()=>timer.toggle();$('skip').onclick=()=>timer.skip();$('reset').onclick=()=>timer.reset();
 const drill=makeTimer('spanish-drill-v1',[240,180,120],s=>{$('drill-clock').textContent=format(s.remaining);$('drill-round').textContent=s.finished?'¡Listo! ¿Fue más fácil la última vuelta?':`Vuelta ${s.index+1} de 3 · la misma historia`;$('drill-start').textContent=s.startedAt!==null?'Pausar':s.finished?'Otra vez':s.remaining<[240,180,120][s.index]?'Continuar':'Empezar';});
 $('drill-start').onclick=()=>drill.toggle();$('drill-reset').onclick=()=>drill.reset();
-timer.tick();drill.tick();setInterval(()=>{timer.tick();drill.tick();},250);document.addEventListener('visibilitychange',()=>{timer.tick();drill.tick();});
+timer.tick();drill.tick();setInterval(()=>{timer.tick();drill.tick();},250);document.addEventListener('visibilitychange',()=>{timer.tick();drill.tick();if(!document.hidden)pullSync();});
+pullSync();listenSync();window.addEventListener('focus',pullSync);
 let vocabulary=[],filter='';
 const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 ['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=document.createElement('button');b.textContent=group;b.setAttribute('aria-pressed','false');b.onclick=()=>{filter=filter===group?'':group;[...$('filters').children].forEach(c=>c.setAttribute('aria-pressed',String(c.textContent===filter)));renderVocab();};$('filters').append(b);});
