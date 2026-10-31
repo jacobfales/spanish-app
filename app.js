@@ -1,32 +1,33 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const WAIT = "Antes de hablar, espera. Dame tiempo para pensar. Si me callo, no hables: espera por lo menos 5 segundos. Si quieres, di solo 'Tómate tu tiempo' o 'Sigue' y espera otra vez. Responde solo cuando yo diga 'listo' o cuando claramente terminé. Nunca me interrumpas. Habla despacio y con frases cortas.";
-const FIX = 'Si cometo un error, no me des la respuesta: dime que hay un error y déjame arreglarlo yo. Al final, dame 2 palabras más avanzadas. Guarda automáticamente las palabras nuevas y mis correcciones en Anki si tienes esa función disponible. Si no puedes guardarlas, dámelas listas para añadir a Anki y no digas que las guardaste.';
+const CHAT = 'https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7';
+const WAIT = "Habla conmigo como un amigo mexicano de verdad: natural, relajado, con las expresiones que usa la gente (no como libro ni como maestro). Frases cortas, una pregunta a la vez. Si me quedo callado, espera; no me interrumpas ni termines mis frases. Contesta solo cuando yo termine.";
+const FIX = 'No me corrijas durante la plática, ni una vez. Apunta mis errores en silencio. Solo cuando yo diga "ya terminamos", dame una lista: 1) cada error así: lo que dije → cómo lo diría un nativo; 2) 2 palabras o frases nuevas que me sirvan. Si puedes guardar en Anki, guárdalas; si no, solo dame la lista y no digas que las guardaste.';
 const prompts = {
- 'Inglés → Español':'Dime una frase en inglés. Yo la digo en español. Corrígeme y dame la forma más natural. Sube la dificultad poco a poco.',
- 'Español → Inglés':'Dime una frase en español, rápido y natural, como habla la gente. Yo la digo en inglés. Así entreno el oído.',
- 'Intérprete legal':'Tú eres un abogado (habla en inglés) y un cliente hispano (habla en español). Explica un poder notarial, una directiva médica o un formulario HIPAA. Yo interpreto los dos lados. Corrige mis palabras legales.',
- 'Misionero en español':'Lee una frase del evangelio en inglés (de Predicad Mi Evangelio o una escritura). Yo la digo en español, como si enseñara una lección.',
- 'Hazlo natural':'Dime una frase en español que suena a gringo, traducida palabra por palabra. Yo la digo como lo diría un nativo. Incluye falsos amigos (embarazada, actual, realizar).',
- 'Profesor':'Actúa como un profesor universitario escéptico. Después de que hable, hazme preguntas difíciles, una a la vez, y pregúntame por qué.',
- 'Debate':'Vamos a debatir. Yo elijo un tema y tú tomas el lado contrario. Desafía mis argumentos y no me dejes ganar fácil.',
- 'Amigo':'Actúa como un amigo latino de mi edad. Habla natural, con expresiones comunes, y cuéntame cosas de tu vida también. Respuestas cortas para que yo hable más.',
- 'Cliente':'Actúa como un cliente hispano de 65 años que viene a mi oficina para hacer un fideicomiso. Hazme preguntas sobre testamentos, poderes y qué pasa cuando uno muere.',
- 'Entrevista':'Actúa como entrevistador para un trabajo en una firma de abogados. Hazme preguntas de entrevista reales, una a la vez.',
- 'Investigador':'Actúa como un investigador con dudas sinceras sobre la Iglesia. Hazme preguntas difíciles mientras te enseño una lección.',
- 'Periodista':'Actúa como un periodista que me entrevista sobre mi vida, mi misión y mis metas. Pide detalles y ejemplos.',
- 'Subjuntivo':'Hazme preguntas que me obliguen a usar el subjuntivo (ojalá, es importante que, si hubiera…). Una pregunta a la vez.',
- 'Futuro':'Hazme preguntas sobre mis planes y el futuro, para que use el futuro y el condicional. Una pregunta a la vez.',
- 'Sin vergüenza':'Me da mucha vergüenza hablar español. Ayúdame a hablar sin miedo. Hazme preguntas fáciles sobre mi vida (mi carrera, mis notas, mi familia) y sube poco a poco. No corrijas cada error: corrige solo lo que no se entiende. Si me trabo, dime "sigue, vas bien" y espera. Celebra cuando hable más de 30 segundos sin parar. Al final, dime 2 cosas que hice bien.',
- 'Escena real':'Hagamos una escena de la vida real: tú eres el doctor, el mecánico o el empleado del banco (tú eliges). Yo soy el cliente con un problema.'
+ 'Inglés → Español':"Dime frases en inglés, de las que dice la gente en la vida diaria. Yo las digo en español y tú sigues con la siguiente. Sube la dificultad poco a poco.",
+ 'Español → Inglés':"Dime frases en español rápido y natural, como habla la gente en la calle. Yo las digo en inglés. Así entreno el oído.",
+ 'Intérprete legal':"Tú eres un abogado (en inglés) y también un cliente hispano (en español). Hablen de un poder notarial, una directiva médica o un formulario HIPAA. Yo interpreto los dos lados.",
+ 'Misionero en español':"Léeme una frase del evangelio en inglés (de Predicad Mi Evangelio o una escritura). Yo la digo en español, como si enseñara una lección.",
+ 'Hazlo natural':"Dime una frase en español que suena a gringo, traducida palabra por palabra. Yo la digo como un nativo y tú sigues con otra. Incluye falsos amigos (embarazada, actual, realizar).",
+ 'Profesor':"Eres un profesor universitario escéptico. Después de que hable, hazme preguntas difíciles, una a la vez, y pregúntame por qué.",
+ 'Debate':"Vamos a debatir. Tú tomas el lado contrario al mío. Pícame, desafía mis argumentos y no me dejes ganar fácil.",
+ 'Amigo':"Eres mi compa latino de mi edad. Platica como en la vida real: cuéntame cosas tuyas también, échale humor y usa expresiones comunes. Respuestas cortas para que yo hable más.",
+ 'Cliente':"Eres un señor hispano de 65 años que viene a mi oficina para hacer un fideicomiso. Habla como cliente de verdad: con dudas, historias de tu familia y preguntas sobre testamentos, poderes y qué pasa cuando uno muere.",
+ 'Entrevista':"Eres entrevistador para un trabajo en una firma de abogados. Hazme preguntas de entrevista reales, una a la vez.",
+ 'Investigador':"Eres un investigador con dudas sinceras sobre la Iglesia. Hazme preguntas difíciles mientras te enseño, como lo haría una persona real.",
+ 'Periodista':"Eres un periodista que me entrevista sobre mi vida, mi misión y mis metas. Pide detalles y ejemplos.",
+ 'Subjuntivo':"Platícame de cosas que me obliguen a usar el subjuntivo (ojalá, es importante que, si hubiera…). Una pregunta a la vez.",
+ 'Futuro':"Pregúntame por mis planes y el futuro, para que use el futuro y el condicional. Una pregunta a la vez.",
+ 'Sin vergüenza':"Me da mucha vergüenza hablar español. Hazme preguntas fáciles sobre mi vida (mi carrera, mis notas, mi familia) y sube poco a poco. Si no me entiendes, solo pregúntame qué quise decir. Si me trabo, dime \"sigue, vas bien\" y espera. Celebra cuando hable más de 30 segundos sin parar. Al final, dime 2 cosas que hice bien.",
+ 'Escena real':"Hagamos una escena de la vida real: tú eres el doctor, el mecánico o el empleado del banco (tú eliges). Yo soy el cliente con un problema. Actúa como alguien de verdad, no como maestro."
 };
 const topics = ['Cuenta tu día de hoy con todos los detalles.','Explica algo interesante que aprendiste esta semana.','Piensa en una noticia reciente y da tu opinión por 3 minutos.','¿Debes decirle la verdad a un amigo aunque lo lastime?','Defiende o critica una regla de BYU.','¿Las redes sociales hacen más daño que bien?','Compara la cultura de tu misión con la de Utah.','Si pudieras cambiar una ley de Estados Unidos, ¿cuál sería y por qué?','Describe a la persona que más admiras y por qué.','Explica cómo hacer tu comida favorita, paso a paso.','¿Qué harías con un millón de dólares?','¿Debería la universidad ser gratis?','Cuenta el momento más difícil de tu misión y qué aprendiste.','Explica cómo funciona un fideicomiso a alguien de 60 años.','¿La inteligencia artificial ayuda o perjudica a los estudiantes?','Explica un dato interesante que leíste en español.','Imagina que eres alcalde de Provo. ¿Qué cambias primero?','Elige: un trabajo que paga mucho lejos de tu familia, o uno normal cerca.','Habla de tu carrera y tus notas: ¿qué estudias, cómo te va y por qué?'];
 function read(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* La sesión sigue aunque el almacenamiento esté bloqueado. */ } }
 const blocks = [
  {name:'Oración',seconds:60,instruction:'Ora en voz alta. Pide ayuda para hablar con claridad y sentir el Espíritu.',fixed:'Voy a orar en voz alta en español. Espera en silencio hasta que termine. Voy a pedir ayuda para hablar con claridad y sentir el Espíritu.'},
- {name:'Calentamiento del evangelio',seconds:120,instruction:'Elige un principio y explícalo como a un amigo.',fixed:'Voy a elegir un principio: la Expiación, la oración, la fe, el arrepentimiento, el bautismo o el Espíritu Santo. Lo explicaré como a un amigo. Espera hasta que termine, hazme una pregunta fácil y ayúdame a corregir mis errores.'},
- {name:'Tema 1',seconds:480,instruction:'Traduce en voz alta. Intenta corregir tus propios errores.',prompt:'Inglés → Español',topic:topics[0]},
+ {name:'Calentamiento del evangelio',seconds:120,instruction:'Elige un principio y explícalo como a un amigo.',fixed:'Voy a elegir un principio: la Expiación, la oración, la fe, el arrepentimiento, el bautismo o el Espíritu Santo. Lo explicaré como a un amigo. Espera hasta que termine y hazme una pregunta fácil, como lo haría un amigo.'},
+ {name:'Tema 1',seconds:480,instruction:'Traduce en voz alta. Las correcciones llegan al final.',prompt:'Inglés → Español',topic:topics[0]},
  {name:'Tema 2',seconds:480,instruction:'Busca una forma más natural de decirlo. Luego responde las preguntas.',prompt:'Hazlo natural',topic:topics[1]},
  {name:'Tema 3 (Debate)',seconds:480,instruction:'Elige un lado y defiéndelo. Al final, pide tus dos palabras para Anki.',prompt:'Debate',topic:topics[5]},
  {name:'Cierre del evangelio',seconds:180,instruction:'Enseña el principio del calentamiento y responde una pregunta difícil.',fixed:prompts.Investigador+' Pregúntame qué principio expliqué en el calentamiento y hazme una pregunta difícil sobre él.'}
@@ -35,7 +36,7 @@ const choices = read('spanish-choices', []);
 blocks.forEach((block, i) => {
  if (block.topic && choices[i]) { if(topics.includes(choices[i].topic)) block.topic=choices[i].topic; if(prompts[choices[i].prompt] && (i!==4 || choices[i].prompt==='Debate')) block.prompt=choices[i].prompt; }
 });
-function fullPrompt(b) { return [WAIT, b.fixed || `Tema: ${b.topic}\n${prompts[b.prompt]}`, FIX].join('\n\n'); }
+function fullPrompt(b) { return [b.fixed || `Hablemos de esto: ${b.topic}\n${prompts[b.prompt]}`, WAIT, FIX].join('\n\n'); }
 function storeChoices(){save('spanish-choices',blocks.map(b=>({topic:b.topic,prompt:b.prompt})));}
 async function copyText(text, area, status, button) {
  let copied=false;
@@ -46,7 +47,7 @@ async function copyText(text, area, status, button) {
   try {copied=document.execCommand('copy');} catch {copied=false;}
   input.remove();button.focus({preventScroll:true});
  }
- if(copied){status.textContent='¡Copiado!';button.textContent='¡Copiado!';setTimeout(()=>{button.textContent='Copiar';status.textContent='';},2200);}
+ if(copied){const label=button.dataset.label||(button.dataset.label=button.textContent);status.textContent='¡Copiado!';button.textContent='¡Copiado!';setTimeout(()=>{button.textContent=label;status.textContent='';},2200);}
  else {area.closest('details').open=true;area.focus();area.select();status.textContent='Mantén pulsado el texto y elige Copiar.';}
 }
 blocks.forEach((b,i)=>{
@@ -62,12 +63,14 @@ blocks.forEach((b,i)=>{
  }
  const copy=document.createElement('button');copy.className='copy';copy.textContent='Copiar';copy.setAttribute('aria-label',`Copiar texto de ${b.name}`);
  const status=document.createElement('p');status.className='copy-status';status.setAttribute('role','status');
- const details=document.createElement('details');details.className='prompt-view';
+ const go=document.createElement('button');go.className='copy go';go.textContent='Copiar y abrir chat';go.setAttribute('aria-label',`Copiar texto de ${b.name} y abrir el chat`);
+ const details=document.createElement('details');details.className='prompt-view';details.open=true;
  const summary=document.createElement('summary');summary.textContent='Ver texto';
  const area=document.createElement('textarea');area.readOnly=true;area.setAttribute('aria-label',`Texto de ${b.name}`);
- details.append(summary,area);card.append(copy,status,details);$('blocks').append(card);
+ details.append(summary,area);card.append(copy,go,status,details);$('blocks').append(card);
  function update(){area.value=fullPrompt(b);status.textContent='';}update();
  copy.onclick=()=>copyText(fullPrompt(b),area,status,copy);
+ go.onclick=()=>{copyText(fullPrompt(b),area,status,go);window.open(CHAT,'_blank','noopener');};
 });
 function format(s){s=Math.max(0,Math.ceil(s));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;}
 let audio;
