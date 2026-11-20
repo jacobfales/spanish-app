@@ -1,6 +1,11 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const CHAT = 'https://claude.ai/chat/e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7';
+const CHAT_ID = 'e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7';
+// En iPhone/iPad, un enlace https://claude.ai/chat/... abre Safari, no la app. claude:// abre la app de Claude.
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const CHAT = IOS ? `claude://claude.ai/chat/${CHAT_ID}` : `https://claude.ai/chat/${CHAT_ID}`;
+function openChat(){ if(IOS) location.href = CHAT; else window.open(CHAT,'_blank','noopener'); }
+document.querySelectorAll('a.chat').forEach(a=>{ a.href = CHAT; if(IOS){ a.removeAttribute('target'); a.onclick = e => { e.preventDefault(); openChat(); }; } });
 const WAIT = "Habla conmigo como un amigo mexicano de verdad: natural, relajado, con las expresiones que usa la gente (no como libro ni como maestro). Frases cortas, una pregunta a la vez. Si me quedo callado, espera; no me interrumpas ni termines mis frases. Contesta solo cuando yo termine.";
 const FIX = "No me corrijas durante la plática, ni una vez. En silencio, lleva UNA sola lista de mis errores y de las palabras que no supe, de TODA la práctica de hoy (todos los bloques de este chat, no solo este). Cuando yo diga \"ya terminamos\": 1) Guarda todo en mi Anki tú solo, sin preguntarme, con la herramienta anki_add_cards: las palabras nuevas en el mazo Spanish::Vocabulario (front = la palabra en español, back = el significado en inglés) y cada frase que dije mal en el mazo Spanish::Claude Corrections (front = lo que dije, back = cómo lo diría un mexicano + la regla en pocas palabras). 2) Dame la lista: lo que dije → cómo lo diría un nativo. 3) Dime en una línea si se guardó en Anki. Si la herramienta falló, dilo; nunca digas que lo guardaste si no fue así.";
 const prompts = {
@@ -84,7 +89,7 @@ if($('blocks'))blocks.forEach((b,i)=>{
  details.append(summary,area);card.append(copy,go,status,details);$('blocks').append(card);
  function update(){area.value=fullPrompt(b);status.textContent='';}update();
  copy.onclick=()=>copyText(fullPrompt(b),area,status,copy);
- go.onclick=()=>{copyText(fullPrompt(b),area,status,go);window.open(CHAT,'_blank','noopener');};
+ go.onclick=()=>{copyText(fullPrompt(b),area,status,go);openChat();};
 });
 function format(s){s=Math.max(0,Math.ceil(s));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;}
 let audio;
