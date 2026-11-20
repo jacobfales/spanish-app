@@ -55,6 +55,20 @@ blocks.forEach((block, i) => {
 function fullPrompt(b) {
  const end = b.last ? 'Este es el último bloque. Cuando yo termine de hablar, ya terminamos: haz todo lo de la lista de abajo (guardar en Anki y darme la lista).' : 'Cuando acabe este bloque, sigue guardando mis errores en silencio. Todavía no me des la lista.';
  return [b.fixed || `${prompts[b.prompt]}\n\nEl tema: ${b.topic}`, WAIT, end, FIX].join('\n\n'); }
+// Todo en un solo mensaje: Claude guía los 5 pasos en modo de voz, sin volver a la app.
+function sessionPrompt(){
+ const steps=blocks.map((b,i)=>{const min=Math.round(b.seconds/60);
+  const what=b.fixed||`${prompts[b.prompt]} ${b.list==='legal'?'La escena':'El tema'}: ${b.topic}`;
+  return `PASO ${i+1}: ${b.name.toUpperCase()} (${min} min). ${what}`;}).join('\n\n');
+ return ['Hoy hago mi práctica de español de 30 minutos, toda en modo de voz. Tú me guías los 5 pasos en orden. Yo no voy a escribir ni pegar nada más.',
+  steps,
+  'CÓMO LLEVAR EL TIEMPO: al empezar cada paso, dime en una frase corta qué paso es y el tema. Cuando se acabe el tiempo del paso, espera a que termine mi frase, di «Siguiente paso» y empieza el siguiente. Si no puedes ver la hora, cuenta mis turnos: cada turno mío con tu respuesta es más o menos 1 minuto. Si yo digo «siguiente», pasa al siguiente paso. Las reglas de cada paso valen solo en ese paso.',
+  WAIT,
+  'Después del paso 5, ya terminamos: haz todo lo de la lista de abajo.',
+  FIX,
+  'Empieza ahora. Di solo: «Paso 1, la oración. Cuando quieras.» y espera.'].join('\n\n');
+}
+if($('all-voice')){$('all-voice').onclick=()=>{const b=$('all-voice');copyText(sessionPrompt(),{closest:()=>({}),focus(){},select(){}},$('all-status'),b);openChat();};}
 function storeChoices(){save('spanish-choices-v2',blocks.map(b=>({topic:b.topic,prompt:b.prompt})));}
 async function copyText(text, area, status, button) {
  let copied=false;

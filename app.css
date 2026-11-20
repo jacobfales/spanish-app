@@ -488,3 +488,4 @@ footer {
 .practice-layout.solo{display:block;max-width:760px}
 
 .how{margin:8px 0 0;padding-left:22px;display:grid;gap:4px}
+.big-voice{width:100%;margin-top:24px;min-height:64px;font-size:19px;border-radius:16px}
