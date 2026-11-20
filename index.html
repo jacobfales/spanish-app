@@ -18,14 +18,28 @@
 </head>
 <body>
 <main>
-<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos. Un paso a la vez.</p><button id="all-voice" class="copy go big-voice">🎙️ Empezar en voz · todo de una vez</button>
+<header><p class="eyebrow">UN POCO CADA DÍA</p><h1>Práctica de<br>Español Diaria</h1><p class="muted">30 minutos de hablar. Claude te guía y tú solo hablas.</p>
+<section class="howto panel" aria-labelledby="howto-t">
+<h2 id="howto-t">Cómo usarla</h2>
+<ol class="steps-how">
+<li><b>Toca el botón azul de abajo.</b><span>Copia todo lo de hoy (los 5 pasos y los temas) y abre la app de Claude.</span></li>
+<li><b>En Claude, toca ✏️ para un chat nuevo.</b><span>Está arriba a la derecha. Usa un chat nuevo cada día.</span></li>
+<li><b>Pega y envía.</b><span>Mantén presionado el cuadro de texto → <b>Pegar</b> → toca la flecha ↑.</span></li>
+<li><b>Toca las ondas para el modo de voz.</b><span>Es el botón al lado del micrófono. Ya no tienes que tocar nada más.</span></li>
+<li><b>Habla.</b><span>Claude te lleva por los 5 pasos y te dice «Siguiente paso» cuando se acaba el tiempo. Di «siguiente» si quieres saltar. No te corrige mientras hablas.</span></li>
+<li><b>Al final, di tus errores.</b><span>Claude te pregunta «¿Qué errores crees que cometiste?». Dilos. Luego te da la lista completa y la guarda en Anki.</span></li>
+</ol>
+<button id="all-voice" class="copy go big-voice">🎙️ Empezar en voz · todo de una vez</button>
 <p id="all-status" class="copy-status" role="status"></p>
-<ol class="muted small how"><li>Toca <b>🎙️ Empezar en voz</b>. Se copia todo y se abre Claude.</li><li>Toca ✏️ (chat nuevo), pega y envía.</li><li>Toca las ondas (voz). Claude te guía los 5 pasos y te avisa el tiempo. Ya no vuelves aquí.</li><li>Al final Claude guarda tus palabras y errores en Anki.</li></ol>
+<p class="muted small">¿No te gusta un tema? Antes de tocar el botón, baja a ese paso y toca <b>Otro tema</b>.</p>
+</section>
 <nav class="top-links" aria-label="Recursos">
 <a href="aprende.html">📘 Vocabulario y gramática</a>
 <a class="chat" href="https://claude.ai/new" target="_blank" rel="noopener">🗣️ Solo abrir Claude <span aria-hidden="true">↗</span></a>
 </nav></header>
 <div class="practice-layout solo"><section class="practice" aria-label="Práctica diaria">
+<h2 class="plan-h">El plan de hoy</h2>
+<p class="muted small plan-note">Aquí ves los temas de hoy. El reloj y los botones de cada paso son <b>opcionales</b>: úsalos solo si quieres hacer un paso a la vez en vez del botón azul.</p>
 <section class="timer panel" aria-label="Temporizador">
 <div class="timer-heading"><span id="current">Oración</span><span id="step-badge" class="badge">PASO 1 DE 5 · 1 MIN</span></div>
 <div id="clock" class="clock" role="timer" aria-label="Tiempo restante">1:00</div>
