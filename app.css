@@ -537,3 +537,11 @@ footer {
 .steps-how span{color:var(--muted);font-size:15px;line-height:1.45}
 .plan-h{margin:8px 0 4px}
 .plan-note{margin:0 0 14px}
+.steps-how li{grid-template-columns:30px 1fr;align-items:center}
+.steps-how li::before{grid-row:auto;width:30px;height:30px}
+.rule .ask{gap:12px}
+.rule .ask li{line-height:1.5}
+.rule .ask small{color:var(--muted)}
+.rule .ask ul{margin-top:6px}
+.steps-how .sh{color:var(--fg);font-size:16px;line-height:1.45}
+.steps-how .sh b{font-size:16px}

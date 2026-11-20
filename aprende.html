@@ -19,22 +19,15 @@
 </head>
 <body class="learn">
 <main>
-<header><p class="eyebrow">PARA REPASAR</p><h1>Vocabulario y<br>Gramática</h1>
+<header><p class="eyebrow">PARA REPASAR</p><h1>Gramática y<br>Vocabulario</h1>
 <nav class="jump" aria-label="Ir a">
 <a href="index.html">← Hablar</a>
-<a href="#vocab">Vocabulario</a>
 <a href="#reglas">Reglas</a>
 <a href="#practica">Práctica</a>
+<a href="#vocab">Vocabulario</a>
 </nav></header>
 
-<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2>
-<label for="search">Buscar en español o inglés</label>
-<input id="search" type="search" placeholder="Una palabra…" autocomplete="off" autocapitalize="off" spellcheck="false">
-<div class="chips" id="filters" aria-label="Filtrar vocabulario"></div>
-<p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p>
-<div id="vocab-groups" class="vtable"></div>
-<button id="retry-vocab" class="secondary" hidden>Volver a cargar</button>
-</section>
+
 
 <section id="reglas" class="panel"><h2>Reglas del español</h2>
 <p class="muted">Una línea por regla. Toca una para ver los detalles.</p>
@@ -46,16 +39,18 @@
 <li><b>No hay cosa → impersonal.</b> El verbo siempre en singular: se vive bien aquí · se trabaja mucho.</li>
 <li>Caso raro: una persona con «a» no cuenta como cosa → singular: se busca a los niños.</li>
 </ul>
-<h4>Los 7, en el orden para revisar</h4>
-<ol class="rows">
-<li><b>Le disfrazado</b> · se + lo / la · <i>Se lo di.</i> <small>I gave it to him.</small></li>
-<li><b>Accidental</b> · se + me / te / le, sin querer · <i>Se me cayó.</i> <small>I dropped it.</small></li>
-<li><b>Pasiva</b> · «la gente» + una cosa; el verbo va con la cosa · <i>Se venden casas.</i> <small>Houses are sold.</small></li>
-<li><b>Impersonal</b> · «la gente», sin cosa; verbo singular · <i>Se vive bien.</i> <small>People live well.</small></li>
-<li><b>Reflexivo</b> · a sí mismo · <i>Se lava las manos.</i> <small>He washes his hands.</small></li>
-<li><b>Recíproco</b> · el uno al otro · <i>Se abrazan.</i> <small>They hug each other.</small></li>
-<li><b>Verbo con se</b> · el verbo cambia de sentido · <i>Me voy.</i> <small>I'm leaving.</small> (ir = go · irse = leave)</li>
+<h4>¿Cuál SE es? Pregúntate esto en orden</h4>
+<p>Empieza en la 1. Si la respuesta es <b>sí</b>, ya terminaste. Si es <b>no</b>, pasa a la siguiente.</p>
+<ol class="ask">
+<li><b>¿Después del se viene lo / la / los / las?</b><br>Sí → <b>Le disfrazado.</b> Es «le» cambiado a «se», porque «le lo» suena mal.<br><i>Se lo di.</i> <small>I gave it to him.</small></li>
+<li><b>¿Después del se viene me / te / nos / le, y pasó sin querer?</b><br>Sí → <b>Accidental.</b> La cosa «se hizo sola»; me / te / le dice a quién le pasó.<br><i>Se me cayó el vaso.</i> <small>I dropped the glass.</small></li>
+<li><b>¿Quiere decir «la gente» o «uno», sin nadie en específico?</b><br>Sí → mira si hay una <b>cosa</b> después del verbo:
+<ul><li>Hay cosa → <b>Pasiva.</b> El verbo va igual que la cosa: <i>Se venden casas.</i></li><li>No hay cosa → <b>Impersonal.</b> El verbo va en singular: <i>Se vive bien aquí.</i></li></ul></li>
+<li><b>¿Puedes agregar «a sí mismo»?</b><br>Sí → <b>Reflexivo.</b> La persona se lo hace a ella misma.<br><i>Se lava las manos.</i> <small>He washes his hands.</small></li>
+<li><b>¿Puedes agregar «el uno al otro»?</b><br>Sí → <b>Recíproco.</b> Dos o más personas, una a la otra.<br><i>Se abrazan.</i> <small>They hug each other.</small></li>
+<li><b>¿Ninguna de las anteriores?</b><br>→ <b>Verbo con se.</b> El se cambia el sentido del verbo. Apréndelo como palabra nueva.<br><i>ir = go · irse = leave · dormir = sleep · dormirse = fall asleep</i></li>
 </ol>
+<p class="trick"><b>Ejemplo:</b> «Se me olvidaron las llaves.» 1) ¿lo / la? No. 2) ¿me, y fue sin querer? <b>Sí → Accidental.</b> Listo.</p>
 <h4>Errores comunes</h4>
 <ul class="fixes">
 <li><s>le lo di</s> → se lo di</li>
@@ -204,6 +199,15 @@
 </section>
 
 <details class="panel more-tips"><summary>Más consejos</summary><div id="tips" class="stack"></div></details>
+
+<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2>
+<label for="search">Buscar en español o inglés</label>
+<input id="search" type="search" placeholder="Una palabra…" autocomplete="off" autocapitalize="off" spellcheck="false">
+<div class="chips" id="filters" aria-label="Filtrar vocabulario"></div>
+<p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p>
+<div id="vocab-groups" class="vtable"></div>
+<button id="retry-vocab" class="secondary" hidden>Volver a cargar</button>
+</section>
 
 <footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
 </main>
