@@ -523,3 +523,8 @@ footer {
 .rscore{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700}
 .plain{margin:0;padding-left:22px;display:grid;gap:10px}
 .more-tips>summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}
+.conj{display:grid;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:8px;background:var(--card)}
+.conj>div{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:8px 12px;border-top:1px solid var(--line)}
+.conj>div:first-child{border-top:0}
+.conj .ch{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.conj b{color:var(--r)}
