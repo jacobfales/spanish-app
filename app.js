@@ -1,9 +1,10 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const CHAT_ID = 'e1bd86ee-3e1b-43f4-b792-4cc30eef4ae7';
-// En iPhone/iPad, un enlace https://claude.ai/chat/... abre Safari, no la app. claude:// abre la app de Claude.
+// En iPhone/iPad, un enlace https://claude.ai/... abre Safari, no la app. claude:// abre la app de Claude
+// y la deja donde la dejaste (la plática de hoy). En la Mac se abre un chat nuevo en la web.
+// Ninguna app de Claude deja que un enlace prenda el modo de voz: hay que tocar el botón de voz.
 const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-const CHAT = IOS ? `claude://claude.ai/chat/${CHAT_ID}` : `https://claude.ai/chat/${CHAT_ID}`;
+const CHAT = IOS ? 'claude://' : 'https://claude.ai/new';
 function openChat(){ if(IOS) location.href = CHAT; else window.open(CHAT,'_blank','noopener'); }
 document.querySelectorAll('a.chat').forEach(a=>{ a.href = CHAT; if(IOS){ a.removeAttribute('target'); a.onclick = e => { e.preventDefault(); openChat(); }; } });
 const WAIT = "Habla conmigo como un amigo mexicano de verdad: natural, relajado, con las expresiones que usa la gente (no como libro ni como maestro). Frases cortas, una pregunta a la vez. Si me quedo callado, espera; no me interrumpas ni termines mis frases. Contesta solo cuando yo termine.";
@@ -39,7 +40,7 @@ const lists = {gospel:gospelTopics, everyday:topics, legal:legalTopics};
 function read(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* La sesión sigue aunque el almacenamiento esté bloqueado. */ } }
 const blocks = [
- {name:'Oración',seconds:60,instruction:'Ora en voz alta en español. La IA solo escucha.',fixed:'Voy a orar en voz alta en español. Escucha en silencio hasta que diga «amén». No me corrijas.'},
+ {name:'Oración',seconds:60,instruction:'Paso 1 de hoy: en Claude toca ✏️ (chat nuevo), pega, y toca el botón de voz (las ondas). Usa ese mismo chat para los 5 pasos.',fixed:'Voy a orar en voz alta en español. Escucha en silencio hasta que diga «amén». No me corrijas.'},
  {name:'Evangelio',seconds:180,instruction:'Escoge un tema y habla tú 2 o 3 minutos. La IA no te interrumpe.',prompt:'Evangelio: yo hablo',list:'gospel',pick:true,menu:['Evangelio: yo hablo','Investigador','Misionero en español']},
  {name:'Plática del día',seconds:720,instruction:'Plática normal, como con un amigo. Todo en español, nada de traducir.',prompt:'Plática natural',list:'everyday',menu:['Plática natural','Amigo','Plática de cena','Conocer a alguien','Escena real',"¿Qué pasaría si…?",'Debate','Sin vergüenza','Subjuntivo','Futuro']},
  {name:'Traducción legal',seconds:660,instruction:'Interpreta en primera persona: «yo», no «él dice». Sin agregar ni quitar nada.',prompt:'Traducción legal',list:'legal',menu:['Traducción legal','Intérprete legal','Cliente','Inglés → Español','Español → Inglés']},
