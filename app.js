@@ -175,16 +175,11 @@ if($('filters'))['Vocabulario','Legal','Correcciones'].forEach(group=>{const b=d
 function renderVocab(){
  const term=normalize($('search').value.trim());
  const rows=vocabulary.filter(v=>(!filter||v.grupo===filter)&&normalize(v.es+' '+v.en).includes(term));
- $('count').textContent=rows.length?'': 'No hay coincidencias.';
- $('count').hidden=rows.length>0;
  $('vocab-groups').replaceChildren();
- for(let i=0;i<rows.length;i+=5){
-  const group=rows.slice(i,i+5),card=document.createElement('details'),title=document.createElement('summary');
-  card.className='vocab-group';card.open=i===0;
-  title.textContent=`${i/5+1} · ${group[0].es} a ${group[group.length-1].es}`;card.append(title);
-  group.forEach(v=>{const row=document.createElement('p');row.className='vocab-row';row.textContent=v.grupo==='Correcciones'?`Dije: ${v.es} → Mejor: ${v.en}`:`${v.es} — ${v.en}`;card.append(row);});
-  $('vocab-groups').append(card);
- }
+ rows.forEach(v=>{const fix=v.grupo==='Correcciones';const row=document.createElement('div');row.className='vrow'+(fix?' fix':'');
+  const es=document.createElement('span');es.className='es';es.textContent=fix?'Dije: '+v.es:v.es;
+  const en=document.createElement('span');en.textContent=fix?'Mejor: '+v.en:v.en;row.append(es,en);$('vocab-groups').append(row);});
+ $('count').hidden=false;$('count').textContent=rows.length?`${rows.length} ${rows.length===1?'palabra':'palabras'}`:'No hay coincidencias.';
 }
 async function loadVocab(){try{const response=await fetch('vocab.json',{cache:'no-cache'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data)||!data.every(v=>typeof v.es==='string'&&typeof v.en==='string'&&['Vocabulario','Legal','Correcciones'].includes(v.grupo)))throw Error();vocabulary=data;save('spanish-vocab',data);$('retry-vocab').hidden=true;renderVocab();}catch{vocabulary=read('spanish-vocab',[]);if(vocabulary.length)renderVocab();else {$('count').hidden=false;$('count').textContent='No se pudo cargar el vocabulario. Abre la app desde un servidor local o vuelve a intentarlo con conexión.';}$('retry-vocab').hidden=false;}}
 if($('search')){$('search').oninput=renderVocab;$('retry-vocab').onclick=loadVocab;loadVocab();}

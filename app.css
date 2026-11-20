@@ -489,3 +489,37 @@ footer {
 
 .how{margin:8px 0 0;padding-left:22px;display:grid;gap:4px}
 .big-voice{width:100%;margin-top:24px;min-height:64px;font-size:19px;border-radius:16px}
+
+/* ---- Vocabulario y gramática (aprende.html) ---- */
+.learn main{max-width:760px}
+.learn section.panel,.learn details.panel{margin-bottom:18px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--inset);color:var(--fg);font-weight:650;text-decoration:none}
+.vtable{display:grid;border:1px solid var(--line);border-radius:12px;overflow:hidden;max-height:60vh;overflow-y:auto;-webkit-overflow-scrolling:touch;margin-top:10px}
+.vrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 14px;border-top:1px solid var(--line)}
+.vrow:first-child{border-top:0}
+.vrow .es{font-weight:650}
+.vrow.fix .es{color:#ed9d91;font-weight:500}
+.vrow.fix span:last-child{color:var(--green)}
+@media (max-width:460px){.vrow{grid-template-columns:1fr;gap:2px}}
+.rule{border:1px solid var(--line);border-left:5px solid var(--r);border-radius:12px;background:var(--inset);margin-top:10px;padding:0 14px}
+.rule>summary{list-style:none;cursor:pointer;min-height:56px;padding:12px 0;display:flex;flex-direction:column;gap:2px}
+.rule>summary::-webkit-details-marker{display:none}
+.rule>summary b{color:var(--r);font-size:18px}
+.rule>summary span{color:var(--muted);font-size:15px}
+.rule[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+.rule[open]{padding-bottom:14px}
+.rule h4{margin:14px 0 6px;color:var(--r);font-size:16px}
+.rule ul,.rule ol{margin:0;padding-left:22px;display:grid;gap:6px}
+.rule .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rule .two>div{background:var(--card);border-radius:10px;padding:2px 12px 12px}
+@media (max-width:560px){.rule .two{grid-template-columns:1fr}}
+.rule .rows small{color:var(--muted)}
+.rule .fixes s{color:#ed9d91}
+.rule .key{font-size:18px;margin:4px 0 8px}
+.rule .key b{color:var(--r)}
+.rule .trick{margin:14px 0 0;padding:10px 12px;border:1px dashed var(--r);border-radius:10px}
+.qkind{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rscore{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700}
+.plain{margin:0;padding-left:22px;display:grid;gap:10px}
+.more-tips>summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}

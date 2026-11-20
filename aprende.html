@@ -8,29 +8,172 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Spanish">
-<meta name="description" content="Tu práctica diaria de español. Treinta minutos, un paso a la vez.">
-<title>Spanish · Gramática y vocabulario</title>
+<meta name="description" content="Tu vocabulario y las reglas del español.">
+<title>Spanish · Vocabulario y gramática</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="app.css">
 <script src="app.js" defer></script>
+<script src="reglas.js" defer></script>
 </head>
-<body>
+<body class="learn">
 <main>
-<header><p class="eyebrow">PARA REPASAR</p><h1>Gramática y<br>Vocabulario</h1><nav class="top-links" aria-label="Recursos">
-<a href="index.html">← Volver a hablar</a>
-<a href="gramatica.html">📘 Reglas del Español</a>
-<a href="#vocab">🗂️ Vocabulario</a>
-<a href="#conectores">🧩 Conectores</a>
-<a href="gramatica.html#verguenza">😬 Sin vergüenza</a>
+<header><p class="eyebrow">PARA REPASAR</p><h1>Vocabulario y<br>Gramática</h1>
+<nav class="jump" aria-label="Ir a">
+<a href="index.html">← Hablar</a>
+<a href="#vocab">Vocabulario</a>
+<a href="#reglas">Reglas</a>
+<a href="#practica">Práctica</a>
 </nav></header>
-<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2><label for="search">Buscar en español o inglés</label><input id="search" type="search" placeholder="Una palabra…" autocomplete="off"><div class="chips" id="filters" aria-label="Filtrar vocabulario"></div><p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p><div id="vocab-groups"></div><button id="retry-vocab" class="secondary" hidden>Volver a cargar</button></section>
-<section class="more" aria-labelledby="more-title"><h2 id="more-title">Más práctica y consejos</h2><div id="tips" class="stack"></div>
-<article class="tip"><h3>Repite: 4, 3, 2</h3><p>Los miércoles, en lugar del Debate: elige una historia, como tu mejor día de la misión. Cuéntala en 4 minutos, luego en 3 y al final en 2. No quites partes: dilo con más fluidez.</p><p id="drill-round">Vuelta 1 de 3 · la misma historia</p><div id="drill-clock" class="drill-clock" role="timer">4:00</div><div class="timer-actions"><button id="drill-start">Empezar</button><button id="drill-reset" class="secondary">Reiniciar</button></div></article>
-<section id="conectores" class="panel"><h3>Conectores</h3><p class="muted">Palabras pequeñas para unir tus ideas.</p></section>
-<section class="panel"><h3>Práctica</h3><p class="muted">Elige la palabra que falta.</p><p id="score" role="status">0 de 15 · 0 respuestas</p><div id="quiz" class="stack"></div><button id="again" class="secondary wide">Otra vez</button></section>
+
+<section id="vocab" class="panel vocabulary"><h2>Vocabulario</h2>
+<label for="search">Buscar en español o inglés</label>
+<input id="search" type="search" placeholder="Una palabra…" autocomplete="off" autocapitalize="off" spellcheck="false">
+<div class="chips" id="filters" aria-label="Filtrar vocabulario"></div>
+<p id="count" class="muted small" role="status" hidden>Cargando vocabulario…</p>
+<div id="vocab-groups" class="vtable"></div>
+<button id="retry-vocab" class="secondary" hidden>Volver a cargar</button>
 </section>
+
+<section id="reglas" class="panel"><h2>Reglas del español</h2>
+<p class="muted">Una línea por regla. Toca una para ver los detalles.</p>
+
+<details class="rule" style="--r:#f0915a"><summary><b>1. SE</b><span>Una palabra, 7 trabajos</span></summary>
+<p class="key">La regla más importante: después del verbo, <b>¿hay una COSA?</b></p>
+<ul>
+<li><b>Sí, hay cosa → pasiva.</b> El verbo copia a la cosa: se vend<b>e</b> una casa · se vend<b>en</b> dos casas.</li>
+<li><b>No hay cosa → impersonal.</b> El verbo siempre en singular: se vive bien aquí · se trabaja mucho.</li>
+<li>Caso raro: una persona con «a» no cuenta como cosa → singular: se busca a los niños.</li>
+</ul>
+<h4>Los 7, en el orden para revisar</h4>
+<ol class="rows">
+<li><b>Le disfrazado</b> · se + lo / la · <i>Se lo di.</i> <small>I gave it to him.</small></li>
+<li><b>Accidental</b> · se + me / te / le, sin querer · <i>Se me cayó.</i> <small>I dropped it.</small></li>
+<li><b>Pasiva</b> · «la gente» + una cosa; el verbo va con la cosa · <i>Se venden casas.</i> <small>Houses are sold.</small></li>
+<li><b>Impersonal</b> · «la gente», sin cosa; verbo singular · <i>Se vive bien.</i> <small>People live well.</small></li>
+<li><b>Reflexivo</b> · a sí mismo · <i>Se lava las manos.</i> <small>He washes his hands.</small></li>
+<li><b>Recíproco</b> · el uno al otro · <i>Se abrazan.</i> <small>They hug each other.</small></li>
+<li><b>Verbo con se</b> · el verbo cambia de sentido · <i>Me voy.</i> <small>I'm leaving.</small> (ir = go · irse = leave)</li>
+</ol>
+<h4>Errores comunes</h4>
+<ul class="fixes">
+<li><s>le lo di</s> → se lo di</li>
+<li><s>se voy</s> → me voy</li>
+<li><s>se me caí las llaves</s> → se me cayeron las llaves</li>
+<li><s>se alquila casas</s> → se alquilan casas</li>
+<li><s>se buscan a los niños</s> → se busca a los niños</li>
+</ul>
+<p class="trick"><b>Si hay cosa, copia. Si no, singular.</b></p>
+</details>
+
+<details class="rule" style="--r:#6aa8e0"><summary><b>2. Ser / estar</b><span>Lo que algo ES, o cómo y dónde ESTÁ</span></summary>
+<div class="two">
+<div><h4>SER = DOCTOR</h4><ul>
+<li><b>D</b>escripción · es alto</li><li><b>O</b>cupación · es abogado</li><li><b>C</b>aracterística · es amable</li>
+<li><b>T</b>iempo · son las tres</li><li><b>O</b>rigen · es de Utah</li><li><b>R</b>elación · es mi esposa</li></ul></div>
+<div><h4>ESTAR = PLACE</h4><ul>
+<li><b>P</b>osición · está sentado</li><li><b>L</b>ugar · está en Provo</li><li><b>A</b>cción · está hablando</li>
+<li><b>C</b>ondición · está cansado</li><li><b>E</b>moción · está feliz</li></ul></div>
+</div>
+<h4>Cambian de sentido</h4>
+<ul><li>ser listo = smart · estar listo = ready</li><li>ser aburrido = boring · estar aburrido = bored</li><li>ser malo = bad · estar malo = sick</li></ul>
+<h4>La trampa</h4>
+<ul><li>Un evento usa SER aunque sea lugar: la fiesta <b>es</b> en mi casa.</li><li>Pero una cosa: mi casa <b>está</b> en Provo.</li></ul>
+<p class="trick">Cómo te sientes y dónde estás: siempre <b>estar</b>.</p>
+</details>
+
+<details class="rule" style="--r:#6cc070"><summary><b>3. Por / para</b><span>De dónde viene, o adónde va</span></summary>
+<div class="two">
+<div><h4>POR · la causa, el camino</h4><ul>
+<li>Razón: gracias <b>por</b> todo</li><li>Medio: <b>por</b> teléfono</li><li>Cambio: $20 <b>por</b> el libro</li>
+<li>Tiempo: <b>por</b> dos horas</li><li>A través: caminé <b>por</b> el parque</li></ul></div>
+<div><h4>PARA · la meta, el destino</h4><ul>
+<li>Meta: estudio <b>para</b> ser abogado</li><li>Fecha límite: <b>para</b> el viernes</li><li>Destino: salgo <b>para</b> Provo</li>
+<li>Para quién: es <b>para</b> ti</li><li>Opinión: <b>para</b> mí, es fácil</li></ul></div>
+</div>
+</details>
+
+<details class="rule" style="--r:#b597e0"><summary><b>4. Pretérito / imperfecto</b><span>La foto o la película</span></summary>
+<div class="two">
+<div><h4>Pretérito · la foto</h4><ul><li>Terminó, con principio o fin</li><li>ayer, una vez, de repente</li><li>Ayer <b>jugué</b> dos horas</li></ul></div>
+<div><h4>Imperfecto · la película de fondo</h4><ul><li>Lo que pasaba, el fondo</li><li>siempre, cada día, de niño</li><li>Edad, hora, cómo era</li><li>De niño <b>jugaba</b> fútbol</li></ul></div>
+</div>
+<p class="trick">Juntos: <b>Llovía</b> (fondo) cuando <b>llegué</b> (la foto).</p>
+</details>
+
+<details class="rule" style="--r:#e07a7a"><summary><b>5. Subjuntivo</b><span>Deseo, emoción o duda + que + otra persona</span></summary>
+<h4>WEIRDO + que + otra persona</h4>
+<ul>
+<li><b>W</b>ishes · quiero que</li><li><b>E</b>moción · me alegra que</li><li><b>I</b>mpersonal · es importante que</li>
+<li><b>R</b>ecomendar · te pido que</li><li><b>D</b>uda · dudo que</li><li><b>O</b>jalá · ojalá que</li>
+</ul>
+<div class="two">
+<div><h4>Sí subjuntivo</h4><ul><li>Espero que <b>tengas</b> un buen día</li><li>Dudo que <b>sea</b> verdad</li><li>Cuando <b>llegues</b>, llámame (futuro)</li></ul></div>
+<div><h4>No subjuntivo</h4><ul><li>Misma persona: quiero <b>ir</b></li><li>Estás seguro: creo que <b>es</b> verdad</li><li>Hábito: cuando <b>llego</b>, como</li></ul></div>
+</div>
+</details>
+
+<details class="rule" style="--r:#e0b44a"><summary><b>6. Lo / le</b><span>Qué cosa, o a quién le llega</span></summary>
+<div class="two">
+<div><h4>LO / LA / LOS / LAS = la cosa</h4><ul><li>Cambia: lo, la, los, las</li><li>Compré el carro → <b>lo</b> compré</li><li>Veo a María → <b>la</b> veo</li><li>Verbos: ver, llamar, conocer, ayudar, buscar</li></ul></div>
+<div><h4>LE / LES = la persona que recibe</h4><ul><li>No cambia con hombre o mujer</li><li>Di el libro a Juan → <b>le</b> di el libro</li><li>Escribí a mis papás → <b>les</b> escribí</li><li>Verbos: dar, decir, mandar, preguntar, pedir, explicar</li></ul></div>
+</div>
+<p class="trick">le + lo = <b>se lo</b>. Persona primero, cosa después: me lo, te la, se los.</p>
+</details>
+
+<details class="rule" style="--r:#5cc8d0"><summary><b>7. Gustar</b><span>La cosa manda el verbo</span></summary>
+<div class="two">
+<div><h4>Una cosa → gusta</h4><ul><li>Me <b>gusta</b> el fútbol</li><li>Le <b>duele</b> la cabeza</li><li>Nos <b>falta</b> tiempo</li></ul></div>
+<div><h4>Varias → gustan</h4><ul><li>Me <b>gustan</b> los tacos</li><li>Le <b>duelen</b> los pies</li><li>Igual: encantar, importar, molestar, interesar</li></ul></div>
+</div>
+</details>
+
+<details class="rule" style="--r:#f07aae"><summary><b>8. Género</b><span>El, la y las trampas</span></summary>
+<ul><li><b>-ma</b> griega = el: el problema, el tema</li><li><b>-ción, -dad, -tud</b> = la: la canción, la verdad, la actitud</li><li><b>á-</b> tónica = el: el agua (pero «el agua está fría»)</li></ul>
+<div class="two">
+<div><h4>EL, aunque termine en -a</h4><ul><li>el problema, el sistema, el idioma, el programa</li><li>el día, el mapa, el planeta</li><li>el agua, el alma, el águila</li></ul></div>
+<div><h4>LA, aunque termine en -o</h4><ul><li>la mano, la foto, la moto, la radio</li><li>En plural vuelve: las aguas</li></ul></div>
+</div>
+<p class="trick">«-ma griega, masculina»: el problema del sistema es el tema.</p>
+</details>
+
+<details class="rule" style="--r:#a7b4bf"><summary><b>9. Acentos</b><span>Dónde cae el golpe y cuándo va la tilde</span></summary>
+<ul>
+<li><b>Aguda</b> (golpe al final, can-CIÓN): tilde si termina en N, S o vocal · canción, café</li>
+<li><b>Llana</b> (golpe en la penúltima, ÁR-bol): tilde si NO termina en N, S o vocal · árbol, fácil</li>
+<li><b>Esdrújula</b> (MÉ-di-co): siempre tilde · médico, rápido</li>
+</ul>
+<h4>Tilde que cambia el sentido</h4>
+<ul><li>tú / tu · él / el · sí / si</li><li>sé / se · más / mas · mí / mi</li><li>Preguntas: qué, cómo, dónde, cuándo</li></ul>
+</details>
+
+<details class="rule" style="--r:#ddbf7d"><summary><b>10. Conectores</b><span>Palabras pequeñas para unir tus ideas</span></summary>
+<div id="conectores"></div>
+</details>
+</section>
+
+<section id="practica" class="panel"><h2>Práctica</h2>
+<p class="muted">Escoge un tema. Toca la respuesta y te dice por qué. «Mis errores» guarda las que fallaste.</p>
+<div class="chips" id="rchips" role="group" aria-label="Tema de práctica"></div>
+<p class="rscore"><span id="rscore">0 / 0</span><button id="rreset" class="secondary" type="button">Empezar de nuevo</button></p>
+<div id="rqs" class="stack"></div>
+</section>
+
+<section class="panel"><h2>Hablar sin vergüenza</h2>
+<ol class="plain">
+<li><b>A nadie le importan tus errores tanto como a ti.</b> Quedarte callado te frena más que un error.</li>
+<li><b>Di al empezar: «Voy a cometer errores y está bien».</b></li>
+<li><b>Ten frases de rescate:</b> «¿Cómo se dice…?», «No sé cómo decirlo, pero…», «O sea…», «Déjame pensar».</li>
+<li><b>Grábate una vez a la semana.</b> Suenas mejor de lo que crees.</li>
+<li><b>Conversaciones pequeñas todos los días:</b> llama a Emita, pide la comida en español.</li>
+<li><b>Acuérdate de tu misión.</b> Ya enseñaste en español a cientos de personas.</li>
+<li><b>La meta es que te entiendan, no hablar perfecto.</b></li>
+</ol>
+</section>
+
+<details class="panel more-tips"><summary>Más consejos</summary><div id="tips" class="stack"></div></details>
+
 <footer>Habla despacio. Tómate tu tiempo. Sigue mañana.</footer>
 </main>
 </body>
