@@ -156,7 +156,7 @@ function makeTimer(key,durations,onPaint){
  timers[key]=api;return api;
 }
 const timer=$('clock')&&makeTimer('spanish-timer-v3',blocks.map(b=>b.seconds),s=>{
- $('clock').textContent=format(s.remaining);$('current').textContent=s.finished?'¡Terminaste!':blocks[s.index].name;
+ $('clock').textContent=format(s.remaining);$('current').textContent=s.finished?'¡Terminaste!':blocks[s.index].name;$('step-badge').textContent=s.finished?'30 MIN EN TOTAL':`PASO ${s.index+1} DE ${blocks.length} · ${Math.round(blocks[s.index].seconds/60)} MIN`;
  $('next-action').textContent=s.finished?'Buen trabajo. Vuelve mañana.':blocks[s.index].instruction;
  $('start').textContent=s.startedAt!==null?'Pausar':s.finished?'Empezar de nuevo':s.remaining<blocks[s.index].seconds?'Continuar':'Empezar';
  $('skip').disabled=s.finished;
