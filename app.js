@@ -232,4 +232,9 @@ const tips=[
  ['Trampas del inglés',['realize → darse cuenta; realizar significa hacer o llevar a cabo.','Para un trabajo: solicitar, en vez de aplicar.','Di «tiene sentido», «estoy emocionado», «por otro lado» y «devolver la llamada». Evita «hace sentido», «estoy excitado», «en la otra mano» y «llamar para atrás».']]
 ];
 if($('tips'))tips.forEach(([title,lines])=>{const item=document.createElement('article');item.className='tip';const h=document.createElement('h3');h.textContent=title;const list=document.createElement('ul');lines.forEach(line=>{const li=document.createElement('li');li.textContent=line;list.append(li);});item.append(h,list);$('tips').append(item);});
-if('serviceWorker' in navigator && /^https?:$/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(()=>{ /* Una primera visita sin conexión no puede instalar la caché. */ });
+// Se actualiza sola: si hay una versión nueva, la app se recarga una vez.
+if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
+ const hadController=!!navigator.serviceWorker.controller;let reloaded=false;
+ navigator.serviceWorker.addEventListener('controllerchange',()=>{if(hadController&&!reloaded){reloaded=true;location.reload();}});
+ navigator.serviceWorker.register('sw.js').then(reg=>{const check=()=>reg.update().catch(()=>{});check();document.addEventListener('visibilitychange',()=>{if(!document.hidden)check();});}).catch(()=>{ /* Una primera visita sin conexión no puede instalar la caché. */ });
+}
