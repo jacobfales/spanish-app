@@ -529,6 +529,10 @@ footer {
 .conj .ch{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .conj b{color:var(--r)}
 .howto{margin-top:20px}
+.calma{margin-top:14px;border-left:4px solid var(--green)}
+.calma h2{margin-top:0}
+.calma ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.calma a{color:var(--muted);font-size:.85em;white-space:nowrap}
 .howto h2{margin-top:0}
 .steps-how{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:hw}
 .steps-how li{counter-increment:hw;display:grid;grid-template-columns:34px 1fr;column-gap:12px;align-items:start}
