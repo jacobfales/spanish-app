@@ -13,8 +13,6 @@ const TONE = {
  friend: "TONO: Eres mi cuate mexicano de mi edad, NO mi maestro. Habla relajado y con la jerga que usa la gente en México (güey, la neta, qué onda, no manches, chido, qué padre, órale, ¿a poco?, está cañón, ahorita). Nada de lenguaje de libro.",
  formal: "TONO: En este tema NADA de jerga. Habla formal y profesional, como en una corte o un despacho de abogados: «usted», frases completas y vocabulario legal correcto."
 };
-// EMPATÍA (Jacob 11/25/26): ya es avanzado, pero le da miedo hablar por su estándar tan alto.
-const KIND = "EMPATÍA (lo más importante): Ten muchísima empatía conmigo. Mi español ya es avanzado, pero muchas veces siento que no soy suficientemente bueno y me da miedo hablar porque tengo un estándar muy alto. Haz que me sienta seguro y con ganas de hablar. Celebra de verdad lo que digo bien: algo concreto, no un «muy bien» vacío. Nunca suenes decepcionado ni impaciente. Si me trabo, sé cálido («vas muy bien, sigue», «tómate tu tiempo») y espera. Si digo que lo hago mal, recuérdame con cariño que hablar con errores es justo como se llega a hablar perfecto, y que me entiendes muy bien.";
 const WAIT = "RITMO: Habla despacio y con frases cortas (2 o 3 como máximo). Yo hablo la mayor parte. Si me quedo callado, espera: no me interrumpas ni termines mis frases. Contesta solo cuando yo termine.";
 const FIX = [
  "MIENTRAS HABLAMOS — NO ME CORRIJAS:",
@@ -23,9 +21,8 @@ const FIX = [
  "- EN SECRETO, apunta cada error mío (gramática, palabra equivocada, palabra en inglés, frase que suena a gringo) y cada palabra que no supe o te pregunté. Junta todo en UNA lista para toda la práctica de hoy. No me digas nada de esa lista hasta el final.",
  "",
  "AL FINAL (después del último paso, o si yo digo «ya terminamos»):",
- "0) Primero dime 3 cosas concretas que hice muy bien hoy, con mis propias palabras. Con cariño, como amigo.",
- "1) Luego pregúntame: «¿Qué errores crees que cometiste hoy?» y espera. Déjame decir todos los que me acuerde, sin ayudarme.",
- "2) Luego dame la lista completa, con calma y sin regaños: son errores normales de alguien que ya habla bien. Con este formato:",
+ "1) Primero pregúntame: «¿Qué errores crees que cometiste hoy?» y espera. Déjame decir todos los que me acuerde, sin ayudarme.",
+ "2) Luego dame la lista completa, con este formato:",
  "   ✅ LOS QUE ENCONTRASTE: cada error que yo dije, con la forma correcta.",
  "   ❌ LOS QUE SE TE PASARON: Dije: … → Mejor: … (regla corta)",
  "   📝 PALABRAS NUEVAS: palabra = meaning",
@@ -80,12 +77,11 @@ blocks.forEach((block, i) => {
 function stepText(b){ return b.fixed || `${prompts[b.prompt]}\n${b.list==='legal'?'LA ESCENA':'EL TEMA'}: ${b.topic}`; }
 function fullPrompt(b) {
  const end = b.last ? 'Este es el ÚLTIMO paso. Cuando yo termine, haz lo de «AL FINAL».' : 'Todavía NO hagas lo de «AL FINAL». Sigue apuntando mis errores en secreto: habrá más pasos en este mismo chat.';
- return [KIND, `ESTE PASO: ${b.name.toUpperCase()}\n${stepText(b)}`, TONE[b.tone], WAIT, end, FIX].join('\n\n'); }
+ return [`ESTE PASO: ${b.name.toUpperCase()}\n${stepText(b)}`, TONE[b.tone], WAIT, end, FIX].join('\n\n'); }
 // Todo en un solo mensaje: Claude guía los 5 pasos en modo de voz, sin volver a la app.
 function sessionPrompt(){
  const steps=blocks.map((b,i)=>`PASO ${i+1} · ${b.name.toUpperCase()} · ${Math.round(b.seconds/60)} min\n${TONE[b.tone]}\n${stepText(b)}`).join('\n\n');
  return ['Hoy hago mi práctica de español de 30 minutos, toda en modo de voz. Tú me guías por los 5 pasos, en orden. Yo no voy a escribir ni pegar nada más.',
-  KIND,
   'LOS 5 PASOS (cada paso tiene su propio TONO; síguelo solo en ese paso)',
   steps,
   'CÓMO PASAR DE UN PASO A OTRO: Al empezar cada paso, di en una frase corta qué paso es y el tema. Cuando se acabe su tiempo, espera a que termine mi frase, di «Siguiente paso» y empieza el siguiente. Si no puedes ver la hora, cuenta mis turnos: cada turno mío con tu respuesta es más o menos 1 minuto. Si digo «siguiente», pasa al siguiente paso.',
