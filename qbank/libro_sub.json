@@ -1,0 +1,101 @@
+[
+ {
+  "titulo": "A · Esperanzas y deseos",
+  "instr": "Complete con el subjuntivo. Siga el modelo.",
+  "modelo": "Quiero que tú ___ (venir) a la audiencia. → vengas",
+  "items": [
+   {
+    "c": "Es importante que el cliente ___ (decir) la verdad.",
+    "a": [
+     "diga"
+    ],
+    "w": "Es importante que + subjuntivo."
+   },
+   {
+    "c": "Ojalá que ___ (hacer) buen tiempo el sábado.",
+    "a": [
+     "haga"
+    ],
+    "w": "Ojalá siempre lleva subjuntivo."
+   },
+   {
+    "c": "Busco un abogado que ___ (hablar) español.",
+    "a": [
+     "hable"
+    ],
+    "w": "Persona que no sabemos si existe: subjuntivo."
+   },
+   {
+    "c": "Cuando (yo) ___ (llegar) a Provo, te llamo.",
+    "a": [
+     "llegue"
+    ],
+    "w": "Cuando + futuro: subjuntivo."
+   },
+   {
+    "c": "No creo que el juez ___ (estar) de acuerdo.",
+    "a": [
+     "esté"
+    ],
+    "w": "No creo que = duda: subjuntivo."
+   },
+   {
+    "c": "Sydney quería que yo ___ (ir) al templo con ella.",
+    "a": [
+     "fuera",
+     "fuese"
+    ],
+    "w": "Pasado: imperfecto de subjuntivo."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Consejos del obispo",
+  "instr": "Diga lo que quiere el obispo. Siga el modelo.",
+  "modelo": "Tú oras cada día. → El obispo quiere que ores cada día.",
+  "items": [
+   {
+    "c": "Tú vas a la capilla temprano.",
+    "a": [
+     "El obispo quiere que vayas a la capilla temprano."
+    ],
+    "w": "Ir → vayas."
+   },
+   {
+    "c": "Nosotros servimos en el templo.",
+    "a": [
+     "El obispo quiere que sirvamos en el templo."
+    ],
+    "w": "Servir cambia e→i: sirvamos."
+   },
+   {
+    "c": "Jacob da un discurso.",
+    "a": [
+     "El obispo quiere que Jacob dé un discurso."
+    ],
+    "w": "Dé lleva tilde para no confundir con de."
+   },
+   {
+    "c": "Los jóvenes son puntuales.",
+    "a": [
+     "El obispo quiere que los jóvenes sean puntuales."
+    ],
+    "w": "Ser → sean."
+   },
+   {
+    "c": "Tú pides ayuda.",
+    "a": [
+     "El obispo quiere que pidas ayuda."
+    ],
+    "w": "Pedir cambia e→i: pidas."
+   },
+   {
+    "c": "Sydney y tú se sienten bienvenidos.",
+    "a": [
+     "El obispo quiere que Sydney y tú se sientan bienvenidos."
+    ],
+    "w": "Sentirse → se sientan (ustedes)."
+   }
+  ]
+ }
+]

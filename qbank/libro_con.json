@@ -1,0 +1,100 @@
+[
+ {
+  "titulo": "A · No esto, sino aquello",
+  "instr": "Complete con pero, sino o sino que. Siga el modelo.",
+  "modelo": "No es abogado, ___ estudiante. → sino",
+  "items": [
+   {
+    "c": "Quería ir al gimnasio, ___ estaba cansado.",
+    "a": [
+     "pero"
+    ],
+    "w": "Contraste sin negar lo primero: pero."
+   },
+   {
+    "c": "No vivo en Salt Lake, ___ en Provo.",
+    "a": [
+     "sino"
+    ],
+    "w": "Corrige una negación: sino."
+   },
+   {
+    "c": "No lo llamé, ___ le escribí.",
+    "a": [
+     "sino que"
+    ],
+    "w": "Corrige con un verbo conjugado: sino que."
+   },
+   {
+    "c": "Es difícil, ___ vale la pena.",
+    "a": [
+     "pero"
+    ],
+    "w": "No hay negación antes: pero."
+   },
+   {
+    "c": "No solo estudia, ___ también trabaja.",
+    "a": [
+     "sino que"
+    ],
+    "w": "No solo… sino que + verbo."
+   },
+   {
+    "c": "No quiero tacos, ___ enchiladas.",
+    "a": [
+     "sino"
+    ],
+    "w": "Corrige una negación sin verbo: sino."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Pequeñas palabras",
+  "instr": "Complete con el conector correcto (y / e, o / u, aunque, porque). Siga el modelo.",
+  "modelo": "Sydney ___ Isabel son amigas. → e",
+  "items": [
+   {
+    "c": "¿Quieres siete ___ ocho tacos?",
+    "a": [
+     "u"
+    ],
+    "w": "O cambia a u antes de o-."
+   },
+   {
+    "c": "Estudio historia ___ inglés.",
+    "a": [
+     "e"
+    ],
+    "w": "Y cambia a e antes de i-."
+   },
+   {
+    "c": "Fui a la iglesia ___ estaba enfermo.",
+    "a": [
+     "aunque"
+    ],
+    "w": "A pesar de algo: aunque."
+   },
+   {
+    "c": "No firmó ___ no confiaba en el abogado.",
+    "a": [
+     "porque"
+    ],
+    "w": "Da la razón: porque."
+   },
+   {
+    "c": "Padre ___ hijo fueron al templo.",
+    "a": [
+     "e"
+    ],
+    "w": "Y cambia a e antes de hi- (sonido i)."
+   },
+   {
+    "c": "¿Es mexicano ___ hondureño?",
+    "a": [
+     "u"
+    ],
+    "w": "O cambia a u antes de ho- (sonido o)."
+   }
+  ]
+ }
+]

@@ -1,0 +1,106 @@
+[
+ {
+  "titulo": "A · ¿Qué se hace aquí?",
+  "instr": "Diga lo que se hace en cada lugar. Use se. Siga el modelo.",
+  "modelo": "en el juzgado / escuchar casos → En el juzgado se escuchan casos.",
+  "items": [
+   {
+    "c": "en el gimnasio / levantar pesas",
+    "a": [
+     "En el gimnasio se levantan pesas.",
+     "Se levantan pesas en el gimnasio."
+    ],
+    "w": "Pesas es plural: se levantan."
+   },
+   {
+    "c": "en la capilla / cantar himnos",
+    "a": [
+     "En la capilla se cantan himnos.",
+     "Se cantan himnos en la capilla."
+    ],
+    "w": "Himnos es plural: se cantan."
+   },
+   {
+    "c": "en México / comer tortillas",
+    "a": [
+     "En México se comen tortillas.",
+     "Se comen tortillas en México."
+    ],
+    "w": "Tortillas es plural: se comen."
+   },
+   {
+    "c": "en el bufete / atender a clientes",
+    "a": [
+     "En el bufete se atiende a clientes.",
+     "Se atiende a clientes en el bufete."
+    ],
+    "w": "Con a personal, el verbo queda en singular."
+   },
+   {
+    "c": "en BYU / hablar muchos idiomas",
+    "a": [
+     "En BYU se hablan muchos idiomas.",
+     "Se hablan muchos idiomas en BYU."
+    ],
+    "w": "Idiomas es plural: se hablan."
+   },
+   {
+    "c": "en la escuela de derecho / estudiar mucho",
+    "a": [
+     "En la escuela de derecho se estudia mucho.",
+     "Se estudia mucho en la escuela de derecho."
+    ],
+    "w": "Sin sustantivo: se impersonal en singular."
+   }
+  ]
+ },
+ {
+  "titulo": "B · ¡Qué mala suerte!",
+  "instr": "Complete con se + pronombre + verbo en pretérito. Siga el modelo.",
+  "modelo": "A Sydney ___ (caerse) el vaso. → se le cayó",
+  "items": [
+   {
+    "c": "A mí ___ (olvidarse) el expediente del cliente.",
+    "a": [
+     "se me olvidó"
+    ],
+    "w": "Accidente: se + me + verbo con el expediente."
+   },
+   {
+    "c": "A nosotros ___ (acabarse) la gasolina en Provo.",
+    "a": [
+     "se nos acabó"
+    ],
+    "w": "La gasolina es singular: acabó."
+   },
+   {
+    "c": "Al obispo ___ (perderse) las llaves de la capilla.",
+    "a": [
+     "se le perdieron"
+    ],
+    "w": "Las llaves es plural: perdieron."
+   },
+   {
+    "c": "A ti ___ (romperse) el cinturón de pesas.",
+    "a": [
+     "se te rompió"
+    ],
+    "w": "A ti → te; el cinturón → rompió."
+   },
+   {
+    "c": "A los clientes ___ (ocurrirse) una buena idea.",
+    "a": [
+     "se les ocurrió"
+    ],
+    "w": "A ellos → les; una idea → ocurrió."
+   },
+   {
+    "c": "A Sydney y a mí ___ (quemarse) las tortillas.",
+    "a": [
+     "se nos quemaron"
+    ],
+    "w": "Sydney y yo → nos; tortillas → quemaron."
+   }
+  ]
+ }
+]

@@ -1,0 +1,114 @@
+[
+ {
+  "titulo": "A · Expresar en español",
+  "instr": "Exprese en español natural. ¡Cuidado con los falsos amigos! Siga el modelo.",
+  "modelo": "I'm embarrassed. → Me da vergüenza.",
+  "items": [
+   {
+    "c": "The library is closed.",
+    "a": [
+     "La biblioteca está cerrada."
+    ],
+    "w": "Library = biblioteca; librería vende libros."
+   },
+   {
+    "c": "I realized I was wrong.",
+    "a": [
+     "Me di cuenta de que estaba equivocado.",
+     "Me di cuenta de que no tenía razón."
+    ],
+    "w": "Realize = darse cuenta; realizar = hacer."
+   },
+   {
+    "c": "I attended the hearing.",
+    "a": [
+     "Asistí a la audiencia."
+    ],
+    "w": "Attend = asistir; atender = servir."
+   },
+   {
+    "c": "She is very sensible.",
+    "a": [
+     "Ella es muy sensata.",
+     "Es muy sensata."
+    ],
+    "w": "Sensible = sensato; sensible = que siente mucho."
+   },
+   {
+    "c": "I have a cold.",
+    "a": [
+     "Tengo gripa.",
+     "Tengo gripe.",
+     "Estoy resfriado.",
+     "Tengo un resfriado."
+    ],
+    "w": "Constipado = estreñido en México."
+   },
+   {
+    "c": "Actually, I'm from Utah.",
+    "a": [
+     "En realidad, soy de Utah.",
+     "La verdad, soy de Utah.",
+     "En realidad soy de Utah."
+    ],
+    "w": "Actually = en realidad; actualmente = ahora."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Calcos del inglés",
+  "instr": "Corrija el calco del inglés. Siga el modelo.",
+  "modelo": "Te llamo para atrás. → Te regreso la llamada.",
+  "items": [
+   {
+    "c": "Eso hace sentido. (corrija)",
+    "a": [
+     "Eso tiene sentido.",
+     "Tiene sentido."
+    ],
+    "w": "En español algo tiene sentido."
+   },
+   {
+    "c": "Estoy excitado por el viaje. (corrija)",
+    "a": [
+     "Estoy emocionado por el viaje.",
+     "Me emociona el viaje."
+    ],
+    "w": "Excitado tiene sentido sexual."
+   },
+   {
+    "c": "El juez hizo una decisión. (corrija)",
+    "a": [
+     "El juez tomó una decisión."
+    ],
+    "w": "Se toma una decisión."
+   },
+   {
+    "c": "Voy a tomar el LSAT. (corrija)",
+    "a": [
+     "Voy a presentar el LSAT.",
+     "Voy a hacer el LSAT."
+    ],
+    "w": "En México se presenta un examen."
+   },
+   {
+    "c": "Cambié mi mente. (corrija)",
+    "a": [
+     "Cambié de opinión.",
+     "Cambié de idea."
+    ],
+    "w": "Se dice cambiar de opinión."
+   },
+   {
+    "c": "Tuve un buen tiempo en la fiesta. (corrija)",
+    "a": [
+     "Me la pasé bien en la fiesta.",
+     "La pasé bien en la fiesta.",
+     "Me divertí en la fiesta.",
+     "Lo pasé bien en la fiesta."
+    ],
+    "w": "Good time = pasarla bien."
+   }
+  ]
+ }
+]

@@ -1,0 +1,110 @@
+[
+ {
+  "titulo": "A · Un día en Provo",
+  "instr": "Complete con por o para. Siga el modelo.",
+  "modelo": "Estudio ___ ser abogado. → para",
+  "items": [
+   {
+    "c": "Gracias ___ tu ayuda con el caso.",
+    "a": [
+     "por"
+    ],
+    "w": "Gracias por: causa o motivo."
+   },
+   {
+    "c": "Salimos ___ México el lunes.",
+    "a": [
+     "para"
+    ],
+    "w": "Destino: para."
+   },
+   {
+    "c": "Caminamos ___ el centro de Provo.",
+    "a": [
+     "por"
+    ],
+    "w": "Movimiento a través de un lugar: por."
+   },
+   {
+    "c": "El escrito es ___ el viernes.",
+    "a": [
+     "para"
+    ],
+    "w": "Fecha límite: para."
+   },
+   {
+    "c": "Pagué veinte dólares ___ la proteína.",
+    "a": [
+     "por"
+    ],
+    "w": "Intercambio o precio: por."
+   },
+   {
+    "c": "Levanto pesas tres veces ___ semana.",
+    "a": [
+     "por"
+    ],
+    "w": "Frecuencia: por semana."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Expresar en español",
+  "instr": "Exprese en español. Siga el modelo.",
+  "modelo": "This gift is for Sydney. → Este regalo es para Sydney.",
+  "items": [
+   {
+    "c": "I went to the store for milk.",
+    "a": [
+     "Fui a la tienda por leche.",
+     "Fui por leche a la tienda.",
+     "Fui a la tienda a comprar leche."
+    ],
+    "w": "Ir por algo = ir a buscarlo."
+   },
+   {
+    "c": "The contract was signed by the client.",
+    "a": [
+     "El contrato fue firmado por el cliente."
+    ],
+    "w": "Agente de la voz pasiva: por."
+   },
+   {
+    "c": "For a student, he knows a lot of law.",
+    "a": [
+     "Para ser estudiante, sabe mucho de derecho.",
+     "Para estudiante, sabe mucho de derecho.",
+     "Para un estudiante, sabe mucho de derecho."
+    ],
+    "w": "Comparación con lo esperado: para."
+   },
+   {
+    "c": "I'll call you (tú) by phone.",
+    "a": [
+     "Te llamo por teléfono.",
+     "Te llamaré por teléfono.",
+     "Te voy a llamar por teléfono.",
+     "Voy a llamarte por teléfono."
+    ],
+    "w": "Medio de comunicación: por."
+   },
+   {
+    "c": "We are about to leave.",
+    "a": [
+     "Estamos por salir.",
+     "Estamos a punto de salir."
+    ],
+    "w": "Estar por (México) = a punto de."
+   },
+   {
+    "c": "I studied for three hours.",
+    "a": [
+     "Estudié por tres horas.",
+     "Estudié durante tres horas.",
+     "Estudié tres horas."
+    ],
+    "w": "Duración: por, o sin preposición."
+   }
+  ]
+ }
+]

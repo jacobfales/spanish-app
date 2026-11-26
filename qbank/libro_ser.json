@@ -1,0 +1,104 @@
+[
+ {
+  "titulo": "A · En el juzgado",
+  "instr": "Complete con la forma correcta de ser o estar en presente. Siga el modelo.",
+  "modelo": "El juez ___ muy estricto. → es",
+  "items": [
+   {
+    "c": "La audiencia ___ en el tercer piso.",
+    "a": [
+     "es"
+    ],
+    "w": "Lugar de un evento: ser."
+   },
+   {
+    "c": "El abogado ___ en su oficina ahora.",
+    "a": [
+     "está"
+    ],
+    "w": "Lugar de una persona o cosa: estar."
+   },
+   {
+    "c": "Yo ___ nervioso por el LSAT.",
+    "a": [
+     "estoy"
+    ],
+    "w": "Estado emocional del momento: estar."
+   },
+   {
+    "c": "Las tortillas ___ frías; hay que calentarlas.",
+    "a": [
+     "están"
+    ],
+    "w": "Condición temporal: estar."
+   },
+   {
+    "c": "Mi esposa ___ muy inteligente.",
+    "a": [
+     "es"
+    ],
+    "w": "Característica de la persona: ser."
+   },
+   {
+    "c": "La reunión sacramental ___ a las nueve.",
+    "a": [
+     "es"
+    ],
+    "w": "Hora de un evento: ser."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Expresar en español",
+  "instr": "Exprese en español. Siga el modelo.",
+  "modelo": "The client is bored. → El cliente está aburrido.",
+  "items": [
+   {
+    "c": "The class is boring.",
+    "a": [
+     "La clase es aburrida."
+    ],
+    "w": "Ser aburrido = que aburre."
+   },
+   {
+    "c": "Sydney is ready.",
+    "a": [
+     "Sydney está lista.",
+     "Sydney ya está lista."
+    ],
+    "w": "Estar listo = preparado."
+   },
+   {
+    "c": "The bishop is very smart.",
+    "a": [
+     "El obispo es muy listo.",
+     "El obispo es muy inteligente."
+    ],
+    "w": "Ser listo = inteligente."
+   },
+   {
+    "c": "The tacos are delicious (eating them now).",
+    "a": [
+     "Los tacos están deliciosos.",
+     "Los tacos están muy ricos.",
+     "Los tacos están riquísimos."
+    ],
+    "w": "Sabor en el momento: estar."
+   },
+   {
+    "c": "The gym is closed.",
+    "a": [
+     "El gimnasio está cerrado."
+    ],
+    "w": "Resultado de una acción: estar + participio."
+   },
+   {
+    "c": "The wedding was in the temple.",
+    "a": [
+     "La boda fue en el templo."
+    ],
+    "w": "Lugar de un evento: ser."
+   }
+  ]
+ }
+]

@@ -1,0 +1,107 @@
+[
+ {
+  "titulo": "A · Corrija el error",
+  "instr": "Corrija el error de la oración. Siga el modelo.",
+  "modelo": "Yo soy cansado. → Yo estoy cansado.",
+  "items": [
+   {
+    "c": "Estoy de Provo.",
+    "a": [
+     "Soy de Provo.",
+     "Yo soy de Provo."
+    ],
+    "w": "Origen: ser."
+   },
+   {
+    "c": "Busco mi esposa.",
+    "a": [
+     "Busco a mi esposa.",
+     "Yo busco a mi esposa."
+    ],
+    "w": "Persona como objeto: a personal."
+   },
+   {
+    "c": "La problema es grave.",
+    "a": [
+     "El problema es grave."
+    ],
+    "w": "Problema es masculino."
+   },
+   {
+    "c": "Me gusta los tacos.",
+    "a": [
+     "Me gustan los tacos."
+    ],
+    "w": "Tacos es plural: gustan."
+   },
+   {
+    "c": "Quiero que tú vienes.",
+    "a": [
+     "Quiero que tú vengas.",
+     "Quiero que vengas."
+    ],
+    "w": "Querer que + subjuntivo."
+   },
+   {
+    "c": "Gracias para la ayuda.",
+    "a": [
+     "Gracias por la ayuda."
+    ],
+    "w": "Gracias por algo."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Expresar en español",
+  "instr": "Exprese en español. Siga el modelo.",
+  "modelo": "I'm 25 years old. → Tengo veinticinco años.",
+  "items": [
+   {
+    "c": "I'm hungry.",
+    "a": [
+     "Tengo hambre.",
+     "Yo tengo hambre."
+    ],
+    "w": "Hambre va con tener, no estar."
+   },
+   {
+    "c": "It depends on the judge.",
+    "a": [
+     "Depende del juez."
+    ],
+    "w": "Depender de, no en."
+   },
+   {
+    "c": "I miss Mexico.",
+    "a": [
+     "Extraño México.",
+     "Extraño a México.",
+     "Echo de menos México."
+    ],
+    "w": "Miss = extrañar, no perder."
+   },
+   {
+    "c": "My wife and I went to the temple.",
+    "a": [
+     "Mi esposa y yo fuimos al templo."
+    ],
+    "w": "Yo, no mí; a + el = al."
+   },
+   {
+    "c": "I go to church on Sundays.",
+    "a": [
+     "Voy a la iglesia los domingos."
+    ],
+    "w": "Días: los domingos, sin en."
+   },
+   {
+    "c": "I have to work tomorrow.",
+    "a": [
+     "Tengo que trabajar mañana.",
+     "Mañana tengo que trabajar."
+    ],
+    "w": "Obligación: tener que + infinitivo."
+   }
+  ]
+ }
+]

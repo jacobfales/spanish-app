@@ -1,0 +1,103 @@
+[
+ {
+  "titulo": "A · Todo hecho ya",
+  "instr": "Conteste que ya lo hizo. Use pronombres. Siga el modelo.",
+  "modelo": "¿Vas a llamar al cliente? (→ ya) → Ya lo llamé.",
+  "items": [
+   {
+    "c": "¿Vas a leer el expediente? (→ ya)",
+    "a": [
+     "Ya lo leí."
+    ],
+    "w": "El expediente → lo."
+   },
+   {
+    "c": "¿Vas a mandar las cartas? (→ ya)",
+    "a": [
+     "Ya las mandé."
+    ],
+    "w": "Las cartas → las."
+   },
+   {
+    "c": "¿Vas a llamar a Sydney? (→ ya)",
+    "a": [
+     "Ya la llamé."
+    ],
+    "w": "Llamar a alguien: objeto directo → la."
+   },
+   {
+    "c": "¿Vas a escribirle al juez? (→ ya)",
+    "a": [
+     "Ya le escribí."
+    ],
+    "w": "Escribir a alguien: objeto indirecto → le."
+   },
+   {
+    "c": "¿Vas a darle el contrato al cliente? (→ ya)",
+    "a": [
+     "Ya se lo di."
+    ],
+    "w": "Le + lo → se lo."
+   },
+   {
+    "c": "¿Vas a devolverles los libros a tus hermanos? (→ ya)",
+    "a": [
+     "Ya se los devolví."
+    ],
+    "w": "Les + los → se los."
+   }
+  ]
+ },
+ {
+  "titulo": "B · ¿A quién se lo diste?",
+  "instr": "Cambie los complementos a pronombres. Siga el modelo.",
+  "modelo": "Le di la Biblia a mi papá. → Se la di.",
+  "items": [
+   {
+    "c": "Le presté mi cinturón a Tomás.",
+    "a": [
+     "Se lo presté."
+    ],
+    "w": "Le + lo → se lo."
+   },
+   {
+    "c": "Les explicamos las reglas a los clientes.",
+    "a": [
+     "Se las explicamos."
+    ],
+    "w": "Les + las → se las."
+   },
+   {
+    "c": "Te traje las tortillas.",
+    "a": [
+     "Te las traje."
+    ],
+    "w": "Indirecto primero, directo después."
+   },
+   {
+    "c": "Sydney me preparó la cena.",
+    "a": [
+     "Sydney me la preparó.",
+     "Me la preparó."
+    ],
+    "w": "Me + la, en ese orden."
+   },
+   {
+    "c": "Voy a mandarle el escrito al juez.",
+    "a": [
+     "Voy a mandárselo.",
+     "Se lo voy a mandar."
+    ],
+    "w": "Pegado al infinitivo: mandárselo, con tilde."
+   },
+   {
+    "c": "Estoy leyéndoles las escrituras a los niños.",
+    "a": [
+     "Estoy leyéndoselas.",
+     "Se las estoy leyendo."
+    ],
+    "w": "Pegado al gerundio: leyéndoselas, con tilde."
+   }
+  ]
+ }
+]

@@ -1,0 +1,102 @@
+[
+ {
+  "titulo": "A · ¿El o la?",
+  "instr": "Escriba el artículo definido correcto (el, la). Siga el modelo.",
+  "modelo": "___ mapa de México → el",
+  "items": [
+   {
+    "c": "___ problema del cliente",
+    "a": [
+     "el"
+    ],
+    "w": "Problema termina en -ma, pero es masculino."
+   },
+   {
+    "c": "___ mano derecha",
+    "a": [
+     "la"
+    ],
+    "w": "Mano termina en -o, pero es femenino."
+   },
+   {
+    "c": "___ agua fría",
+    "a": [
+     "el"
+    ],
+    "w": "Femenino, pero empieza con a tónica: el."
+   },
+   {
+    "c": "___ foto de la boda",
+    "a": [
+     "la"
+    ],
+    "w": "Foto viene de fotografía: femenino."
+   },
+   {
+    "c": "___ día del juicio",
+    "a": [
+     "el"
+    ],
+    "w": "Día termina en -a, pero es masculino."
+   },
+   {
+    "c": "___ crisis económica",
+    "a": [
+     "la"
+    ],
+    "w": "Palabras en -sis suelen ser femeninas."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Expresar en español",
+  "instr": "Exprese en español. Siga el modelo.",
+  "modelo": "The map is old. → El mapa es viejo.",
+  "items": [
+   {
+    "c": "The weapon is dangerous.",
+    "a": [
+     "El arma es peligrosa."
+    ],
+    "w": "Arma es femenino; el por la a tónica."
+   },
+   {
+    "c": "The topic is difficult.",
+    "a": [
+     "El tema es difícil."
+    ],
+    "w": "Tema es masculino."
+   },
+   {
+    "c": "The climate in Provo is dry.",
+    "a": [
+     "El clima de Provo es seco.",
+     "El clima en Provo es seco."
+    ],
+    "w": "Clima es masculino."
+   },
+   {
+    "c": "The eagle is the symbol of Mexico.",
+    "a": [
+     "El águila es el símbolo de México."
+    ],
+    "w": "Águila: femenino con artículo el."
+   },
+   {
+    "c": "The program starts at seven.",
+    "a": [
+     "El programa empieza a las siete.",
+     "El programa comienza a las siete."
+    ],
+    "w": "Programa es masculino."
+   },
+   {
+    "c": "I go to the gym on Mondays.",
+    "a": [
+     "Voy al gimnasio los lunes."
+    ],
+    "w": "Días: los lunes, sin en."
+   }
+  ]
+ }
+]

@@ -1,0 +1,108 @@
+[
+ {
+  "titulo": "A · Gustos y disgustos",
+  "instr": "Forme una oración con los elementos. Siga el modelo.",
+  "modelo": "Sydney / gustar / los tacos → A Sydney le gustan los tacos.",
+  "items": [
+   {
+    "c": "yo / encantar / levantar pesas",
+    "a": [
+     "Me encanta levantar pesas.",
+     "A mí me encanta levantar pesas."
+    ],
+    "w": "Con infinitivo, el verbo va en singular."
+   },
+   {
+    "c": "nosotros / faltar / dos testigos",
+    "a": [
+     "Nos faltan dos testigos.",
+     "A nosotros nos faltan dos testigos."
+    ],
+    "w": "Testigos es plural: faltan."
+   },
+   {
+    "c": "el juez / molestar / los teléfonos",
+    "a": [
+     "Al juez le molestan los teléfonos.",
+     "Los teléfonos le molestan al juez."
+    ],
+    "w": "A + el = al; teléfonos → molestan."
+   },
+   {
+    "c": "tú / quedar / diez minutos",
+    "a": [
+     "Te quedan diez minutos.",
+     "A ti te quedan diez minutos."
+    ],
+    "w": "Minutos es plural: quedan."
+   },
+   {
+    "c": "los estudiantes / interesar / la historia de México",
+    "a": [
+     "A los estudiantes les interesa la historia de México."
+    ],
+    "w": "La historia es singular: interesa."
+   },
+   {
+    "c": "Sydney y yo / fascinar / los templos",
+    "a": [
+     "A Sydney y a mí nos fascinan los templos."
+    ],
+    "w": "Sydney y yo → a Sydney y a mí nos."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Expresar en español",
+  "instr": "Exprese en español. Siga el modelo.",
+  "modelo": "I like the gym. → Me gusta el gimnasio.",
+  "items": [
+   {
+    "c": "Sydney loves enchiladas.",
+    "a": [
+     "A Sydney le encantan las enchiladas."
+    ],
+    "w": "Encantar funciona como gustar."
+   },
+   {
+    "c": "My back hurts.",
+    "a": [
+     "Me duele la espalda."
+    ],
+    "w": "Doler como gustar; artículo, no mi."
+   },
+   {
+    "c": "We need more time.",
+    "a": [
+     "Necesitamos más tiempo.",
+     "Nos hace falta más tiempo.",
+     "Nos falta más tiempo."
+    ],
+    "w": "Hacer falta funciona como gustar."
+   },
+   {
+    "c": "The clients like you (tú).",
+    "a": [
+     "Les caes bien a los clientes.",
+     "A los clientes les caes bien."
+    ],
+    "w": "Para personas: caer bien, no gustar."
+   },
+   {
+    "c": "I don't care about the grade.",
+    "a": [
+     "No me importa la calificación."
+    ],
+    "w": "Importar funciona como gustar."
+   },
+   {
+    "c": "Do you (tú) like history?",
+    "a": [
+     "¿Te gusta la historia?",
+     "¿A ti te gusta la historia?"
+    ],
+    "w": "La historia es singular: gusta."
+   }
+  ]
+ }
+]

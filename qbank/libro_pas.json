@@ -1,0 +1,113 @@
+[
+{
+"titulo": "A · Recuerdos",
+"instr": "Complete con el pretérito o el imperfecto. Siga el modelo.",
+"modelo": "Cuando yo ___ (ser) niño, vivía en Utah. → era",
+"items": [
+{
+"c": "En la prepa, nosotros ___ (levantarse) temprano todos los días.",
+"a": [
+"nos levantábamos"
+],
+"w": "Hábito en el pasado: imperfecto."
+},
+{
+"c": "Un día, mi tío nos ___ (invitar) a comer.",
+"a": [
+"invitó"
+],
+"w": "Acción única y terminada: pretérito."
+},
+{
+"c": "Mientras yo ___ (estudiar), Sydney llamó.",
+"a": [
+"estudiaba",
+"estaba estudiando"
+],
+"w": "Acción en progreso interrumpida: imperfecto."
+},
+{
+"c": "Ayer el juez ___ (decidir) el caso.",
+"a": [
+"decidió"
+],
+"w": "Acción terminada en un momento: pretérito."
+},
+{
+"c": "___ (ser) las diez cuando llegó el cliente.",
+"a": [
+"Eran",
+"eran"
+],
+"w": "La hora en el pasado: imperfecto."
+},
+{
+"c": "Anoche yo ___ (conocer) al nuevo obispo.",
+"a": [
+"conocí"
+],
+"w": "Conocer en pretérito = ver por primera vez."
+}
+]
+},
+{
+"titulo": "B · Expresar en español",
+"instr": "Exprese en español. Siga el modelo.",
+"modelo": "I was tired when I got home. → Estaba cansado cuando llegué a casa.",
+"items": [
+{
+"c": "We used to eat tacos every Sunday.",
+"a": [
+"Comíamos tacos todos los domingos.",
+"Todos los domingos comíamos tacos."
+],
+"w": "Used to = imperfecto."
+},
+{
+"c": "I found out the truth yesterday.",
+"a": [
+"Supe la verdad ayer.",
+"Ayer supe la verdad.",
+"Me enteré de la verdad ayer.",
+"Ayer me enteré de la verdad."
+],
+"w": "Saber en pretérito = enterarse."
+},
+{
+"c": "Sydney was reading when I arrived.",
+"a": [
+"Sydney leía cuando llegué.",
+"Sydney estaba leyendo cuando llegué.",
+"Sydney leía cuando yo llegué.",
+"Sydney estaba leyendo cuando yo llegué."
+],
+"w": "Fondo: imperfecto; acción que interrumpe: pretérito."
+},
+{
+"c": "The client refused to sign.",
+"a": [
+"El cliente no quiso firmar.",
+"El cliente se negó a firmar."
+],
+"w": "No querer en pretérito = negarse."
+},
+{
+"c": "It was raining when we left church.",
+"a": [
+"Llovía cuando salimos de la iglesia.",
+"Estaba lloviendo cuando salimos de la iglesia."
+],
+"w": "Clima de fondo: imperfecto."
+},
+{
+"c": "I lived in Provo for four years.",
+"a": [
+"Viví en Provo cuatro años.",
+"Viví en Provo por cuatro años.",
+"Viví en Provo durante cuatro años."
+],
+"w": "Periodo cerrado: pretérito."
+}
+]
+}
+]

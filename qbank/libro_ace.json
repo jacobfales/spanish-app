@@ -1,0 +1,102 @@
+[
+ {
+  "titulo": "A · ¡Faltan las tildes!",
+  "instr": "Escriba la oración con todas las tildes. Siga el modelo.",
+  "modelo": "El esta en el juzgado. → Él está en el juzgado.",
+  "items": [
+   {
+    "c": "¿Donde esta la capilla?",
+    "a": [
+     "¿Dónde está la capilla?"
+    ],
+    "w": "Dónde en pregunta; está es aguda en vocal."
+   },
+   {
+    "c": "Mi esposa me pidio un pastel.",
+    "a": [
+     "Mi esposa me pidió un pastel."
+    ],
+    "w": "Pidió es aguda y termina en vocal."
+   },
+   {
+    "c": "Se que tu levantas mas que yo.",
+    "a": [
+     "Sé que tú levantas más que yo."
+    ],
+    "w": "Sé (saber), tú (pronombre), más (cantidad)."
+   },
+   {
+    "c": "La reunion de la estaca es el miercoles.",
+    "a": [
+     "La reunión de la estaca es el miércoles."
+    ],
+    "w": "Reunión: aguda en -n; miércoles: esdrújula."
+   },
+   {
+    "c": "¿Por que llegaste tarde?",
+    "a": [
+     "¿Por qué llegaste tarde?"
+    ],
+    "w": "Qué en pregunta lleva tilde."
+   },
+   {
+    "c": "Despues de la boda, compramos un sofa.",
+    "a": [
+     "Después de la boda, compramos un sofá."
+    ],
+    "w": "Después y sofá: agudas en -s y vocal."
+   }
+  ]
+ },
+ {
+  "titulo": "B · ¿Con tilde o sin tilde?",
+  "instr": "Escoja la palabra correcta. Siga el modelo.",
+  "modelo": "Este regalo es para (tu / tú) ___ esposa. → tu",
+  "items": [
+   {
+    "c": "¿(Que / Qué) ___ hora es?",
+    "a": [
+     "Qué",
+     "qué"
+    ],
+    "w": "Pregunta: qué con tilde."
+   },
+   {
+    "c": "Quiero (mas / más) ___ tortillas.",
+    "a": [
+     "más"
+    ],
+    "w": "Cantidad: más con tilde."
+   },
+   {
+    "c": "Ya (se / sé) ___ la respuesta.",
+    "a": [
+     "sé"
+    ],
+    "w": "Verbo saber: sé con tilde."
+   },
+   {
+    "c": "(Si / Sí) ___ llueve, no vamos.",
+    "a": [
+     "Si",
+     "si"
+    ],
+    "w": "Condición: si sin tilde."
+   },
+   {
+    "c": "Este escrito es para (mi / mí) ___.",
+    "a": [
+     "mí"
+    ],
+    "w": "Pronombre después de preposición: mí."
+   },
+   {
+    "c": "El juez (aun / aún) ___ no llega.",
+    "a": [
+     "aún"
+    ],
+    "w": "Aún = todavía, con tilde."
+   }
+  ]
+ }
+]

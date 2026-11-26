@@ -1,0 +1,110 @@
+[
+ {
+  "titulo": "A · Con respeto",
+  "instr": "Cambie la oración de tú a usted. Siga el modelo.",
+  "modelo": "¿Tienes tiempo? → ¿Tiene tiempo?",
+  "items": [
+   {
+    "c": "¿Puedes firmar aquí?",
+    "a": [
+     "¿Puede firmar aquí?",
+     "¿Usted puede firmar aquí?",
+     "¿Puede usted firmar aquí?"
+    ],
+    "w": "Usted usa la forma de él/ella."
+   },
+   {
+    "c": "Siéntate, por favor.",
+    "a": [
+     "Siéntese, por favor.",
+     "Por favor, siéntese."
+    ],
+    "w": "Mandato de usted: siéntese."
+   },
+   {
+    "c": "¿Cómo te llamas?",
+    "a": [
+     "¿Cómo se llama?",
+     "¿Cómo se llama usted?"
+    ],
+    "w": "Te → se con usted."
+   },
+   {
+    "c": "Te llamo mañana.",
+    "a": [
+     "Lo llamo mañana.",
+     "La llamo mañana."
+    ],
+    "w": "Usted como objeto directo: lo o la."
+   },
+   {
+    "c": "No te preocupes por el juicio.",
+    "a": [
+     "No se preocupe por el juicio."
+    ],
+    "w": "Mandato negativo de usted: no se preocupe."
+   },
+   {
+    "c": "Tu caso es fuerte.",
+    "a": [
+     "Su caso es fuerte."
+    ],
+    "w": "Tu → su con usted."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Hablando de vos",
+  "instr": "Cambie de tú a vos (como en Argentina o Centroamérica). Siga el modelo.",
+  "modelo": "¿Tú hablas inglés? → ¿Vos hablás inglés?",
+  "items": [
+   {
+    "c": "Tú tienes razón.",
+    "a": [
+     "Vos tenés razón.",
+     "Tenés razón."
+    ],
+    "w": "Vos: tenés, con tilde y sin cambio de raíz."
+   },
+   {
+    "c": "¿Tú eres de Provo?",
+    "a": [
+     "¿Vos sos de Provo?",
+     "¿Sos de Provo?"
+    ],
+    "w": "Ser con vos: sos."
+   },
+   {
+    "c": "Ven acá.",
+    "a": [
+     "Vení acá."
+    ],
+    "w": "Mandato de vos: quita la -r, tilde final."
+   },
+   {
+    "c": "Tú puedes hacerlo.",
+    "a": [
+     "Vos podés hacerlo.",
+     "Podés hacerlo."
+    ],
+    "w": "Vos: podés, sin cambio o→ue."
+   },
+   {
+    "c": "¿Qué quieres comer?",
+    "a": [
+     "¿Qué querés comer?",
+     "¿Vos qué querés comer?"
+    ],
+    "w": "Vos: querés, sin cambio e→ie."
+   },
+   {
+    "c": "Siéntate aquí.",
+    "a": [
+     "Sentate aquí.",
+     "Sentate acá."
+    ],
+    "w": "Mandato de vos con pronombre: sentate, sin tilde."
+   }
+  ]
+ }
+]

@@ -1,26 +1,242 @@
 [
-{"s": "Siempre pienso ___ mi familia cuando estoy lejos.", "o": ["en", "de", "a"], "a": "en", "w": "«Think about» = pensar en."},
-{"s": "Me casé ___ mi esposa en el templo de Provo.", "o": ["con", "a", "de"], "a": "con", "w": "«Marry someone» = casarse con alguien."},
-{"s": "Anoche soñé ___ el examen del LSAT.", "o": ["con", "de", "en"], "a": "con", "w": "«Dream about» = soñar con."},
-{"s": "Mañana voy a visitar ___ mis abuelos.", "o": ["a", "con", "(nada)"], "a": "a", "w": "Antes de una persona como objeto directo se pone la «a» personal."},
-{"s": "Mi hermano se enamoró ___ una chica de Orem.", "o": ["de", "con", "en"], "a": "de", "w": "«Fall in love with» = enamorarse de."},
-{"s": "Mis planes dependen ___ los resultados del LSAT.", "o": ["de", "en", "con"], "a": "de", "w": "«Depend on» = depender de, no «en»."},
-{"s": "Acabo ___ salir del gimnasio.", "o": ["de", "a", "en"], "a": "de", "w": "«Acabar de» + infinitivo = to have just done something."},
-{"s": "Mañana empiezo ___ trabajar en el despacho.", "o": ["a", "de", "en"], "a": "a", "w": "«Empezar a» + infinitivo."},
-{"s": "El trabajo consiste ___ revisar contratos.", "o": ["en", "de", "a"], "a": "en", "w": "«Consist of» = consistir en."},
-{"s": "Voy a tratar ___ terminar el ensayo hoy.", "o": ["de", "a", "en"], "a": "de", "w": "«Try to» = tratar de + infinitivo."},
-{"s": "Mi amigo me ayudó ___ mudarme al nuevo departamento.", "o": ["a", "de", "en"], "a": "a", "w": "«Ayudar a» + infinitivo."},
-{"s": "Quedamos ___ vernos en el templo a las siete.", "o": ["en", "de", "a"], "a": "en", "w": "«Quedar en» = ponerse de acuerdo (to agree to)."},
-{"s": "¿Te acuerdas ___ mi primo que vive en Texas?", "o": ["de", "a", "en"], "a": "de", "w": "«Acordarse de» = to remember. Siempre con «de»."},
-{"s": "Estaba tan concentrado que no me di cuenta ___ la hora.", "o": ["de", "en", "a"], "a": "de", "w": "«Darse cuenta de» = to realize/notice."},
-{"s": "Estoy buscando ___ abogado que hable español.", "o": ["un", "al", "a el"], "a": "un", "w": "Una persona no específica (cualquiera que hable español): sin «a» personal."},
-{"s": "Estoy buscando ___ abogado que me recomendaste.", "o": ["al", "el", "a el"], "a": "al", "w": "Persona específica: lleva «a» personal. a + el = al."},
-{"s": "Ese libro es más largo ___ que pensaba.", "o": ["de lo", "que lo", "de"], "a": "de lo", "w": "Comparación con una idea completa (que pensaba): más... de lo que."},
-{"s": "En el juicio declararon más ___ veinte testigos.", "o": ["de", "que", "de lo"], "a": "de", "w": "Con números se usa «más de»: más de veinte."},
-{"s": "¿Cuál está bien? (I met your brother at BYU)", "o": ["Conocí a tu hermano en BYU.", "Conocí tu hermano en BYU.", "Conocí con tu hermano en BYU."], "a": "Conocí a tu hermano en BYU.", "w": "Persona específica como objeto directo: lleva «a» personal."},
-{"s": "¿Cuál está bien? (I want to marry her)", "o": ["Quiero casarme con ella.", "Quiero casarme a ella.", "Quiero casarme ella."], "a": "Quiero casarme con ella.", "w": "«Casarse con» alguien, nunca «casarse a»."},
-{"s": "Llegaron más personas ___ las que esperábamos.", "o": ["de", "que", "de lo"], "a": "de", "w": "Comparando con un sustantivo (personas): más... de las que."},
-{"s": "No hago más ___ estudiar para el LSAT.", "o": ["que", "de", "de lo"], "a": "que", "w": "«No... más que» = solamente (I do nothing but study)."},
-{"s": "El juez tardó dos horas ___ dar el veredicto.", "o": ["en", "de", "a"], "a": "en", "w": "«Tardar en» + infinitivo = to take time to do something."},
-{"s": "Mi suegro insistió ___ pagar la cena.", "o": ["en", "de", "a"], "a": "en", "w": "«Insist on» = insistir en."}
+{
+"s": "Siempre pienso ___ mi familia cuando estoy lejos.",
+"o": [
+"en",
+"de",
+"a"
+],
+"a": "en",
+"w": "«Think about» = pensar en."
+},
+{
+"s": "Mi primo se casó ___ su novia en el templo.",
+"o": [
+"con",
+"a",
+"de"
+],
+"a": "con",
+"w": "«Marry someone» = casarse con alguien."
+},
+{
+"s": "Anoche soñé ___ el examen del LSAT.",
+"o": [
+"con",
+"de",
+"en"
+],
+"a": "con",
+"w": "«Dream about» = soñar con."
+},
+{
+"s": "Mañana voy a visitar ___ mis abuelos.",
+"o": [
+"a",
+"con",
+"(nada)"
+],
+"a": "a",
+"w": "Antes de una persona como objeto directo se pone la «a» personal."
+},
+{
+"s": "Mi hermano se enamoró ___ una chica de Orem.",
+"o": [
+"de",
+"con",
+"en"
+],
+"a": "de",
+"w": "«Fall in love with» = enamorarse de."
+},
+{
+"s": "Mis planes dependen ___ los resultados del LSAT.",
+"o": [
+"de",
+"en",
+"con"
+],
+"a": "de",
+"w": "«Depend on» = depender de, no «en»."
+},
+{
+"s": "Acabo ___ salir del gimnasio.",
+"o": [
+"de",
+"a",
+"en"
+],
+"a": "de",
+"w": "«Acabar de» + infinitivo = to have just done something."
+},
+{
+"s": "Mañana empiezo ___ trabajar en el despacho.",
+"o": [
+"a",
+"de",
+"en"
+],
+"a": "a",
+"w": "«Empezar a» + infinitivo."
+},
+{
+"s": "El trabajo consiste ___ revisar contratos.",
+"o": [
+"en",
+"de",
+"a"
+],
+"a": "en",
+"w": "«Consist of» = consistir en."
+},
+{
+"s": "Voy a tratar ___ terminar el ensayo hoy.",
+"o": [
+"de",
+"a",
+"en"
+],
+"a": "de",
+"w": "«Try to» = tratar de + infinitivo."
+},
+{
+"s": "Mi amigo me ayudó ___ mudarme al nuevo departamento.",
+"o": [
+"a",
+"de",
+"en"
+],
+"a": "a",
+"w": "«Ayudar a» + infinitivo."
+},
+{
+"s": "Quedamos ___ vernos en el templo a las siete.",
+"o": [
+"en",
+"de",
+"a"
+],
+"a": "en",
+"w": "«Quedar en» = ponerse de acuerdo (to agree to)."
+},
+{
+"s": "¿Te acuerdas ___ mi primo que vive en Texas?",
+"o": [
+"de",
+"a",
+"en"
+],
+"a": "de",
+"w": "«Acordarse de» = to remember. Siempre con «de»."
+},
+{
+"s": "Estaba tan concentrado que no me di cuenta ___ la hora.",
+"o": [
+"de",
+"en",
+"a"
+],
+"a": "de",
+"w": "«Darse cuenta de» = to realize/notice."
+},
+{
+"s": "Estoy buscando ___ abogado que hable español.",
+"o": [
+"un",
+"al",
+"a el"
+],
+"a": "un",
+"w": "Una persona no específica (cualquiera que hable español): sin «a» personal."
+},
+{
+"s": "Estoy buscando ___ abogado que me recomendaste.",
+"o": [
+"al",
+"el",
+"a el"
+],
+"a": "al",
+"w": "Persona específica: lleva «a» personal. a + el = al."
+},
+{
+"s": "Ese libro es más largo ___ que pensaba.",
+"o": [
+"de lo",
+"que lo",
+"de"
+],
+"a": "de lo",
+"w": "Comparación con una idea completa (que pensaba): más... de lo que."
+},
+{
+"s": "En el juicio declararon más ___ veinte testigos.",
+"o": [
+"de",
+"que",
+"de lo"
+],
+"a": "de",
+"w": "Con números se usa «más de»: más de veinte."
+},
+{
+"s": "¿Cuál está bien? (I met your brother at BYU)",
+"o": [
+"Conocí a tu hermano en BYU.",
+"Conocí tu hermano en BYU.",
+"Conocí con tu hermano en BYU."
+],
+"a": "Conocí a tu hermano en BYU.",
+"w": "Persona específica como objeto directo: lleva «a» personal."
+},
+{
+"s": "¿Cuál está bien? (I want to marry her)",
+"o": [
+"Quiero casarme con ella.",
+"Quiero casarme a ella.",
+"Quiero casarme ella."
+],
+"a": "Quiero casarme con ella.",
+"w": "«Casarse con» alguien, nunca «casarse a»."
+},
+{
+"s": "Llegaron más personas ___ las que esperábamos.",
+"o": [
+"de",
+"que",
+"de lo"
+],
+"a": "de",
+"w": "Comparando con un sustantivo (personas): más... de las que."
+},
+{
+"s": "No hago más ___ estudiar para el LSAT.",
+"o": [
+"que",
+"de",
+"de lo"
+],
+"a": "que",
+"w": "«No... más que» = solamente (I do nothing but study)."
+},
+{
+"s": "El juez tardó dos horas ___ dar el veredicto.",
+"o": [
+"en",
+"de",
+"a"
+],
+"a": "en",
+"w": "«Tardar en» + infinitivo = to take time to do something."
+},
+{
+"s": "Mi suegro insistió ___ pagar la cena.",
+"o": [
+"en",
+"de",
+"a"
+],
+"a": "en",
+"w": "«Insist on» = insistir en."
+}
 ]

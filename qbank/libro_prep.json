@@ -1,0 +1,109 @@
+[
+{
+"titulo": "A · Preposiciones pegadas",
+"instr": "Complete con a, de, en o con. Escriba X si no hace falta. Siga el modelo.",
+"modelo": "Sueño ___ ser abogado. → con",
+"items": [
+{
+"c": "Mi hermano se casó ___ su novia en junio.",
+"a": [
+"con"
+],
+"w": "Casarse con."
+},
+{
+"c": "Visité ___ mis padres en Provo.",
+"a": [
+"a"
+],
+"w": "Persona como objeto directo: a personal."
+},
+{
+"c": "Me acuerdo ___ mi primer día en BYU.",
+"a": [
+"de"
+],
+"w": "Acordarse de."
+},
+{
+"c": "Pienso ___ Sydney todo el día.",
+"a": [
+"en"
+],
+"w": "Pensar en alguien."
+},
+{
+"c": "El cliente se olvidó ___ la cita.",
+"a": [
+"de"
+],
+"w": "Olvidarse de algo."
+},
+{
+"c": "Empecé ___ levantar pesas a los quince.",
+"a": [
+"a"
+],
+"w": "Empezar a + infinitivo."
+}
+]
+},
+{
+"titulo": "B · Expresar en español",
+"instr": "Exprese en español. Siga el modelo.",
+"modelo": "I depend on my wife. → Dependo de mi esposa.",
+"items": [
+{
+"c": "I'm looking for my wife.",
+"a": [
+"Busco a mi esposa.",
+"Estoy buscando a mi esposa."
+],
+"w": "Buscar ya incluye for; a personal."
+},
+{
+"c": "We arrived at the courthouse.",
+"a": [
+"Llegamos al juzgado.",
+"Llegamos al tribunal."
+],
+"w": "Llegar a un lugar, no en."
+},
+{
+"c": "She fell in love with Mexico.",
+"a": [
+"Se enamoró de México.",
+"Ella se enamoró de México."
+],
+"w": "Enamorarse de, no con."
+},
+{
+"c": "I'm waiting for the bus.",
+"a": [
+"Espero el camión.",
+"Estoy esperando el camión.",
+"Espero el autobús.",
+"Estoy esperando el autobús."
+],
+"w": "Esperar ya incluye for."
+},
+{
+"c": "Think about it. (tú)",
+"a": [
+"Piénsalo.",
+"Piensa en eso.",
+"Piensa en ello."
+],
+"w": "Pensar en algo, no sobre."
+},
+{
+"c": "The case consists of three parts.",
+"a": [
+"El caso consta de tres partes.",
+"El caso consiste en tres partes."
+],
+"w": "Consistir en, o constar de."
+}
+]
+}
+]

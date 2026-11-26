@@ -1,0 +1,106 @@
+[
+ {
+  "titulo": "A · ¿Saber o conocer? ¿Pedir o preguntar?",
+  "instr": "Complete con saber, conocer, pedir o preguntar en presente. Siga el modelo.",
+  "modelo": "Yo ___ a la jueza Martínez. → conozco",
+  "items": [
+   {
+    "c": "¿Tú ___ dónde está el juzgado?",
+    "a": [
+     "sabes"
+    ],
+    "w": "Datos o información: saber."
+   },
+   {
+    "c": "Sydney ___ muy bien el centro de Provo.",
+    "a": [
+     "conoce"
+    ],
+    "w": "Lugares conocidos por experiencia: conocer."
+   },
+   {
+    "c": "El cliente me ___ más tiempo para pagar.",
+    "a": [
+     "pide"
+    ],
+    "w": "Solicitar algo: pedir."
+   },
+   {
+    "c": "Los niños siempre me ___ cómo es México.",
+    "a": [
+     "preguntan"
+    ],
+    "w": "Buscar información: preguntar."
+   },
+   {
+    "c": "Yo no ___ nadar muy bien.",
+    "a": [
+     "sé"
+    ],
+    "w": "Habilidad: saber + infinitivo."
+   },
+   {
+    "c": "Nosotros ___ tacos al pastor cada viernes.",
+    "a": [
+     "pedimos"
+    ],
+    "w": "Ordenar comida: pedir."
+   }
+  ]
+ },
+ {
+  "titulo": "B · Expresar en español",
+  "instr": "Exprese en español. Siga el modelo.",
+  "modelo": "Bring me the file. (tú) → Tráeme el expediente.",
+  "items": [
+   {
+    "c": "I'll take Sydney to the airport.",
+    "a": [
+     "Llevo a Sydney al aeropuerto.",
+     "Voy a llevar a Sydney al aeropuerto.",
+     "Llevaré a Sydney al aeropuerto."
+    ],
+    "w": "Hacia otro lugar: llevar."
+   },
+   {
+    "c": "I returned the book to the library.",
+    "a": [
+     "Devolví el libro a la biblioteca."
+    ],
+    "w": "Regresar un objeto: devolver."
+   },
+   {
+    "c": "We came back from Mexico on Monday.",
+    "a": [
+     "Volvimos de México el lunes.",
+     "Regresamos de México el lunes."
+    ],
+    "w": "Regresar una persona: volver."
+   },
+   {
+    "c": "Take this to the judge. (tú)",
+    "a": [
+     "Llévale esto al juez.",
+     "Lleva esto al juez."
+    ],
+    "w": "Hacia allá: llevar."
+   },
+   {
+    "c": "The client returned the money.",
+    "a": [
+     "El cliente devolvió el dinero.",
+     "El cliente regresó el dinero."
+    ],
+    "w": "Regresar un objeto: devolver."
+   },
+   {
+    "c": "When are you (tú) coming back?",
+    "a": [
+     "¿Cuándo vuelves?",
+     "¿Cuándo regresas?"
+    ],
+    "w": "Volver = regresar una persona."
+   }
+  ]
+ }
+]
