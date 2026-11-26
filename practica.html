@@ -103,8 +103,8 @@ function run(set, list){
   document.documentElement.style.setProperty('--c',set.color);
   $('back').href=set.back;
   const K='practica-miss-'+set.id;
-  let qs=shuffle(list), i=0, right=0;
-  const head=el('div');head.append(el('h1',null,set.title),el('p','sub',qs.length+' preguntas · toca la respuesta y te dice por qué'));
+  let qs=set.libro?list.slice():shuffle(list), i=0, right=0;
+  const head=el('div');head.append(el('h1',null,set.title),el('p','sub',qs.length+(set.libro?' frases · escribe la respuesta y toca Revisar':' preguntas · toca la respuesta y te dice por qué')));
   const prog=el('div','prog'),bar=el('b');prog.append(bar);
   const box=el('div');
   app.replaceChildren(head,prog,box);
