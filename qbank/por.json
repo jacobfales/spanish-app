@@ -1,0 +1,243 @@
+[
+ {
+  "s": "Gracias ___ la ayuda con mi tarea.",
+  "o": [
+   "por",
+   "para",
+   "de"
+  ],
+  "a": "por",
+  "w": "Gracias por = la razón de dar gracias."
+ },
+ {
+  "s": "Este regalo es ___ mi esposa.",
+  "o": [
+   "para",
+   "por",
+   "a"
+  ],
+  "a": "para",
+  "w": "Para = quién lo recibe (recipient)."
+ },
+ {
+  "s": "Salgo ___ México el lunes.",
+  "o": [
+   "para",
+   "por",
+   "en"
+  ],
+  "a": "para",
+  "w": "Para = destino (a dónde vas)."
+ },
+ {
+  "s": "El ensayo es ___ el viernes.",
+  "o": [
+   "para",
+   "por",
+   "a"
+  ],
+  "a": "para",
+  "w": "Para = fecha límite (deadline)."
+ },
+ {
+  "s": "Caminamos ___ todo el campus de BYU buscando a mi esposa.",
+  "o": [
+   "por",
+   "para",
+   "a"
+  ],
+  "a": "por",
+  "w": "Por = a través de, por dentro (through/around)."
+ },
+ {
+  "s": "Estudié ___ tres horas anoche.",
+  "o": [
+   "por",
+   "para",
+   "de"
+  ],
+  "a": "por",
+  "w": "Por = cuánto tiempo (duration)."
+ },
+ {
+  "s": "Hablé con el cliente ___ teléfono.",
+  "o": [
+   "por",
+   "para",
+   "en"
+  ],
+  "a": "por",
+  "w": "Por = medio (by phone, by mail)."
+ },
+ {
+  "s": "Pagué cien dólares ___ estos zapatos para el gym.",
+  "o": [
+   "por",
+   "para",
+   "de"
+  ],
+  "a": "por",
+  "w": "Por = intercambio (exchange): dinero por cosa."
+ },
+ {
+  "s": "___ mí, la clase de historia de México es la más interesante.",
+  "o": [
+   "Para",
+   "Por",
+   "A"
+  ],
+  "a": "Para",
+  "w": "Para mí = en mi opinión."
+ },
+ {
+  "s": "No fui al gym ___ la lluvia.",
+  "o": [
+   "por",
+   "para",
+   "de"
+  ],
+  "a": "por",
+  "w": "Por = causa (because of)."
+ },
+ {
+  "s": "Voy a estudiar mucho ___ entrar a la escuela de derecho.",
+  "o": [
+   "para",
+   "por",
+   "a"
+  ],
+  "a": "para",
+  "w": "Para + infinitivo = meta (in order to)."
+ },
+ {
+  "s": "¡___ fin terminé mi último examen!",
+  "o": [
+   "Por",
+   "Para",
+   "En"
+  ],
+  "a": "Por",
+  "w": "Frase fija: por fin = finally."
+ },
+ {
+  "s": "Después del sellamiento, mi esposa y yo estaremos juntos ___.",
+  "o": [
+   "para siempre",
+   "por eso",
+   "por supuesto",
+   "para colmo"
+  ],
+  "a": "para siempre",
+  "w": "Para siempre = forever."
+ },
+ {
+  "s": "Me duele la espalda; ___ no voy a hacer peso muerto hoy.",
+  "o": [
+   "por eso",
+   "para eso",
+   "por fin"
+  ],
+  "a": "por eso",
+  "w": "Por eso = por esa razón (that's why)."
+ },
+ {
+  "s": "—¿Me ayudas con la mudanza? —¡___!",
+  "o": [
+   "Por supuesto",
+   "Para supuesto",
+   "Por seguro"
+  ],
+  "a": "Por supuesto",
+  "w": "Frase fija: por supuesto = of course."
+ },
+ {
+  "s": "El libro fue escrito ___ un profesor de BYU.",
+  "o": [
+   "por",
+   "para",
+   "de"
+  ],
+  "a": "por",
+  "w": "Por = quién hace la acción en voz pasiva (by)."
+ },
+ {
+  "s": "Trabajo ___ un bufete de abogados en Provo.",
+  "o": [
+   "para",
+   "por",
+   "a"
+  ],
+  "a": "para",
+  "w": "Trabajar para = ser empleado de (work for)."
+ },
+ {
+  "s": "Hoy trabajé ___ mi compañero porque estaba enfermo.",
+  "o": [
+   "por",
+   "para",
+   "a"
+  ],
+  "a": "por",
+  "w": "Por = en lugar de (instead of)."
+ },
+ {
+  "s": "___ ser gringo, hablas español muy bien.",
+  "o": [
+   "Para",
+   "Por",
+   "A"
+  ],
+  "a": "Para",
+  "w": "Para = comparado con lo normal (considering)."
+ },
+ {
+  "s": "Lo arrestaron ___ manejar borracho.",
+  "o": [
+   "por",
+   "para",
+   "de"
+  ],
+  "a": "por",
+  "w": "Por = razón o causa."
+ },
+ {
+  "s": "El tren pasa ___ Orem antes de llegar a Provo.",
+  "o": [
+   "por",
+   "para",
+   "a"
+  ],
+  "a": "por",
+  "w": "Por = a través de un lugar (through)."
+ },
+ {
+  "s": "¿Cuál está bien? (ir a traer algo)",
+  "o": [
+   "Fui a la tienda por leche.",
+   "Fui a la tienda para leche.",
+   "Fui a la tienda a leche."
+  ],
+  "a": "Fui a la tienda por leche.",
+  "w": "Ir por algo = ir a traerlo (to go get)."
+ },
+ {
+  "s": "¿Cuál está bien? (una meta)",
+  "o": [
+   "Estudio para ser abogado.",
+   "Estudio por ser abogado.",
+   "Estudio a ser abogado."
+  ],
+  "a": "Estudio para ser abogado.",
+  "w": "Para + infinitivo = meta (in order to)."
+ },
+ {
+  "s": "¿Cuál está bien? (un cambio)",
+  "o": [
+   "Te cambio mi sándwich por tus tacos.",
+   "Te cambio mi sándwich para tus tacos.",
+   "Te cambio mi sándwich a tus tacos."
+  ],
+  "a": "Te cambio mi sándwich por tus tacos.",
+  "w": "Por = intercambio (exchange)."
+ }
+]

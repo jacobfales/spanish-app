@@ -1,0 +1,242 @@
+[
+{
+"s": "¿___ dónde está el juzgado?",
+"o": [
+"Sabes",
+"Conoces",
+"Conocés"
+],
+"a": "Sabes",
+"w": "«Saber» para información (dónde, qué, cómo). «Conocer» para personas y lugares."
+},
+{
+"s": "¿Ya ___ a mi esposa?",
+"o": [
+"conoces",
+"sabes",
+"sabés"
+],
+"a": "conoces",
+"w": "Para personas se usa «conocer»."
+},
+{
+"s": "Voy a ___ al profesor si el examen es el viernes.",
+"o": [
+"preguntarle",
+"pedirle",
+"hacerle"
+],
+"a": "preguntarle",
+"w": "«Preguntar» = buscar información (to ask a question)."
+},
+{
+"s": "Vamos a ___ una pizza para la cena.",
+"o": [
+"pedir",
+"preguntar",
+"preguntar por"
+],
+"a": "pedir",
+"w": "«Pedir» = solicitar algo (to order/request)."
+},
+{
+"s": "Mi hermano ___ la guitarra muy bien.",
+"o": [
+"toca",
+"juega",
+"pone"
+],
+"a": "toca",
+"w": "Instrumentos: tocar. Deportes y juegos: jugar."
+},
+{
+"s": "Los sábados ___ básquetbol con mis amigos.",
+"o": [
+"juego",
+"toco",
+"hago"
+],
+"a": "juego",
+"w": "Deportes y juegos: jugar."
+},
+{
+"s": "Cuando vivía lejos de casa, ___ mucho a mi familia.",
+"o": [
+"extrañaba",
+"perdía",
+"faltaba"
+],
+"a": "extrañaba",
+"w": "«To miss someone» = extrañar. «Perder» es to lose."
+},
+{
+"s": "Mañana voy a ___ el libro a la biblioteca.",
+"o": [
+"devolver",
+"volver",
+"revolver"
+],
+"a": "devolver",
+"w": "«Devolver» = regresar una cosa. «Volver» = regresar tú a un lugar."
+},
+{
+"s": "¿Me puedes ___ mi chamarra cuando vengas a mi casa?",
+"o": [
+"traer",
+"llevar",
+"tomar"
+],
+"a": "traer",
+"w": "«Traer» = hacia donde está el que habla (to bring here)."
+},
+{
+"s": "Voy a ___ estos documentos a la corte.",
+"o": [
+"llevar",
+"traer",
+"tomar"
+],
+"a": "llevar",
+"w": "«Llevar» = hacia otro lugar (to take there)."
+},
+{
+"s": "Voy a ___ el camión a Salt Lake.",
+"o": [
+"tomar",
+"llevar",
+"coger"
+],
+"a": "tomar",
+"w": "Transporte: tomar el camión. En México «coger» es vulgar."
+},
+{
+"s": "Mi esposa me llama: «¿Ya vienes?». Le contesto: «Sí, ya ___».",
+"o": [
+"voy",
+"vengo",
+"ando"
+],
+"a": "voy",
+"w": "Hacia donde está la otra persona se usa «ir» (I'm coming = ya voy)."
+},
+{
+"s": "Salí de la oficina a las seis, pero ___ mi teléfono en el escritorio.",
+"o": [
+"dejé",
+"salí",
+"quedé"
+],
+"a": "dejé",
+"w": "«Dejar» = to leave something behind. «Salir» = to leave a place."
+},
+{
+"s": "Mi esposa y yo ___ de la casa a las siete para ir al templo.",
+"o": [
+"salimos",
+"dejamos",
+"quitamos"
+],
+"a": "salimos",
+"w": "«Salir de» un lugar = to leave/go out."
+},
+{
+"s": "¿A qué hora ___ a mi casa mañana? Te voy a esperar.",
+"o": [
+"vienes",
+"vas",
+"llevas"
+],
+"a": "vienes",
+"w": "Hacia donde está el que habla (mi casa) se usa «venir»."
+},
+{
+"s": "Mi esposa ___ muy feliz cuando le di la noticia.",
+"o": [
+"se puso",
+"se hizo",
+"se volvió"
+],
+"a": "se puso",
+"w": "Cambio rápido de emoción: ponerse (feliz, triste, nervioso)."
+},
+{
+"s": "Después de muchos años de estudio, mi tío ___ abogado.",
+"o": [
+"se hizo",
+"se puso",
+"se volvió"
+],
+"a": "se hizo",
+"w": "Profesión lograda con esfuerzo: hacerse (abogado, rico)."
+},
+{
+"s": "Mañana ___ en casa porque tengo que estudiar.",
+"o": [
+"me quedo",
+"quedo",
+"quedé"
+],
+"a": "me quedo",
+"w": "«Quedarse» = permanecer en un lugar (to stay)."
+},
+{
+"s": "Mi amigo y yo ___ a las cinco para ir al gimnasio.",
+"o": [
+"quedamos",
+"nos quedamos",
+"dejamos"
+],
+"a": "quedamos",
+"w": "«Quedar» = acordar una cita (to agree to meet). «Quedarse» = to stay."
+},
+{
+"s": "___ todo el sábado estudiando para el examen.",
+"o": [
+"Pasé",
+"Gasté",
+"Tomé"
+],
+"a": "Pasé",
+"w": "Tiempo: pasar. Dinero: gastar."
+},
+{
+"s": "___ mucho dinero en la boda.",
+"o": [
+"Gastamos",
+"Pasamos",
+"Extrañamos"
+],
+"a": "Gastamos",
+"w": "Dinero: gastar (to spend money)."
+},
+{
+"s": "Corre, que vas a ___ el camión.",
+"o": [
+"perder",
+"extrañar",
+"faltar"
+],
+"a": "perder",
+"w": "«Perder el camión» = to miss the bus. «Extrañar» = sentir nostalgia."
+},
+{
+"s": "Ayer ___ que mi cuñada estaba embarazada. ¡Qué alegría!",
+"o": [
+"supe",
+"sabía",
+"conocí"
+],
+"a": "supe",
+"w": "«Saber» en pretérito = enterarse (found out)."
+},
+{
+"s": "Cuando ___ a Provo el próximo año, te llamo.",
+"o": [
+"vuelva",
+"devuelva",
+"vuelvo"
+],
+"a": "vuelva",
+"w": "«Volver» = regresar tú. Con «cuando» + futuro se usa subjuntivo."
+}
+]

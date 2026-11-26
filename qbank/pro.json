@@ -1,0 +1,250 @@
+[
+ {
+  "s": "¿Tienes el libro? Sí, ___ tengo.",
+  "o": [
+   "lo",
+   "le",
+   "la"
+  ],
+  "a": "lo",
+  "w": "«Libro» = objeto directo masculino: lo."
+ },
+ {
+  "s": "Le compré flores a mi esposa y ___ puse en la mesa.",
+  "o": [
+   "las",
+   "les",
+   "los",
+   "le"
+  ],
+  "a": "las",
+  "w": "«Flores» = objeto directo femenino plural: las."
+ },
+ {
+  "s": "___ escribí una carta a mi mamá.",
+  "o": [
+   "Le",
+   "La",
+   "Lo",
+   "Les"
+  ],
+  "a": "Le",
+  "w": "Mi mamá recibe la carta: objeto indirecto (le)."
+ },
+ {
+  "s": "A mis papás ___ mandé fotos de la boda.",
+  "o": [
+   "les",
+   "los",
+   "las"
+  ],
+  "a": "les",
+  "w": "Ellos reciben las fotos: indirecto plural (les)."
+ },
+ {
+  "s": "¿Las fotos? Mi esposa ya ___ mandó a sus papás.",
+  "o": [
+   "se las",
+   "les las",
+   "se los",
+   "las les"
+  ],
+  "a": "se las",
+  "w": "Les + las → se las."
+ },
+ {
+  "s": "El juez quiere el expediente. Voy a ___ mañana.",
+  "o": [
+   "dárselo",
+   "dárlelo",
+   "darlo se",
+   "dárselos"
+  ],
+  "a": "dárselo",
+  "w": "Pegados al infinitivo: se (a él) + lo (el expediente)."
+ },
+ {
+  "s": "Necesito tu celular. ¡___, por favor!",
+  "o": [
+   "Dámelo",
+   "Melo da",
+   "Dalo me",
+   "Dámelos"
+  ],
+  "a": "Dámelo",
+  "w": "Mandato afirmativo: pronombres pegados al final (me + lo)."
+ },
+ {
+  "s": "Es un secreto del cliente. No ___ digas a nadie.",
+  "o": [
+   "se lo",
+   "díselo",
+   "lo se"
+  ],
+  "a": "se lo",
+  "w": "Mandato negativo: pronombres antes del verbo."
+ },
+ {
+  "s": "¿Ya escribiste el ensayo? Estoy ___ ahorita.",
+  "o": [
+   "escribiéndolo",
+   "escribiendolo",
+   "escribiéndole",
+   "lo escribiendo"
+  ],
+  "a": "escribiéndolo",
+  "w": "Pronombre pegado al gerundio; necesita acento."
+ },
+ {
+  "s": "Ayer vi ___ mi suegro en la iglesia.",
+  "o": [
+   "a",
+   "en",
+   "(nada)"
+  ],
+  "a": "a",
+  "w": "«A personal»: objeto directo que es persona lleva «a»."
+ },
+ {
+  "s": "Busco ___ mis llaves.",
+  "o": [
+   "(nada)",
+   "a",
+   "por"
+  ],
+  "a": "(nada)",
+  "w": "Llaves no son persona, y «buscar» ya incluye «for»."
+ },
+ {
+  "s": "¿Viste a Jacob? Sí, ___ vi en el gym.",
+  "o": [
+   "lo",
+   "le",
+   "la"
+  ],
+  "a": "lo",
+  "w": "En México, hombre como objeto directo = lo (no le)."
+ },
+ {
+  "s": "A mi esposa ___ gusta el pozole.",
+  "o": [
+   "le",
+   "la",
+   "lo"
+  ],
+  "a": "le",
+  "w": "Con «gustar», la persona es indirecta: le."
+ },
+ {
+  "s": "Al cliente ___ expliqué el contrato.",
+  "o": [
+   "le",
+   "lo",
+   "la"
+  ],
+  "a": "le",
+  "w": "Explicar algo a alguien: la persona es indirecta (le)."
+ },
+ {
+  "s": "El contrato ya ___ expliqué al cliente.",
+  "o": [
+   "se lo",
+   "le lo",
+   "lo le",
+   "se le"
+  ],
+  "a": "se lo",
+  "w": "Le + lo → se lo."
+ },
+ {
+  "s": "Llamé ___ mi esposa en la tarde, pero no contestó.",
+  "o": [
+   "a",
+   "(nada)",
+   "por"
+  ],
+  "a": "a",
+  "w": "Persona como objeto directo = «a personal»."
+ },
+ {
+  "s": "¿Y el pastel? Mi esposa ___ está preparando.",
+  "o": [
+   "lo",
+   "le",
+   "se"
+  ],
+  "a": "lo",
+  "w": "«Pastel» = objeto directo: lo, antes del verbo conjugado."
+ },
+ {
+  "s": "Mi hermano necesitaba dinero y mis papás ___ prestaron.",
+  "o": [
+   "se lo",
+   "le lo",
+   "se le",
+   "lo le"
+  ],
+  "a": "se lo",
+  "w": "Le (a mi hermano) + lo (el dinero) → se lo."
+ },
+ {
+  "s": "Saludé ___ juez al entrar.",
+  "o": [
+   "al",
+   "el",
+   "a el"
+  ],
+  "a": "al",
+  "w": "A personal + el = al."
+ },
+ {
+  "s": "Tengo ___ dos hermanos.",
+  "o": [
+   "(nada)",
+   "a",
+   "por"
+  ],
+  "a": "(nada)",
+  "w": "Con «tener» normalmente no se usa «a personal»."
+ },
+ {
+  "s": "¿Cuál está bien? (verbo + infinitivo)",
+  "o": [
+   "Te lo voy a decir.",
+   "Te voy a lo decir.",
+   "Lo te voy a decir."
+  ],
+  "a": "Te lo voy a decir.",
+  "w": "Antes del verbo conjugado; indirecto primero (te + lo)."
+ },
+ {
+  "s": "¿Cuál está bien? (decirle algo a ella)",
+  "o": [
+   "Voy a decírselo a mi esposa.",
+   "Voy a decírlelo a mi esposa.",
+   "Voy a se lo decir a mi esposa."
+  ],
+  "a": "Voy a decírselo a mi esposa.",
+  "w": "Le + lo → se lo; puede ir pegado al infinitivo."
+ },
+ {
+  "s": "¿Cuál está bien? (español de México)",
+  "o": [
+   "Lo invité a la boda.",
+   "Le invité a la boda.",
+   "Invité lo a la boda."
+  ],
+  "a": "Lo invité a la boda.",
+  "w": "En México: hombre como objeto directo = lo. «Le invité» es de España (leísmo)."
+ },
+ {
+  "s": "¿Cuál está bien? (mandato negativo)",
+  "o": [
+   "No me lo digas.",
+   "No dímelo.",
+   "No me digas lo."
+  ],
+  "a": "No me lo digas.",
+  "w": "Mandato negativo: pronombres antes del verbo."
+ }
+]

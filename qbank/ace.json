@@ -1,0 +1,242 @@
+[
+{
+"s": "¿___ hora es la reunión del barrio?",
+"o": [
+"A qué",
+"A que",
+"Á que"
+],
+"a": "A qué",
+"w": "«Qué» en preguntas lleva tilde. La preposición «a» nunca lleva tilde."
+},
+{
+"s": "Ayer mi esposa ___ con el juez.",
+"o": [
+"habló",
+"hablo",
+"hábló"
+],
+"a": "habló",
+"w": "Pretérito «ella habló» lleva tilde; «hablo» es presente (yo)."
+},
+{
+"s": "___ eres mi mejor amigo de BYU.",
+"o": [
+"Tú",
+"Tu",
+"Tù"
+],
+"a": "Tú",
+"w": "«Tú» (pronombre, you) lleva tilde; «tu» (your) no."
+},
+{
+"s": "Este regalo es para ___.",
+"o": [
+"mí",
+"mi",
+"mì"
+],
+"a": "mí",
+"w": "«Mí» después de preposición (para mí) lleva tilde; «mi» (my) no."
+},
+{
+"s": "¿Dónde dejaste ___ carro?",
+"o": [
+"tu",
+"tú",
+"tù"
+],
+"a": "tu",
+"w": "«Tu» = your (posesivo), sin tilde."
+},
+{
+"s": "___ es el abogado del caso.",
+"o": [
+"Él",
+"El",
+"Èl"
+],
+"a": "Él",
+"w": "«Él» (he) lleva tilde; «el» (the) no."
+},
+{
+"s": "¿Cuál está bien? (examen / miércoles)",
+"o": [
+"El examen es el miércoles.",
+"El examen es el miercoles.",
+"El exámen es el miércoles."
+],
+"a": "El examen es el miércoles.",
+"w": "«Miércoles» es esdrújula (tilde). «Examen» es llana en -n: sin tilde."
+},
+{
+"s": "—¿Vas al templo hoy? —___, a las seis.",
+"o": [
+"Sí",
+"Si",
+"Sì"
+],
+"a": "Sí",
+"w": "«Sí» (yes) lleva tilde; «si» (if) no."
+},
+{
+"s": "No ___ dónde dejé las llaves.",
+"o": [
+"sé",
+"se",
+"sè"
+],
+"a": "sé",
+"w": "«Sé» del verbo saber (I know) lleva tilde; «se» pronombre no."
+},
+{
+"s": "¿Quieres un ___ de manzanilla?",
+"o": [
+"té",
+"te",
+"tè"
+],
+"a": "té",
+"w": "«Té» (bebida, tea) lleva tilde; «te» pronombre no."
+},
+{
+"s": "___ lo explico después de la clase.",
+"o": [
+"Te",
+"Té",
+"Tè"
+],
+"a": "Te",
+"w": "Aquí «te» es pronombre (to you), sin tilde."
+},
+{
+"s": "Si sabes la respuesta, ___, por favor.",
+"o": [
+"dímela",
+"dimela",
+"dímelá"
+],
+"a": "dímela",
+"w": "«Di» + «me» + «la» = esdrújula; siempre lleva tilde."
+},
+{
+"s": "El cliente no entiende el contrato. ___, por favor.",
+"o": [
+"Explícaselo",
+"Explicaselo",
+"Explicáselo"
+],
+"a": "Explícaselo",
+"w": "Golpe en «pli»: ex-PLI-ca-se-lo. Es sobresdrújula: siempre tilde."
+},
+{
+"s": "Mañana tengo examen de ___.",
+"o": [
+"matemáticas",
+"matematicas",
+"matematícas"
+],
+"a": "matemáticas",
+"w": "Golpe en «má»: ma-te-MÁ-ti-cas. Esdrújula: siempre tilde."
+},
+{
+"s": "Voy a tomar el ___ a Salt Lake.",
+"o": [
+"camión",
+"camion",
+"cámion"
+],
+"a": "camión",
+"w": "Aguda que termina en -n: lleva tilde (ca-MIÓN)."
+},
+{
+"s": "Mi cliente pasó dos años en la ___.",
+"o": [
+"cárcel",
+"carcel",
+"carcél"
+],
+"a": "cárcel",
+"w": "Llana que termina en -l (no en n, s o vocal): lleva tilde."
+},
+{
+"s": "Esta semana tengo tres ___ finales.",
+"o": [
+"exámenes",
+"examenes",
+"examénes"
+],
+"a": "exámenes",
+"w": "En plural cambia a esdrújula (e-XÁ-me-nes): lleva tilde."
+},
+{
+"s": "___ llueve, no vamos al cañón.",
+"o": [
+"Si",
+"Sí",
+"Sì"
+],
+"a": "Si",
+"w": "«Si» = if (condición), sin tilde."
+},
+{
+"s": "Necesito ___ tiempo para terminar el ensayo.",
+"o": [
+"más",
+"mas",
+"màs"
+],
+"a": "más",
+"w": "«Más» (more) lleva tilde."
+},
+{
+"s": "¿Cuál está bien? (Why didn't you come?)",
+"o": [
+"¿Por qué no viniste?",
+"¿Porqué no viniste?",
+"¿Por que no viniste?"
+],
+"a": "¿Por qué no viniste?",
+"w": "En preguntas: «por qué», separado y con tilde."
+},
+{
+"s": "¿Cuál está bien? (I don't know what the judge wants)",
+"o": [
+"No sé qué quiere el juez.",
+"No se que quiere el juez.",
+"No sé que quiere el juez."
+],
+"a": "No sé qué quiere el juez.",
+"w": "«Sé» (saber) y «qué» en pregunta indirecta llevan tilde."
+},
+{
+"s": "¿___ es tu clase favorita este semestre?",
+"o": [
+"Cuál",
+"Cual",
+"Cuàl"
+],
+"a": "Cuál",
+"w": "Palabra de pregunta = tilde: cuál, qué, dónde."
+},
+{
+"s": "Espero que el juez me ___ permiso para salir del país.",
+"o": [
+"dé",
+"de",
+"dè"
+],
+"a": "dé",
+"w": "«Dé» (verbo dar) lleva tilde para no confundirse con «de»."
+},
+{
+"s": "¿Cuál está bien? (When I arrived, he had already left)",
+"o": [
+"Cuando llegué, él ya había salido.",
+"Cuando llegue, el ya había salido.",
+"Cuándo llegué, él ya habia salido."
+],
+"a": "Cuando llegué, él ya había salido.",
+"w": "«Llegué», «él» y «había» llevan tilde; «cuando» no es pregunta."
+}
+]

@@ -1,0 +1,242 @@
+[
+{
+"s": "¿Cuál está bien?",
+"o": [
+"Soy cansado después del gimnasio.",
+"Estoy cansado después del gimnasio.",
+"Tengo cansado después del gimnasio."
+],
+"a": "Estoy cansado después del gimnasio.",
+"w": "Cómo te sientes ahorita = estar."
+},
+{
+"s": "La reunión del barrio ___ en la capilla.",
+"o": [
+"es",
+"está",
+"hay"
+],
+"a": "es",
+"w": "Un evento usa ser, aunque digas el lugar."
+},
+{
+"s": "Gracias ___ todo lo que hiciste por mí.",
+"o": [
+"por",
+"para",
+"de"
+],
+"a": "por",
+"w": "Por = la razón (gracias por)."
+},
+{
+"s": "Estudio mucho ___ ser abogado.",
+"o": [
+"para",
+"por",
+"a"
+],
+"a": "para",
+"w": "Para = la meta."
+},
+{
+"s": "Pagué veinte dólares ___ el libro de leyes.",
+"o": [
+"por",
+"para",
+"en"
+],
+"a": "por",
+"w": "Por = a cambio de (precio)."
+},
+{
+"s": "Cuando ___ niño, vivía en Utah.",
+"o": [
+"era",
+"fui",
+"estuve"
+],
+"a": "era",
+"w": "Edad y fondo en el pasado = imperfecto."
+},
+{
+"s": "Ayer ___ al templo con mi esposa.",
+"o": [
+"fui",
+"iba",
+"voy"
+],
+"a": "fui",
+"w": "Algo que pasó y terminó ayer = pretérito."
+},
+{
+"s": "Mi mamá quiere que yo ___ a cenar el domingo.",
+"o": [
+"venga",
+"vengo",
+"venir"
+],
+"a": "venga",
+"w": "Querer que + otra persona = subjuntivo."
+},
+{
+"s": "Cuando ___ a la oficina mañana, te llamo.",
+"o": [
+"llegue",
+"llego",
+"llegaré"
+],
+"a": "llegue",
+"w": "Cuando + algo futuro = subjuntivo."
+},
+{
+"s": "No creo que el testigo ___ la verdad.",
+"o": [
+"diga",
+"dice",
+"decir"
+],
+"a": "diga",
+"w": "Duda (no creo que) = subjuntivo."
+},
+{
+"s": "¿El contrato? ___ di al cliente ayer.",
+"o": [
+"Se lo",
+"Le lo",
+"Lo le"
+],
+"a": "Se lo",
+"w": "Le + lo cambia a se lo."
+},
+{
+"s": "¿Cuál está bien?",
+"o": [
+"Yo gusto los tacos.",
+"Me gustan los tacos.",
+"Me gusta los tacos."
+],
+"a": "Me gustan los tacos.",
+"w": "La cosa manda: los tacos (plural) → gustan."
+},
+{
+"s": "Después de la sentadilla me duele ___ espalda.",
+"o": [
+"la",
+"mi",
+"su"
+],
+"a": "la",
+"w": "Partes del cuerpo: el/la, no mi."
+},
+{
+"s": "Antes de comer, ___ las manos.",
+"o": [
+"me lavo",
+"lavo mis",
+"lavo"
+],
+"a": "me lavo",
+"w": "Algo en tu propio cuerpo: me lavo las manos."
+},
+{
+"s": "En esta calle se ___ casas.",
+"o": [
+"venden",
+"vende",
+"vendemos"
+],
+"a": "venden",
+"w": "Pasiva: el verbo copia a la cosa (casas)."
+},
+{
+"s": "Sin querer, ___ el vaso.",
+"o": [
+"se me rompió",
+"rompí yo",
+"me rompí"
+],
+"a": "se me rompió",
+"w": "Accidente = se + me + verbo."
+},
+{
+"s": "Hay ___ problema con el testamento.",
+"o": [
+"un",
+"una",
+"uno"
+],
+"a": "un",
+"w": "Problema termina en -ma, pero es masculino."
+},
+{
+"s": "La gente de mi barrio ___ muy amable.",
+"o": [
+"era",
+"eran",
+"fueron"
+],
+"a": "era",
+"w": "Gente es singular."
+},
+{
+"s": "¿Cuál está bien?",
+"o": [
+"Soy un abogado.",
+"Soy abogado.",
+"Estoy abogado."
+],
+"a": "Soy abogado.",
+"w": "Profesión después de ser: sin un/una."
+},
+{
+"s": "Cada día pienso ___ mi familia.",
+"o": [
+"en",
+"de",
+"sobre"
+],
+"a": "en",
+"w": "Pensar en = think about."
+},
+{
+"s": "Me casé ___ Sydney en el templo.",
+"o": [
+"con",
+"a",
+"de"
+],
+"a": "con",
+"w": "Casarse con."
+},
+{
+"s": "Estoy buscando ___ las llaves del carro.",
+"o": [
+"(nada)",
+"por",
+"para"
+],
+"a": "(nada)",
+"w": "Buscar ya significa «look for»: busco las llaves."
+},
+{
+"s": "El caso tardó más ___ lo que pensaba.",
+"o": [
+"de",
+"que",
+"como"
+],
+"a": "de",
+"w": "Más de lo que (antes de «lo que» y números)."
+},
+{
+"s": "¿Cuál suena natural en un restaurante en México?",
+"o": [
+"¿Puedo tener un café?",
+"¿Me trae un café, por favor?",
+"¿Puedo haber un café?"
+],
+"a": "¿Me trae un café, por favor?",
+"w": "«Puedo tener» es copia del inglés; se pide con «¿me trae…?»."
+}
+]

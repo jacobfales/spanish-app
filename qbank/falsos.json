@@ -1,0 +1,242 @@
+[
+{
+"s": "Mi hermana está ___; el bebé nace en junio.",
+"o": [
+"embarazada",
+"avergonzada",
+"embarazosa"
+],
+"a": "embarazada",
+"w": "«Embarazada» = pregnant. No significa embarrassed."
+},
+{
+"s": "Me sentí muy ___ cuando olvidé el nombre del juez.",
+"o": [
+"avergonzado",
+"embarazado",
+"excitado"
+],
+"a": "avergonzado",
+"w": "Embarrassed = avergonzado (o «me dio pena» en México)."
+},
+{
+"s": "Hace 40 grados en Phoenix. ¡___!",
+"o": [
+"Tengo calor",
+"Estoy caliente",
+"Soy caliente"
+],
+"a": "Tengo calor",
+"w": "Por el clima se dice «tengo calor». «Estoy caliente» tiene sentido sexual."
+},
+{
+"s": "Voy a la ___ Harold B. Lee a estudiar.",
+"o": [
+"biblioteca",
+"librería",
+"libraría"
+],
+"a": "biblioteca",
+"w": "Library = biblioteca. «Librería» es donde compras libros."
+},
+{
+"s": "La ___ del edificio está a la izquierda.",
+"o": [
+"salida",
+"éxito",
+"exit"
+],
+"a": "salida",
+"w": "Exit = salida. «Éxito» significa success."
+},
+{
+"s": "Mañana vamos a la playa en Mazatlán y vamos a ___.",
+"o": [
+"pasarla bien",
+"tener un buen tiempo",
+"hacer un buen tiempo"
+],
+"a": "pasarla bien",
+"w": "«Have a good time» = pasarla bien. «Tener un buen tiempo» es calco del inglés."
+},
+{
+"s": "Estoy muy ___ por mi primer día en el despacho.",
+"o": [
+"emocionado",
+"excitado",
+"caliente"
+],
+"a": "emocionado",
+"w": "Excited = emocionado. «Excitado» suele tener sentido sexual."
+},
+{
+"s": "Tu argumento no ___.",
+"o": [
+"tiene sentido",
+"hace sentido",
+"realiza sentido"
+],
+"a": "tiene sentido",
+"w": "«Make sense» = tener sentido. «Hacer sentido» es calco."
+},
+{
+"s": "Ahorita no puedo hablar; te ___ en una hora.",
+"o": [
+"devuelvo la llamada",
+"llamo para atrás",
+"llamo atrás"
+],
+"a": "devuelvo la llamada",
+"w": "«Call back» = devolver la llamada (o «te marco»). «Llamar para atrás» es calco."
+},
+{
+"s": "El trabajo paga bien. ___, el horario es muy pesado.",
+"o": [
+"Por otro lado",
+"En la otra mano",
+"Por la otra mano"
+],
+"a": "Por otro lado",
+"w": "«On the other hand» = por otro lado. «En la otra mano» es literal."
+},
+{
+"s": "Ayer me ___ de que había dejado la cartera en el gimnasio.",
+"o": [
+"di cuenta",
+"realicé",
+"entendí"
+],
+"a": "di cuenta",
+"w": "«To realize» = darse cuenta de. «Realizar» = hacer o llevar a cabo."
+},
+{
+"s": "La empresa va a ___ una auditoría el próximo mes.",
+"o": [
+"realizar",
+"darse cuenta de",
+"notar"
+],
+"a": "realizar",
+"w": "«Realizar» = hacer, llevar a cabo (to carry out). No es to realize."
+},
+{
+"s": "Quiero ___ una beca para la facultad de derecho.",
+"o": [
+"solicitar",
+"aplicar",
+"pedir por"
+],
+"a": "solicitar",
+"w": "«Apply for» = solicitar. «Aplicar» es poner algo sobre algo (apply cream)."
+},
+{
+"s": "Mañana voy a ___ a la audiencia del caso.",
+"o": [
+"asistir",
+"atender",
+"ayudar"
+],
+"a": "asistir",
+"w": "«Asistir a» = estar presente (to attend). No significa to assist."
+},
+{
+"s": "¿Me puedes ___ a cargar el sillón?",
+"o": [
+"ayudar",
+"asistir",
+"atender"
+],
+"a": "ayudar",
+"w": "To help/assist = ayudar a. «Asistir» casi siempre significa to attend."
+},
+{
+"s": "¿Cuál está bien? (quieres decir «Currently I live in Provo»)",
+"o": [
+"Actualmente vivo en Provo.",
+"Realmente vivo en Provo.",
+"Actual vivo en Provo."
+],
+"a": "Actualmente vivo en Provo.",
+"w": "«Actualmente» = currently, hoy en día. No significa actually."
+},
+{
+"s": "¿Cuál está bien? (quieres decir «Actually, I have never tried coffee»)",
+"o": [
+"En realidad, nunca he probado el café.",
+"Actualmente, nunca he probado el café.",
+"Actual, nunca he probado el café."
+],
+"a": "En realidad, nunca he probado el café.",
+"w": "Actually = en realidad. «Actualmente» = currently."
+},
+{
+"s": "Voy a la ___ a comprar el libro de texto para mi clase.",
+"o": [
+"librería",
+"biblioteca",
+"libraría"
+],
+"a": "librería",
+"w": "«Librería» = bookstore, donde compras libros."
+},
+{
+"s": "Voy a ___ la clase con mi grabadora para estudiar después.",
+"o": [
+"grabar",
+"recordar",
+"registrar"
+],
+"a": "grabar",
+"w": "To record (audio, video) = grabar. «Recordar» = to remember."
+},
+{
+"s": "Guardé todos los documentos del caso en una ___ azul.",
+"o": [
+"carpeta",
+"alfombra",
+"carta"
+],
+"a": "carpeta",
+"w": "«Carpeta» = folder. Carpet es alfombra."
+},
+{
+"s": "El doctor me dio fibra porque estaba ___ (constipated).",
+"o": [
+"estreñido",
+"constipado",
+"congestionado"
+],
+"a": "estreñido",
+"w": "Constipated = estreñido. «Constipado» significa resfriado o con la nariz tapada."
+},
+{
+"s": "Te quiero ___ a mi esposa.",
+"o": [
+"presentar",
+"introducir",
+"conocer"
+],
+"a": "presentar",
+"w": "«Introduce someone» = presentar. «Introducir» es meter algo."
+},
+{
+"s": "¿Cuál está bien? (quieres decir «Does the noise bother you?»)",
+"o": [
+"¿Te molesta el ruido?",
+"¿Te abusa el ruido?",
+"¿Te disturba el ruido?"
+],
+"a": "¿Te molesta el ruido?",
+"w": "«Molestar» = to bother. No significa to molest."
+},
+{
+"s": "Para sacar dinero, ___ la tarjeta en el cajero.",
+"o": [
+"introduce",
+"presenta",
+"aplica"
+],
+"a": "introduce",
+"w": "«Introducir» = meter algo (to insert). Para personas se usa «presentar»."
+}
+]

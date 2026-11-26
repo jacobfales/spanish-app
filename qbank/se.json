@@ -1,0 +1,262 @@
+[
+{
+"s": "¿Qué uso de SE? «Mi esposa quería el libro, así que se lo di.»",
+"o": [
+"Le disfrazado",
+"Reflexivo",
+"Pasiva",
+"Accidental"
+],
+"a": "Le disfrazado",
+"w": "«Le lo» no existe; «le» cambia a «se» antes de lo/la/los/las."
+},
+{
+"s": "¿Qué uso de SE? «Se me cayó la barra en el gym.»",
+"o": [
+"Accidental",
+"Reflexivo",
+"Impersonal",
+"Recíproco"
+],
+"a": "Accidental",
+"w": "Pasó sin querer: se + me + verbo (unplanned event)."
+},
+{
+"s": "¿Qué uso de SE? «Se venden casas en Provo.»",
+"o": [
+"Pasiva",
+"Impersonal",
+"Reflexivo",
+"Verbo con se"
+],
+"a": "Pasiva",
+"w": "Las casas son vendidas; el verbo concuerda con «casas» (plural)."
+},
+{
+"s": "¿Qué uso de SE? «En México se vive bien.»",
+"o": [
+"Impersonal",
+"Pasiva",
+"Recíproco",
+"Reflexivo"
+],
+"a": "Impersonal",
+"w": "No hay sujeto específico; «se» = la gente en general (people/one)."
+},
+{
+"s": "¿Qué uso de SE? «Los dos abogados se ayudan el uno al otro.»",
+"o": [
+"Recíproco",
+"Reflexivo",
+"Pasiva",
+"Le disfrazado"
+],
+"a": "Recíproco",
+"w": "Uno ayuda al otro (each other)."
+},
+{
+"s": "¿Qué uso de SE? «El juez se pone la toga antes de entrar.»",
+"o": [
+"Reflexivo",
+"Recíproco",
+"Impersonal",
+"Accidental"
+],
+"a": "Reflexivo",
+"w": "El juez se lo hace a sí mismo (himself)."
+},
+{
+"s": "¿Qué uso de SE? «Mi hermano se fue a México en junio.»",
+"o": [
+"Verbo con se",
+"Reflexivo",
+"Pasiva",
+"Le disfrazado"
+],
+"a": "Verbo con se",
+"w": "«Irse» = salir de un lugar (to leave); no es reflexivo real."
+},
+{
+"s": "¿Qué uso de SE? «El abogado se durmió en la reunión.»",
+"o": [
+"Verbo con se",
+"Recíproco",
+"Impersonal",
+"Accidental"
+],
+"a": "Verbo con se",
+"w": "«Dormirse» = quedarse dormido (to fall asleep); cambia el sentido de «dormir»."
+},
+{
+"s": "¿Qué uso de SE? «Se trabaja mucho en la oficina de abogados.»",
+"o": [
+"Impersonal",
+"Pasiva",
+"Reflexivo",
+"Verbo con se"
+],
+"a": "Impersonal",
+"w": "«Trabajar» aquí no tiene objeto; «se» = la gente en general."
+},
+{
+"s": "¿Qué uso de SE? «Se rentan departamentos cerca de BYU.»",
+"o": [
+"Pasiva",
+"Impersonal",
+"Recíproco",
+"Le disfrazado"
+],
+"a": "Pasiva",
+"w": "Los departamentos son rentados; verbo en plural con «departamentos»."
+},
+{
+"s": "¿Qué uso de SE? «El cliente necesitaba los documentos y la secretaria se los mandó.»",
+"o": [
+"Le disfrazado",
+"Reflexivo",
+"Recíproco",
+"Pasiva"
+],
+"a": "Le disfrazado",
+"w": "Le (al cliente) + los (documentos) → se los."
+},
+{
+"s": "¿Qué uso de SE? «Mis papás se conocieron en una clase de BYU.»",
+"o": [
+"Recíproco",
+"Reflexivo",
+"Accidental",
+"Pasiva"
+],
+"a": "Recíproco",
+"w": "Él la conoció a ella y ella a él (each other)."
+},
+{
+"s": "En el mercado ___ tacos muy buenos.",
+"o": [
+"se venden",
+"se vende",
+"se venda",
+"venden se"
+],
+"a": "se venden",
+"w": "«Tacos» es plural, así que el verbo va en plural."
+},
+{
+"s": "En esa tienda ___ ropa de segunda mano.",
+"o": [
+"se vende",
+"se venden",
+"se vendan"
+],
+"a": "se vende",
+"w": "«Ropa» es singular, así que el verbo va en singular."
+},
+{
+"s": "¡Ay! ___ las llaves del carro en la oficina.",
+"o": [
+"Se me olvidaron",
+"Se me olvidó",
+"Me se olvidaron",
+"Se olvidé"
+],
+"a": "Se me olvidaron",
+"w": "«Llaves» es plural. Orden correcto: se + me + verbo."
+},
+{
+"s": "¿El reporte para el juez? Ya ___ di ayer.",
+"o": [
+"se lo",
+"le lo",
+"lo le",
+"se le"
+],
+"a": "se lo",
+"w": "«Le lo» no existe; «le» cambia a «se»."
+},
+{
+"s": "Mañana ___ a Provo temprano.",
+"o": [
+"me voy",
+"se voy",
+"voy me",
+"me va"
+],
+"a": "me voy",
+"w": "Con «yo», irse = me voy."
+},
+{
+"s": "Cuando estaba en la prepa, ___ a las 6:30 cada día.",
+"o": [
+"me levantaba",
+"se levantaba",
+"levantaba"
+],
+"a": "me levantaba",
+"w": "Reflexivo con «yo» = me. «Levantar» solo necesita un objeto."
+},
+{
+"s": "Los dos abogados ___ saludaron el uno al otro antes de la audiencia.",
+"o": [
+"se",
+"les",
+"los",
+"nos"
+],
+"a": "se",
+"w": "Recíproco con «ellos» = se (each other)."
+},
+{
+"s": "Mi esposa me pidió las fotos del viaje y yo ___ voy a mandar mañana.",
+"o": [
+"se las",
+"le las",
+"se los",
+"las le"
+],
+"a": "se las",
+"w": "«Fotos» = las (femenino plural); le cambia a se."
+},
+{
+"s": "En la corte no ___ usar el celular.",
+"o": [
+"se puede",
+"se pueden",
+"puede se"
+],
+"a": "se puede",
+"w": "Se + verbo + infinitivo: el verbo va en singular."
+},
+{
+"s": "Al juez ___ cayeron los papeles.",
+"o": [
+"se le",
+"le se",
+"se lo",
+"se les"
+],
+"a": "se le",
+"w": "Accidental: se + le (a él) + verbo plural (papeles)."
+},
+{
+"s": "¿Cuál está bien? (un accidente)",
+"o": [
+"A mi esposa se le rompió el celular.",
+"A mi esposa le se rompió el celular.",
+"A mi esposa se le rompieron el celular.",
+"A mi esposa se la rompió el celular."
+],
+"a": "A mi esposa se le rompió el celular.",
+"w": "Orden: se + le + verbo; el verbo concuerda con «celular» (singular)."
+},
+{
+"s": "¿Cuál está bien? (un letrero)",
+"o": [
+"Se venden libros usados en la librería de BYU.",
+"Se vende libros usados en la librería de BYU.",
+"Venden se libros usados en la librería de BYU."
+],
+"a": "Se venden libros usados en la librería de BYU.",
+"w": "Pasiva: el verbo concuerda con «libros» (plural); «se» va antes."
+}
+]

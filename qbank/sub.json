@@ -1,0 +1,242 @@
+[
+ {
+  "s": "Quiero que tú ___ conmigo al templo.",
+  "o": [
+   "vengas",
+   "vienes",
+   "venir"
+  ],
+  "a": "vengas",
+  "w": "Deseo + que + otra persona = subjuntivo."
+ },
+ {
+  "s": "Quiero ___ al gym hoy.",
+  "o": [
+   "ir",
+   "vaya",
+   "voy"
+  ],
+  "a": "ir",
+  "w": "Mismo sujeto (yo quiero, yo voy) = infinitivo."
+ },
+ {
+  "s": "Creo que el juez ___ justo.",
+  "o": [
+   "es",
+   "sea",
+   "ser"
+  ],
+  "a": "es",
+  "w": "«Creo que» = certeza: indicativo."
+ },
+ {
+  "s": "No creo que el juez ___ justo.",
+  "o": [
+   "sea",
+   "es",
+   "ser"
+  ],
+  "a": "sea",
+  "w": "«No creo que» = duda: subjuntivo."
+ },
+ {
+  "s": "Ojalá que ___ el LSAT.",
+  "o": [
+   "pase",
+   "paso",
+   "pasar"
+  ],
+  "a": "pase",
+  "w": "Ojalá siempre lleva subjuntivo."
+ },
+ {
+  "s": "Cuando ___ a la escuela de derecho, voy a estudiar mucho.",
+  "o": [
+   "entre",
+   "entro",
+   "entraré"
+  ],
+  "a": "entre",
+  "w": "Cuando + algo en el futuro = subjuntivo."
+ },
+ {
+  "s": "Cuando ___ niño, vivía en Utah.",
+  "o": [
+   "era",
+   "fuera",
+   "sea"
+  ],
+  "a": "era",
+  "w": "Cuando + pasado (ya pasó) = indicativo."
+ },
+ {
+  "s": "Te presto mi carro para que ___ a la corte.",
+  "o": [
+   "llegues",
+   "llegas",
+   "llegar"
+  ],
+  "a": "llegues",
+  "w": "«Para que» siempre lleva subjuntivo."
+ },
+ {
+  "s": "Es importante que mi esposa ___ bien.",
+  "o": [
+   "descanse",
+   "descansa",
+   "descansar"
+  ],
+  "a": "descanse",
+  "w": "«Es importante que» + otra persona = subjuntivo."
+ },
+ {
+  "s": "Si ___ más dinero, compraría una casa en Provo.",
+  "o": [
+   "tuviera",
+   "tengo",
+   "tendría"
+  ],
+  "a": "tuviera",
+  "w": "Si + situación irreal = imperfecto del subjuntivo, nunca condicional."
+ },
+ {
+  "s": "Si estudiara más, ___ mejores calificaciones.",
+  "o": [
+   "sacaría",
+   "sacara",
+   "saco"
+  ],
+  "a": "sacaría",
+  "w": "Si + imperfecto del subjuntivo; la otra parte va en condicional."
+ },
+ {
+  "s": "Si ___ tiempo mañana, voy al gym.",
+  "o": [
+   "tengo",
+   "tenga",
+   "tuviera"
+  ],
+  "a": "tengo",
+  "w": "Si + algo posible = presente indicativo. Nunca «si + presente del subjuntivo»."
+ },
+ {
+  "s": "No sé qué va a pasar, pero aunque ___ mañana, vamos a ir al partido.",
+  "o": [
+   "llueva",
+   "llueve",
+   "llover"
+  ],
+  "a": "llueva",
+  "w": "Aunque + algo no seguro (even if) = subjuntivo."
+ },
+ {
+  "s": "Aunque ___ todo el día ayer, fuimos al parque.",
+  "o": [
+   "llovió",
+   "llueva",
+   "llover"
+  ],
+  "a": "llovió",
+  "w": "Aunque + hecho real del pasado = indicativo."
+ },
+ {
+  "s": "Me alegra que ___ a visitarnos.",
+  "o": [
+   "vengan",
+   "vienen",
+   "venir"
+  ],
+  "a": "vengan",
+  "w": "Emoción + que + otra persona = subjuntivo."
+ },
+ {
+  "s": "Es verdad que mi esposa ___ mejor que yo.",
+  "o": [
+   "cocina",
+   "cocine",
+   "cocinar"
+  ],
+  "a": "cocina",
+  "w": "«Es verdad que» = certeza: indicativo."
+ },
+ {
+  "s": "Necesito un abogado que ___ español; ¿conoces a alguno?",
+  "o": [
+   "hable",
+   "habla",
+   "hablar"
+  ],
+  "a": "hable",
+  "w": "Persona que no sabes si existe = subjuntivo."
+ },
+ {
+  "s": "Dudo que el cliente ___ la verdad.",
+  "o": [
+   "diga",
+   "dice",
+   "decir"
+  ],
+  "a": "diga",
+  "w": "Duda = subjuntivo."
+ },
+ {
+  "s": "El domingo pasado el obispo me pidió que ___ un discurso, y lo di.",
+  "o": [
+   "diera",
+   "daba",
+   "dé"
+  ],
+  "a": "diera",
+  "w": "Verbo en pasado (pidió) + que = imperfecto del subjuntivo."
+ },
+ {
+  "s": "Mi esposa quería que yo ___ la cena anoche.",
+  "o": [
+   "hiciera",
+   "hice",
+   "hacía"
+  ],
+  "a": "hiciera",
+  "w": "Deseo en pasado (quería) + que + otra persona = imperfecto del subjuntivo."
+ },
+ {
+  "s": "Te llamo en cuanto ___ del juzgado.",
+  "o": [
+   "salga",
+   "salgo",
+   "saldré"
+  ],
+  "a": "salga",
+  "w": "«En cuanto» + algo futuro = subjuntivo (como «cuando»)."
+ },
+ {
+  "s": "¿Cuál está bien? (un deseo)",
+  "o": [
+   "Espero que tengas un buen día.",
+   "Espero que tienes un buen día.",
+   "Espero que tendrás un buen día."
+  ],
+  "a": "Espero que tengas un buen día.",
+  "w": "Esperar que + otra persona = subjuntivo."
+ },
+ {
+  "s": "¿Cuál está bien? (opinión)",
+  "o": [
+   "Pienso que el examen es mañana.",
+   "Pienso que el examen sea mañana.",
+   "No pienso que el examen es mañana."
+  ],
+  "a": "Pienso que el examen es mañana.",
+  "w": "«Pienso que» = indicativo; «no pienso que» = subjuntivo."
+ },
+ {
+  "s": "¿Cuál está bien? (situación irreal)",
+  "o": [
+   "Si fuera abogado, ayudaría a mi familia.",
+   "Si sería abogado, ayudaría a mi familia.",
+   "Si sea abogado, ayudaría a mi familia."
+  ],
+  "a": "Si fuera abogado, ayudaría a mi familia.",
+  "w": "Si + imperfecto del subjuntivo, luego condicional. Nunca «si sería»."
+ }
+]

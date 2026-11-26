@@ -1,0 +1,243 @@
+[
+{
+"s": "Mi cuñada ___ enfermera.",
+"o": [
+"es",
+"está",
+"son"
+],
+"a": "es",
+"w": "Profesión = ser."
+},
+{
+"s": "La oficina de abogados ___ en el centro de Provo.",
+"o": [
+"está",
+"es",
+"son"
+],
+"a": "está",
+"w": "Lugar de una cosa o persona = estar."
+},
+{
+"s": "La fiesta de Navidad del barrio ___ en el centro de estaca.",
+"o": [
+"es",
+"está",
+"son"
+],
+"a": "es",
+"w": "Dónde pasa un evento = ser."
+},
+{
+"s": "Mi abuelo ya ___ muerto.",
+"o": [
+"está",
+"es",
+"ha"
+],
+"a": "está",
+"w": "«Muerto» siempre va con estar."
+},
+{
+"s": "Ahorita ___ estudiando para el LSAT.",
+"o": [
+"estoy",
+"soy",
+"es"
+],
+"a": "estoy",
+"w": "Estar + gerundio (-ando/-iendo) = acción en progreso."
+},
+{
+"s": "Mi profesor de historia ___ muy aburrido; todos se duermen en su clase.",
+"o": [
+"es",
+"está",
+"tiene"
+],
+"a": "es",
+"w": "Ser aburrido = boring (así es la persona)."
+},
+{
+"s": "La clase fue tan larga que ___ muy aburrido y casi me dormí.",
+"o": [
+"estaba",
+"era",
+"tenía"
+],
+"a": "estaba",
+"w": "Estar aburrido = bored (cómo te sientes)."
+},
+{
+"s": "¿Ya ___ listo? El juez nos espera.",
+"o": [
+"estás",
+"eres",
+"tienes"
+],
+"a": "estás",
+"w": "Estar listo = ready. Ser listo = smart."
+},
+{
+"s": "Ese abogado ___ muy listo; ganó todos sus casos.",
+"o": [
+"es",
+"está",
+"tiene"
+],
+"a": "es",
+"w": "Ser listo = inteligente (smart)."
+},
+{
+"s": "Los plátanos todavía ___ verdes; no te los comas.",
+"o": [
+"están",
+"son",
+"tienen"
+],
+"a": "están",
+"w": "Estar verde = no maduro (not ripe)."
+},
+{
+"s": "El dueño del bufete ___ muy rico; tiene tres casas.",
+"o": [
+"es",
+"está",
+"tiene"
+],
+"a": "es",
+"w": "Ser rico = tener mucho dinero. Estar rico = sabroso."
+},
+{
+"s": "¡Pruébala! La sopa ___ bien rica hoy.",
+"o": [
+"está",
+"es",
+"tiene"
+],
+"a": "está",
+"w": "Estar rico = sabe muy bien (tasty) ahora."
+},
+{
+"s": "Mi primo ___ muy malo; siempre les pega a sus hermanos.",
+"o": [
+"es",
+"está",
+"tiene"
+],
+"a": "es",
+"w": "Ser malo = mala persona. Estar malo = enfermo."
+},
+{
+"s": "No fui a la iglesia porque ___ malo del estómago.",
+"o": [
+"estaba",
+"era",
+"tenía"
+],
+"a": "estaba",
+"w": "Estar malo = enfermo (sick)."
+},
+{
+"s": "___ las tres de la tarde cuando terminó la audiencia.",
+"o": [
+"Eran",
+"Estaban",
+"Era"
+],
+"a": "Eran",
+"w": "La hora va con ser; «las tres» es plural."
+},
+{
+"s": "Mi compañero de cuarto ___ de Guadalajara.",
+"o": [
+"es",
+"está",
+"son"
+],
+"a": "es",
+"w": "Origen (de dónde eres) = ser."
+},
+{
+"s": "La boda de mi hermana ___ en el templo de Provo.",
+"o": [
+"será",
+"estará",
+"estarán"
+],
+"a": "será",
+"w": "Evento = ser, aunque digas el lugar."
+},
+{
+"s": "La puerta del juzgado ___ cerrada; no podemos entrar.",
+"o": [
+"está",
+"es",
+"tiene"
+],
+"a": "está",
+"w": "Estado o resultado = estar."
+},
+{
+"s": "¿Cuál está bien? (trabajo y lugar)",
+"o": [
+"Soy abogado y estoy en Provo.",
+"Estoy abogado y soy en Provo.",
+"Soy abogado y soy en Provo.",
+"Estoy abogado y estoy en Provo."
+],
+"a": "Soy abogado y estoy en Provo.",
+"w": "Profesión = ser; lugar = estar."
+},
+{
+"s": "¿Cuál está bien? (un evento)",
+"o": [
+"La reunión con el cliente es en la sala de juntas.",
+"La reunión con el cliente está en la sala de juntas.",
+"La reunión con el cliente son en la sala de juntas."
+],
+"a": "La reunión con el cliente es en la sala de juntas.",
+"w": "Una reunión es un evento: ser, aunque digas dónde."
+},
+{
+"s": "¿Cuál está bien? (la familia)",
+"o": [
+"Mi abuela está muerta.",
+"Mi abuela es muerta.",
+"Mi abuela está muerto."
+],
+"a": "Mi abuela está muerta.",
+"w": "Muerto/a va con estar y concuerda con «abuela»."
+},
+{
+"s": "Cuando llegué a casa, mi esposa ___ cocinando.",
+"o": [
+"estaba",
+"era",
+"estuvo"
+],
+"a": "estaba",
+"w": "Acción en progreso en el pasado = estaba + gerundio."
+},
+{
+"s": "Este abogado ___ muy vivo; nadie lo engaña.",
+"o": [
+"es",
+"está",
+"tiene"
+],
+"a": "es",
+"w": "Ser vivo = astuto (sharp). Estar vivo = alive."
+},
+{
+"s": "Mi suegro ___ muy orgulloso de mi esposa.",
+"o": [
+"está",
+"es",
+"tiene"
+],
+"a": "está",
+"w": "Estar orgulloso de = proud of. Ser orgulloso = arrogante."
+}
+]

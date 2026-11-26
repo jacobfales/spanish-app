@@ -1,6 +1,6 @@
 <!doctype html><html lang="es" translate="no"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <title>Reglas del Español</title>
-<meta name="theme-color" content="#1a1a19">
+<meta name="theme-color" content="#151918">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Spanish">
@@ -256,19 +256,49 @@ figure{margin:0;background:var(--card);border:1px solid var(--line);border-radiu
 .app-bar a{color:var(--fg);text-decoration:none;white-space:nowrap}
 .app-bar span{margin-left:auto;text-align:right}
 section{scroll-margin-top:80px}
+
+/* 11/25/26: always dark, quieter section bars, a practice button under every topic, vocab by topic. */
+:root{--bg:#151918;--card:#1e2422;--fg:#e8ecea;--muted:#a3aeaa;--line:#323b38;
+  --se:#f0915a;--ser:#6aa8e0;--por:#6cc070;--pas:#b597e0;--sub:#e07a7a;--pro:#e0b44a;--gus:#5cc8d0;--gen:#f07aae;--ace:#a7b4bf;--ver:#8f9fe0;
+  --t-se:#33221a;--t-ser:#1b2836;--t-por:#1c2d1d;--t-pas:#272035;--t-sub:#311d1d;--t-pro:#2f2818;--t-gus:#17292b;--t-gen:#321c27;--t-ace:#232a2f;--t-ver:#1e2235;
+  --ok:#7fd08a;--ok-bg:#1d3320;--bad:#f08a8a;--bad-bg:#3a1f1f;color-scheme:dark}
+.bar{background:var(--card)!important;color:var(--c)!important;border:1px solid var(--line);border-left:8px solid var(--c);text-transform:none;font-size:26px;padding:14px 18px}
+.bar small{color:var(--muted)!important;opacity:1;margin-top:2px}
+#reglas .bar{--c:var(--fg)}
+.wrap{gap:44px}
+.jump{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.jump nav{gap:6px}
+.jump nav a{font-size:13px;padding:4px 10px}
+.plink{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--tint,var(--card));border:2px solid var(--c);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--fg);font:800 19px var(--display)}
+.plink small{display:block;font:600 14px var(--body);color:var(--muted)}
+.plink .go2{color:var(--c);font-size:22px}
+.plink:hover{background:var(--card)}
+.pl2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.vgroup{display:flex;flex-direction:column;gap:12px}
+.vgroup h3{margin:8px 0 0}
+.vtemas{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.vt{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--k);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.vt b.n{font:800 18px var(--display);color:var(--k)}
+.vt details summary{cursor:pointer;color:var(--muted);font-weight:700}
+.vt ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:15px}
+.vt li{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid var(--line);padding-top:4px}
+.vt li span:first-child{font-weight:700}
+.vt .plink{font-size:16px;padding:10px 12px;--c:var(--k)}
+.allp{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.allp a{display:block;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--k);border-radius:10px;padding:10px 12px;color:var(--fg);text-decoration:none;font-weight:700}
+.allp a small{display:block;color:var(--muted);font-weight:600}
+.con-g h4{margin:0 0 6px;font:800 17px var(--display);color:var(--c)}
+.con-g ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.err{display:flex;flex-direction:column;gap:14px}
+.err h4{margin:6px 0 0;font:800 17px var(--display);color:var(--c)}
 </style>
 </head><body>
-<div class="app-bar"><a href="aprende.html">← Volver</a><span>Reglas del Español</span></div>
+<div class="app-bar"><a href="index.html">← Hablar</a><span>Reglas del Español</span></div>
 <div class="wrap">
 <header>
   <h1>Reglas del Español</h1>
-  <p>Las reglas grandes en una página. Arriba: todas las reglas. Después: cada regla con su dibujo y ejemplos. Al final: la práctica.</p>
-  <div class="navgroups">
-    <div class="ng"><span>Empieza aquí</span><nav><a href="#reglas" style="--c:var(--fg)">Todas las reglas</a></nav></div>
-    <div class="ng"><span>SE primero</span><nav><a href="#se" style="--c:var(--se)">1. Los 7 SE</a></nav></div>
-    <div class="ng"><span>Gramática</span><nav><a href="#serestar" style="--c:var(--ser)">2. Ser / estar</a><a href="#porpara" style="--c:var(--por)">3. Por / para</a><a href="#pasado" style="--c:var(--pas)">4. Pasado</a><a href="#subj" style="--c:var(--sub)">5. Subjuntivo</a><a href="#pron" style="--c:var(--pro)">6. Lo / le</a><a href="#gustar" style="--c:var(--gus)">7. Gustar</a><a href="#genero" style="--c:var(--gen)">8. Género</a><a href="#acentos" style="--c:var(--ace)">9. Acentos</a></nav></div>
-    <div class="ng"><span>Al final</span><nav><a href="#verguenza" style="--c:var(--ver)">10. Sin vergüenza</a><a href="#practica" style="--c:var(--ver)">Práctica</a></nav></div>
-  </div>
+  <p>Cada tema: la regla, un dibujo y abajo un botón para <b>practicar</b>. Después: tu vocabulario por tema.</p>
+  <div class="jump"><div class="ng"><span>Gramática</span><nav><a href="#se" style="--c:var(--se)">1. SE</a><a href="#serestar" style="--c:var(--ser)">2. Ser / estar</a><a href="#porpara" style="--c:var(--por)">3. Por / para</a><a href="#pasado" style="--c:var(--pas)">4. Pasado</a><a href="#subj" style="--c:var(--sub)">5. Subjuntivo</a><a href="#pron" style="--c:var(--pro)">6. Lo / le</a><a href="#gustar" style="--c:var(--gus)">7. Gustar</a><a href="#genero" style="--c:var(--gen)">8. Género</a><a href="#acentos" style="--c:var(--ace)">9. Acentos</a><a href="#vos" style="--c:var(--ver)">10. Tú / usted / vos</a><a href="#conectores" style="--c:var(--pro)">11. Conectores</a><a href="#prep" style="--c:var(--por)">12. Preposiciones</a><a href="#verbos" style="--c:var(--gus)">13. Verbos</a><a href="#falsos" style="--c:var(--sub)">14. Falsos amigos</a><a href="#errores" style="--c:var(--se)">15. Errores comunes</a></nav></div><div class="ng"><span>Vocabulario</span><nav><a href="#vocab" style="--c:var(--gus)">Palabras por tema</a></nav></div><div class="ng"><span>Practicar</span><nav><a href="#practicas" style="--c:var(--ver)">Todas las prácticas</a><a href="#verguenza" style="--c:var(--ver)">Hablar sin vergüenza</a></nav></div></div>
 </header>
 
 <section id="reglas" style="--c:var(--fg)">
@@ -292,7 +322,7 @@ section{scroll-margin-top:80px}
     <a class="tile" href="#gustar" style="--c:var(--gus)"><b>7. Gustar</b><ul><li>🌮 La <b>cosa</b> manda el verbo</li><li>1 cosa → <b>gusta</b> · 2+ → <b>gustan</b></li><li><span class="ex">Me gustan los tacos</span></li></ul></a>
     <a class="tile" href="#genero" style="--c:var(--gen)"><b>8. Género</b><ul><li>♂️ <b>-ma</b> griega = el (el problema)</li><li>♀️ <b>-ción, -dad, -tud</b> = la</li><li>💧 el agua (a tónica) · la mano</li></ul></a>
     <a class="tile" href="#acentos" style="--c:var(--ace)"><b>9. Acentos</b><ul><li>Aguda: tilde si termina en <b>N, S o vocal</b></li><li>Llana: tilde si <b>NO</b></li><li>Esdrújula: <b>siempre</b> (médico)</li></ul></a>
-    <a class="tile" href="#verguenza" style="--c:var(--ver)"><b>10. Hablar sin vergüenza</b><ul><li>😬 La vergüenza es normal</li><li>🗣️ Habla igual: la meta es que te entiendan</li><li><span class="ex">"¿Cómo se dice...?" · "O sea..."</span></li></ul></a>
+    <a class="tile" href="#vos" style="--c:var(--ver)"><b>10. Tú, usted y vos</b><ul><li><b>tú</b> amigos · <b>usted</b> corte y clientes</li><li><b>vos</b> = tú en Argentina: sos, tenés</li></ul></a><a class="tile" href="#conectores" style="--c:var(--pro)"><b>11. Conectores</b><ul><li>pero · <b>sino</b> (después de no)</li><li>y → e · o → u</li></ul></a><a class="tile" href="#prep" style="--c:var(--por)"><b>12. Preposiciones</b><ul><li>pensar <b>en</b> · casarse <b>con</b></li><li>Veo <b>a</b> mi mamá</li></ul></a><a class="tile" href="#verbos" style="--c:var(--gus)"><b>13. Verbos que se confunden</b><ul><li>saber / conocer · pedir / preguntar</li><li>llevar / traer · volver / devolver</li></ul></a><a class="tile" href="#falsos" style="--c:var(--sub)"><b>14. Falsos amigos</b><ul><li>embarazada ≠ embarrassed</li><li>realizar ≠ realize</li></ul></a><a class="tile" href="#errores" style="--c:var(--se)"><b>15. Errores comunes</b><ul><li>Los que más cometen los que hablan inglés</li></ul></a><a class="tile" href="#vocab" style="--c:var(--gus)"><b>📚 Vocabulario por tema</b><ul><li>Tus palabras de Anki, con práctica</li></ul></a>
   </div>
 </section>
 
@@ -427,6 +457,7 @@ section{scroll-margin-top:80px}
     <li><a href="https://www.spanishdict.com/guide/impersonal-se-vs-passive-se" target="_blank" rel="noopener">SpanishDict: impersonal vs. passive se</a></li>
     <li><a href="https://progress.lawlessspanish.com/revision/lessons/different-uses-of-se-in-spanish" target="_blank" rel="noopener">Lawless Spanish: different uses of se</a></li>
   </ul></details>
+  <div class="pl2"><a class="plink" href="practica.html?t=se" data-t="se"><span>📝 Practicar: SE<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=se&amp;modo=libro" data-l="se"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="serestar" style="--c:var(--ser);--tint:var(--t-ser)">
@@ -443,6 +474,7 @@ section{scroll-margin-top:80px}
     <div class="box"><b class="t">La trampa</b><ul><li>Un evento usa SER aunque sea lugar</li><li>La fiesta <b>es</b> en mi casa</li><li>Pero: mi casa <b>está</b> en Provo</li></ul></div>
   </div>
   <div class="trick"><b>Truco:</b> "Cómo te sientes y dónde estás, siempre usas estar."</div>
+  <div class="pl2"><a class="plink" href="practica.html?t=ser" data-t="ser"><span>📝 Practicar: Ser / estar<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=ser&amp;modo=libro" data-l="ser"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="porpara" style="--c:var(--por);--tint:var(--t-por)">
@@ -457,6 +489,7 @@ section{scroll-margin-top:80px}
     <div class="box" style="--c:var(--sub);--tint:var(--t-sub)"><b class="t">POR</b><ul><li>Razón: gracias <b>por</b> todo</li><li>Medio: <b>por</b> teléfono</li><li>Cambio: $20 <b>por</b> el libro</li><li>Tiempo: <b>por</b> dos horas</li><li>A través: caminé <b>por</b> el parque</li></ul></div>
     <div class="box"><b class="t">PARA</b><ul><li>Meta: estudio <b>para</b> ser abogado</li><li>Fecha límite: <b>para</b> el viernes</li><li>Destino: salgo <b>para</b> Provo</li><li>Para quién: es <b>para</b> ti</li><li>Opinión: <b>para</b> mí, es fácil</li></ul></div>
   </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=por" data-t="por"><span>📝 Practicar: Por / para<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=por&amp;modo=libro" data-l="por"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="pasado" style="--c:var(--pas);--tint:var(--t-pas)">
@@ -474,6 +507,7 @@ section{scroll-margin-top:80px}
     <div class="box" style="--c:var(--se);--tint:var(--t-se)"><b class="t">Pretérito 📸</b><ul><li>Terminó, con principio o fin</li><li>ayer, una vez, de repente</li><li>Ayer <b>jugué</b> dos horas</li></ul></div>
     <div class="box"><b class="t">Imperfecto 🎞️</b><ul><li>El fondo: lo que pasaba</li><li>siempre, cada día, de niño</li><li>Edad, hora, cómo era</li><li>De niño <b>jugaba</b> fútbol</li></ul></div>
   </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=pas" data-t="pas"><span>📝 Practicar: Pretérito / imperfecto<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=pas&amp;modo=libro" data-l="pas"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="subj" style="--c:var(--sub);--tint:var(--t-sub)">
@@ -493,6 +527,7 @@ section{scroll-margin-top:80px}
     <div class="box"><b class="t">Sí subjuntivo</b><ul><li>Espero que <b>tengas</b> un buen día</li><li>Dudo que <b>sea</b> verdad</li><li>Cuando <b>llegues</b>, llámame (futuro)</li></ul></div>
     <div class="box" style="--c:var(--por);--tint:var(--t-por)"><b class="t">No subjuntivo</b><ul><li>Misma persona: Quiero <b>ir</b></li><li>Estás seguro: Creo que <b>es</b> verdad</li><li>Hábito: Cuando <b>llego</b>, como</li></ul></div>
   </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=sub" data-t="sub"><span>📝 Practicar: Subjuntivo<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=sub&amp;modo=libro" data-l="sub"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="pron" style="--c:var(--pro);--tint:var(--t-pro)">
@@ -517,6 +552,7 @@ section{scroll-margin-top:80px}
     <div class="box" style="--c:var(--pas);--tint:var(--t-pas)"><b class="t">Verbos con le</b><ul><li>dar, decir, mandar, preguntar, pedir, explicar, gustar</li><li>¿Le dijiste la verdad? Sí, <b>se la</b> dije</li></ul></div>
   </div>
   <div class="trick"><b>Truco:</b> LO es la cosa en tus manos. LE es la persona que la recibe. Orden: persona primero, cosa después (me lo, te la, se los).</div>
+  <div class="pl2"><a class="plink" href="practica.html?t=pro" data-t="pro"><span>📝 Practicar: Lo / le<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=pro&amp;modo=libro" data-l="pro"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="gustar" style="--c:var(--gus);--tint:var(--t-gus)">
@@ -531,6 +567,7 @@ section{scroll-margin-top:80px}
     <div class="box"><b class="t">Una cosa → gusta</b><ul><li>Me <b>gusta</b> el fútbol</li><li>Le <b>duele</b> la cabeza</li><li>Nos <b>falta</b> tiempo</li></ul></div>
     <div class="box"><b class="t">Varias → gustan</b><ul><li>Me <b>gustan</b> los tacos</li><li>Le <b>duelen</b> los pies</li><li>Igual: encantar, importar, molestar, interesar</li></ul></div>
   </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=gus" data-t="gus"><span>📝 Practicar: Gustar<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=gus&amp;modo=libro" data-l="gus"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="genero" style="--c:var(--gen);--tint:var(--t-gen)">
@@ -548,6 +585,7 @@ section{scroll-margin-top:80px}
     <div class="box"><b class="t">LA ♀ (aunque termine en -o)</b><ul><li>la mano, la foto, la moto, la radio</li><li>las aguas: en plural vuelve a "las"</li></ul></div>
   </div>
   <div class="trick"><b>Truco:</b> "-ma griega, masculina": el problema del sistema es el tema.</div>
+  <div class="pl2"><a class="plink" href="practica.html?t=gen" data-t="gen"><span>📝 Practicar: Género<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=gen&amp;modo=libro" data-l="gen"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
 </section>
 
 <section id="acentos" style="--c:var(--ace);--tint:var(--t-ace)">
@@ -561,10 +599,101 @@ section{scroll-margin-top:80px}
     <div class="box"><b class="t">La regla NSV</b><ul><li><b>Aguda:</b> tilde si termina en N, S o vocal (canción, café)</li><li><b>Llana:</b> tilde si NO termina en N, S o vocal (árbol, fácil)</li><li><b>Esdrújula:</b> siempre (médico, rápido)</li></ul></div>
     <div class="box"><b class="t">Tilde que cambia el sentido</b><ul><li>tú / tu · él / el · sí / si</li><li>sé / se · más / mas · mí / mi</li><li>Preguntas: qué, cómo, dónde, cuándo</li></ul></div>
   </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=ace" data-t="ace"><span>📝 Practicar: Acentos<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=ace&amp;modo=libro" data-l="ace"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="vos" style="--c:var(--ver);--tint:var(--t-ver)">
+  <div class="bar">10. Tú, usted y vos<small>Las tres formas de decir «you»</small></div>
+  <div class="vs">
+    <div class="box"><b class="t">Una persona</b><ul><li><b>tú</b> · amigos, familia, gente de tu edad (México, España)</li><li><b>usted</b> · un juez, un cliente, una persona mayor. Se conjuga como él: usted <b>habla</b></li><li><b>vos</b> · igual que tú, pero en Argentina, Uruguay y casi toda Centroamérica</li></ul></div>
+    <div class="box"><b class="t">Varias personas</b><ul><li><b>ustedes</b> · toda Latinoamérica, amigos y formal</li><li><b>vosotros</b> · solo España, amigos</li></ul></div>
+  </div>
+  <figure><div class="cap">Cómo se forma vos (presente)</div>
+    <div class="lego">
+      <div class="brick" style="--b:var(--ace)"><span class="p">hablar</span><small>QUITA LA R</small></div><span class="eq">→</span>
+      <div class="brick" style="--b:var(--ver)"><span class="p">hablás</span><small>TILDE + S</small></div>
+    </div>
+    <div class="vs"><div class="box"><ul><li>comer → <b>comés</b> · vivir → <b>vivís</b></li><li>querer → <b>querés</b> (no «quieres»)</li></ul></div><div class="box"><ul><li>ser → <b>sos</b> · tener → <b>tenés</b> · ir → <b>vas</b></li><li>Mandatos: hablá, vení, decí, andá</li></ul></div></div>
+  </figure>
+  <div class="trick"><b>Para ti:</b> tú con amigos, <b>usted</b> en la corte y con clientes. Si oyes «sos» o «tenés», es alguien diciendo «tú». Con usted: <b>le</b> y <b>su</b>, no te ni tu.</div>
+  <div class="pl2"><a class="plink" href="practica.html?t=vos" data-t="vos"><span>📝 Practicar: Tú, usted y vos<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=vos&amp;modo=libro" data-l="vos"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="conectores" style="--c:var(--pro);--tint:var(--t-pro)">
+  <div class="bar">11. Conectores<small>Palabras pequeñas para unir tus ideas</small></div>
+  <div class="vs" id="con-groups"></div>
+  <div class="trick"><b>Truco:</b> «sino» corrige después de un no (no es X, <b>sino</b> Y). «y» → <b>e</b> antes de i-/hi-; «o» → <b>u</b> antes de o-/ho-.</div>
+  <div class="pl2"><a class="plink" href="practica.html?t=con" data-t="con"><span>📝 Practicar: Conectores<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=con&amp;modo=libro" data-l="con"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="prep" style="--c:var(--por);--tint:var(--t-por)">
+  <div class="bar">12. Preposiciones que van pegadas al verbo<small>En inglés usamos otra, o ninguna</small></div>
+  <div class="vs">
+    <div class="box"><b class="t">Verbo + preposición fija</b><ul><li>pensar <b>en</b> · soñar <b>con</b> · casarse <b>con</b></li><li>enamorarse <b>de</b> · depender <b>de</b> · darse cuenta <b>de</b></li><li>consistir <b>en</b> · tratar <b>de</b> · acabar <b>de</b></li><li>empezar <b>a</b> · ayudar <b>a</b> · aprender <b>a</b></li></ul></div>
+    <div class="box"><b class="t">La «a» personal</b><ul><li>Veo <b>a</b> mi mamá · Llamé <b>al</b> juez</li><li>Busco <b>al</b> abogado (uno que conozco)</li><li>Busco un abogado (cualquiera: sin a)</li><li>Tengo dos hermanos (con tener: sin a)</li></ul></div>
+  </div>
+  <div class="vs">
+    <div class="box"><b class="t">Comparar con números e ideas</b><ul><li>más <b>de</b> cien · más <b>de</b> lo que pensaba</li><li>más alto <b>que</b> yo (personas y cosas)</li></ul></div>
+    <div class="box"><b class="t">Ojo con el inglés</b><ul><li>esperar el bus (no «esperar <s>por</s>»)</li><li>buscar las llaves (no «buscar <s>por</s>»)</li><li>pedir ayuda (no «pedir <s>por</s>»)</li></ul></div>
+  </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=prep" data-t="prep"><span>📝 Practicar: Preposiciones<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=prep&amp;modo=libro" data-l="prep"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="verbos" style="--c:var(--gus);--tint:var(--t-gus)">
+  <div class="bar">13. Verbos que se confunden<small>En inglés es uno; en español son dos</small></div>
+  <div class="vs">
+    <div class="box"><b class="t">Saber / conocer</b><ul><li><b>saber</b> = un dato o cómo hacer algo: sé nadar</li><li><b>conocer</b> = personas, lugares: conozco a Ana</li></ul></div>
+    <div class="box"><b class="t">Pedir / preguntar</b><ul><li><b>pedir</b> = que te den algo: pido ayuda</li><li><b>preguntar</b> = información: pregunto la hora</li></ul></div>
+    <div class="box"><b class="t">Llevar / traer · ir / venir</b><ul><li><b>llevar / ir</b> = allá (lejos de mí)</li><li><b>traer / venir</b> = acá (hacia mí)</li></ul></div>
+    <div class="box"><b class="t">Volver / devolver</b><ul><li><b>volver</b> = regresar tú: vuelvo a las 5</li><li><b>devolver</b> = regresar una cosa: devuelvo el libro</li></ul></div>
+    <div class="box"><b class="t">Jugar / tocar · salir / dejar</b><ul><li>jugar fútbol · tocar la guitarra</li><li>salir de casa · dejar algo (o a alguien)</li></ul></div>
+    <div class="box"><b class="t">«Become»</b><ul><li><b>ponerse</b> = emoción rápida: se puso rojo</li><li><b>hacerse</b> = por esfuerzo: se hizo abogado</li><li><b>volverse</b> = cambio fuerte: se volvió loco</li></ul></div>
+  </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=verbos" data-t="verbos"><span>📝 Practicar: Verbos que se confunden<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=verbos&amp;modo=libro" data-l="verbos"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="falsos" style="--c:var(--sub);--tint:var(--t-sub)">
+  <div class="bar">14. Falsos amigos y calcos<small>Se parecen al inglés, pero no significan lo mismo</small></div>
+  <div class="fix">
+    <div><span class="no">estoy embarazado (I'm embarrassed)</span><span class="ar2">→</span><span class="yes">tengo vergüenza</span></div>
+    <div><span class="no">actualmente (actually)</span><span class="ar2">→</span><span class="yes">en realidad</span></div>
+    <div><span class="no">realicé que… (I realized)</span><span class="ar2">→</span><span class="yes">me di cuenta de que…</span></div>
+    <div><span class="no">aplicar para un trabajo</span><span class="ar2">→</span><span class="yes">solicitar un trabajo</span></div>
+    <div><span class="no">tener un buen tiempo</span><span class="ar2">→</span><span class="yes">pasarla bien</span></div>
+    <div><span class="no">hace sentido</span><span class="ar2">→</span><span class="yes">tiene sentido</span></div>
+    <div><span class="no">te llamo para atrás</span><span class="ar2">→</span><span class="yes">te devuelvo la llamada</span></div>
+    <div><span class="no">librería (library)</span><span class="ar2">→</span><span class="yes">biblioteca</span></div>
+    <div><span class="no">asistir (to help)</span><span class="ar2">→</span><span class="yes">ayudar · asistir = ir a</span></div>
+    <div><span class="no">éxito (exit)</span><span class="ar2">→</span><span class="yes">salida · éxito = success</span></div>
+  </div>
+  <div class="pl2"><a class="plink" href="practica.html?t=falsos" data-t="falsos"><span>📝 Practicar: Falsos amigos<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=falsos&amp;modo=libro" data-l="falsos"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="errores" style="--c:var(--se);--tint:var(--t-se)">
+  <div class="bar">15. Los errores más comunes<small>Lo que más se equivocan los que hablan inglés (según maestros y estudios)</small></div>
+  <div class="err">
+<h4>Ser / estar</h4><div class="fix"><div><span class="no">Soy cansado</span><span class="ar2">→</span><span class="yes">Estoy cansado</span></div><div><span class="no">La fiesta está en mi casa</span><span class="ar2">→</span><span class="yes">La fiesta es en mi casa</span></div></div>
+<h4>Por / para</h4><div class="fix"><div><span class="no">Gracias para todo</span><span class="ar2">→</span><span class="yes">Gracias por todo</span></div><div><span class="no">Estudio por ser abogado</span><span class="ar2">→</span><span class="yes">Estudio para ser abogado</span></div><div><span class="no">Pagué $10 para el libro</span><span class="ar2">→</span><span class="yes">Pagué $10 por el libro</span></div></div>
+<h4>Pasado</h4><div class="fix"><div><span class="no">Ayer caminaba al parque (y terminó)</span><span class="ar2">→</span><span class="yes">Ayer caminé al parque</span></div><div><span class="no">Cuando fui niño</span><span class="ar2">→</span><span class="yes">Cuando era niño</span></div></div>
+<h4>Subjuntivo</h4><div class="fix"><div><span class="no">Quiero que vienes</span><span class="ar2">→</span><span class="yes">Quiero que vengas</span></div><div><span class="no">Cuando llego mañana, te llamo</span><span class="ar2">→</span><span class="yes">Cuando llegue mañana, te llamo</span></div><div><span class="no">No creo que es verdad</span><span class="ar2">→</span><span class="yes">No creo que sea verdad</span></div></div>
+<h4>Pronombres y gustar</h4><div class="fix"><div><span class="no">Le lo doy</span><span class="ar2">→</span><span class="yes">Se lo doy</span></div><div><span class="no">Yo gusto la pizza</span><span class="ar2">→</span><span class="yes">Me gusta la pizza</span></div><div><span class="no">Me gusta los libros</span><span class="ar2">→</span><span class="yes">Me gustan los libros</span></div><div><span class="no">Me duele mi cabeza</span><span class="ar2">→</span><span class="yes">Me duele la cabeza</span></div></div>
+<h4>SE</h4><div class="fix"><div><span class="no">Lavo mis manos</span><span class="ar2">→</span><span class="yes">Me lavo las manos</span></div><div><span class="no">Se vende casas</span><span class="ar2">→</span><span class="yes">Se venden casas</span></div><div><span class="no">Rompí el vaso (sin querer)</span><span class="ar2">→</span><span class="yes">Se me rompió el vaso</span></div></div>
+<h4>Género y artículos</h4><div class="fix"><div><span class="no">La problema</span><span class="ar2">→</span><span class="yes">El problema</span></div><div><span class="no">La gente son</span><span class="ar2">→</span><span class="yes">La gente es</span></div><div><span class="no">Me gusta café</span><span class="ar2">→</span><span class="yes">Me gusta el café</span></div><div><span class="no">Soy un abogado</span><span class="ar2">→</span><span class="yes">Soy abogado</span></div></div>
+<h4>Acentos</h4><div class="fix"><div><span class="no">Tu eres · el lo hizo · si, quiero</span><span class="ar2">→</span><span class="yes">Tú eres · él lo hizo · sí, quiero</span></div><div><span class="no">Tengo 20 anos</span><span class="ar2">→</span><span class="yes">Tengo 20 años</span></div></div>
+<h4>Preposiciones</h4><div class="fix"><div><span class="no">Pienso de ti · me casé a ella</span><span class="ar2">→</span><span class="yes">Pienso en ti · me casé con ella</span></div><div><span class="no">Busco por mis llaves</span><span class="ar2">→</span><span class="yes">Busco mis llaves</span></div><div><span class="no">Veo María</span><span class="ar2">→</span><span class="yes">Veo a María</span></div><div><span class="no">Más que cinco</span><span class="ar2">→</span><span class="yes">Más de cinco</span></div></div>
+<h4>Calcos del inglés</h4><div class="fix"><div><span class="no">¿Puedo tener un café?</span><span class="ar2">→</span><span class="yes">¿Me trae un café?</span></div><div><span class="no">Tener un buen tiempo</span><span class="ar2">→</span><span class="yes">Pasarla bien</span></div><div><span class="no">Hace sentido</span><span class="ar2">→</span><span class="yes">Tiene sentido</span></div></div>
+</div>
+<p class="ex" style="font-size:14px">Fuentes: Babbel, don Quijote, RAE (Diccionario panhispánico de dudas), Revista Nebrija (estudio de errores con pronombres), r/Spanish y el capítulo 28 «¡Ojo! Common Errors» de <i>The Ultimate Spanish Review and Practice</i> (Gordon y Stillman).</p>
+  <div class="pl2"><a class="plink" href="practica.html?t=errores" data-t="errores"><span>📝 Practicar: Errores comunes<small class="pc">Preguntas de este tema</small></span><span class="go2">→</span></a><a class="plink" href="practica.html?t=errores&amp;modo=libro" data-l="errores"><span>✍️ Ejercicios (escribe)<small class="lc">Como el libro: sigue el modelo</small></span><span class="go2">→</span></a></div>
+</section>
+
+<section id="vocab" style="--c:var(--gus);--tint:var(--t-gus)">
+  <div class="bar">Vocabulario por tema<small>Tus palabras de Anki, en grupos. Toca «Practicar» debajo de cada tema.</small></div>
+  <div id="vocab-temas" class="vtemas"><p class="ex">Cargando…</p></div>
 </section>
 
 <section id="verguenza" style="--c:var(--ver);--tint:var(--t-ver)">
-  <div class="bar">10. Hablar sin vergüenza<small>Los mejores consejos</small></div>
+  <div class="bar">Hablar sin vergüenza<small>Los mejores consejos</small></div>
   <figure><div class="cap">El ciclo</div>
     <div class="ladder">
       <div class="step"><span class="e">😬</span>Vergüenza</div><span class="to">→</span>
@@ -578,7 +707,6 @@ section{scroll-margin-top:80px}
     <li><b>Ten frases de rescate:</b> "¿Cómo se dice...?", "No sé cómo decirlo, pero...", "O sea...", "Déjame pensar".</li>
     <li><b>Grábate una vez a la semana.</b> Vas a oír que suenas mejor de lo que crees.</li>
     <li><b>Conversaciones pequeñas todos los días:</b> llama a Emita, pide la comida en español, habla con los hispanos del barrio.</li>
-    <li><b>Acuérdate de tu misión.</b> Ya enseñaste el evangelio en español a cientos de personas. Estás desempolvando algo que ya sabes.</li>
     <li><b>La meta es que te entiendan, no hablar perfecto.</b> Cada error es la prueba de que estás aprendiendo.</li>
   </ol>
   <figure><div class="cap">Cuando te da vergüenza en el momento</div>
@@ -593,7 +721,7 @@ section{scroll-margin-top:80px}
   <figure><div class="cap">Cuando te sale mal y sientes vergüenza después</div>
   <ol class="tips">
     <li><b>Cambia "soy malo" por "esa frase salió mal".</b> Los estudios de Tangney muestran que la vergüenza ("yo soy malo") te hace esconderte y hablar menos. La culpa sana ("eso salió mal") te hace arreglarlo. Habla del error, no de ti.</li>
-    <li><b>Háblate como a un compañero de misión.</b> En un estudio de Berkeley (Breines y Chen, 2012), las personas que se trataron con compasión después de fallar estudiaron más y mejoraron más que las que se criticaron. Ser duro contigo no te hace mejor. Te hace callar.</li>
+    <li><b>Háblate como a un buen amigo.</b> En un estudio de Berkeley (Breines y Chen, 2012), las personas que se trataron con compasión después de fallar estudiaron más y mejoraron más que las que se criticaron. Ser duro contigo no te hace mejor. Te hace callar.</li>
     <li><b>Repásalo una vez y suéltalo.</b> Repetir la escena en tu cabeza una y otra vez aumenta el miedo la próxima vez (Clark y Wells). Haz esto en 1 minuto: 1) ¿qué palabra me faltó? 2) apúntala en Anki 3) listo, se acabó.</li>
     <li><b>Busca la prueba real, no el sentimiento.</b> Pregúntate: ¿me entendieron? Casi siempre sí. La vergüenza exagera; los nativos olvidan tu error en segundos.</li>
     <li><b>Vuelve a hablar pronto.</b> Si después de un mal momento evitas hablar, la vergüenza crece. Di una frase más en español ese mismo día, aunque sea pequeña.</li>
@@ -609,126 +737,18 @@ section{scroll-margin-top:80px}
     <li><b>6. Practica en parejas o grupos pequeños, de temas de tu vida.</b> Hablar de cosas personales con una o dos personas baja la ansiedad más que hablar frente a un grupo grande (Koch y Terrell, 1991).</li>
     <li><b>7. Busca disfrutarlo, no solo no fallar.</b> Los estudios de Dewaele muestran que disfrutar la clase pesa más que el miedo: risa, temas que te importan, gente que te cae bien.</li>
   </ol></figure>
-  <div class="trick"><b>Tu caso:</b> tú no empiezas de cero. Enseñaste el evangelio en español por dos años. Tu meta no es sonar nativo: es volver a sonar como tú en tu misión.</div>
+  <div class="trick"><b>Tu caso:</b> tú no empiezas de cero. Ya hablas español a nivel avanzado. Tu meta no es sonar nativo: es que te entiendan y disfrutarlo.</div>
   <p class="small" style="opacity:.75;margin-top:10px">Fuentes: Toyama y Yamazaki, revisión sistemática (Frontiers in Psychology, 2021) · Brooks, J. Exp. Psych. (2014) · Ramirez y Beilock, Science (2011) · Ay (2010) · Nation, método 4/3/2 · Dewaele y MacIntyre, disfrute en el aula · Tangney, vergüenza y culpa · Breines y Chen, Pers. Soc. Psych. Bulletin (2012) · Clark y Wells, ansiedad social.</p>
 </section>
 
-<section id="practica" style="--c:var(--ver);--tint:var(--t-ver)">
-  <div class="bar">Práctica<small>Escoge un tema. Toca la respuesta y te dice por qué. "Mis errores" guarda las que fallaste.</small></div>
-  <div class="test">
-    <div class="pbar" role="group" aria-label="Tema de práctica" id="chips"></div>
-    <div class="pbar"><button class="btn" id="reset" type="button">Empezar de nuevo</button><span class="score" id="score">0 / 0</span></div>
-    <div class="qwrap" id="qs"></div>
-  </div>
+<section id="practicas" style="--c:var(--ver);--tint:var(--t-ver)">
+  <div class="bar">Todas las prácticas<small>Escoge un tema. Una pregunta a la vez; al final repasas las que fallaste.</small></div>
+  <div class="allp" id="allp"></div>
 </section>
 </div>
 
-<script>
-const T=[['se','SE','var(--se)'],['ser','Ser / estar','var(--ser)'],['por','Por / para','var(--por)'],['pas','Pasado','var(--pas)'],['sub','Subjuntivo','var(--sub)'],['pro','Lo / le','var(--pro)'],['gus','Gustar','var(--gus)'],['gen','Género','var(--gen)'],['ace','Acentos','var(--ace)']];
-const SE7=['Le disfrazado','Reflexivo','Recíproco','Accidental','Impersonal','Pasiva','Verbo con se'];
-const Q=[
- {t:'se',s:'Se lo expliqué al cliente ayer.',o:SE7,a:'Le disfrazado',w:'Viene "lo" después del se. Era "le lo", y se cambió a "se lo".'},
- {t:'se',s:'Mi hermano se ducha por la noche.',o:SE7,a:'Reflexivo',w:'Se ducha a sí mismo.'},
- {t:'se',s:'Mis papás se llaman todos los días.',o:SE7,a:'Recíproco',w:'Se llaman el uno al otro.'},
- {t:'se',s:'Se me cayó el celular en la calle.',o:SE7,a:'Accidental',w:'Pasó sin querer, y "me" es la víctima.'},
- {t:'se',s:'En Provo se come temprano.',o:SE7,a:'Impersonal',w:'La gente come temprano. No hay una cosa, verbo singular.'},
- {t:'se',s:'Se buscan misioneros que hablen español.',o:SE7,a:'Pasiva',w:'Hay una cosa (misioneros) y el verbo va en plural con ella.'},
- {t:'se',s:'Ya me voy, se hace tarde.',o:SE7,a:'Verbo con se',w:'Irse = to leave. El verbo cambia de sentido.'},
- {t:'se',s:'Se la di a mi esposa.',o:SE7,a:'Le disfrazado',w:'Viene "la" después del se. Era "le la".'},
- {t:'se',s:'Se nos acabó la leche.',o:SE7,a:'Accidental',w:'Sin querer. "Nos" son las víctimas.'},
- {t:'se',s:'¿Cómo se escribe "abogado"?',o:SE7,a:'Impersonal',w:'Cualquier persona, en general.'},
- {t:'se',s:'Se venden libros usados.',o:SE7,a:'Pasiva',w:'La cosa (libros) es plural y el verbo también.'},
- {t:'se',s:'Me dormí durante la película.',o:SE7,a:'Verbo con se',w:'Dormirse = to fall asleep.'},
- {t:'se',s:'Los dos abogados se saludaron.',o:SE7,a:'Recíproco',w:'Se saludaron el uno al otro.'},
- {t:'se',s:'Ella se maquilla antes de salir.',o:SE7,a:'Reflexivo',w:'Se maquilla a sí misma.'},
- {t:'se',s:'Se le olvidaron las llaves.',o:SE7,a:'Accidental',w:'Sin querer; el verbo va con las llaves (plural).'},
- {t:'se',s:'No me acuerdo de su nombre.',o:SE7,a:'Verbo con se',w:'Acordarse = to remember. Sin se es "to agree".'},
- {t:'se',s:'Se busca a los culpables.',o:SE7,a:'Impersonal',w:'Hay "a" + personas: es impersonal y el verbo queda singular.'},
- {t:'se',s:'Se me cayeron las llaves.',o:SE7,a:'Accidental',w:'Sin querer. "Cayeron" va con las llaves (plural), no con "me".'},
- {t:'se',s:'Se habla español aquí.',o:SE7,a:'Pasiva',w:'La cosa es "español" y el verbo va con ella (singular). Piensa en el letrero.'},
- {t:'se',s:'¿Cuál está bien? "Ya ___ voy, adiós."',o:['se','me'],a:'me',w:'Irse cambia con la persona: me voy, te vas, se va.'},
- {t:'se',s:'Se buscan actores para la obra.',o:SE7,a:'Pasiva',w:'Sin "a": actores es el sujeto y el verbo va en plural con ellos.'},
- {t:'se',s:'Se habla de política en la cena.',o:SE7,a:'Impersonal',w:'"De" bloquea el sujeto: no hay cosa que mande el verbo.'},
- {t:'se',s:'¿Cuál está bien? "Se ____ cuartos."',o:['alquila','alquilan'],a:'alquilan',w:'Pasiva: cuartos es plural, el verbo también.'},
- {t:'se',s:'¿Cuál está bien? "Se ____ a los culpables."',o:['busca','buscan'],a:'busca',w:'Con "a" + persona es impersonal: siempre singular.'},
- {t:'ser',s:'Mi esposa ____ de Utah.',o:['es','está'],a:'es',w:'Origen = DOCTOR = ser.'},
- {t:'ser',s:'Hoy ____ muy cansado.',o:['soy','estoy'],a:'estoy',w:'Condición = PLACE = estar.'},
- {t:'ser',s:'La reunión ____ en la capilla.',o:['es','está'],a:'es',w:'Un evento usa SER aunque hable de lugar.'},
- {t:'ser',s:'¿Ya ____ listo para salir? (ready)',o:['eres','estás'],a:'estás',w:'Estar listo = ready. Ser listo = smart.'},
- {t:'ser',s:'Mi papá ____ abogado.',o:['es','está'],a:'es',w:'Ocupación = ser.'},
- {t:'ser',s:'Provo ____ en Utah.',o:['es','está'],a:'está',w:'Lugar de una cosa = estar.'},
- {t:'por',s:'Gracias ____ la ayuda.',o:['por','para'],a:'por',w:'Razón, mira atrás: ← POR.'},
- {t:'por',s:'Estudio ____ ser abogado.',o:['por','para'],a:'para',w:'Meta: PARA →.'},
- {t:'por',s:'La tarea es ____ el viernes.',o:['por','para'],a:'para',w:'Fecha límite = para.'},
- {t:'por',s:'Te llamo ____ teléfono.',o:['por','para'],a:'por',w:'Medio = por.'},
- {t:'por',s:'Pagué $20 ____ el libro.',o:['por','para'],a:'por',w:'Intercambio = por.'},
- {t:'por',s:'____ mí, el subjuntivo es lo más difícil.',o:['Por','Para'],a:'Para',w:'Opinión = para mí.'},
- {t:'pas',s:'Cuando ____ niño, jugaba fútbol.',o:['fui','era'],a:'era',w:'Edad y fondo = imperfecto.'},
- {t:'pas',s:'Ayer ____ a la biblioteca.',o:['fui','iba'],a:'fui',w:'Una vez, terminó = pretérito.'},
- {t:'pas',s:'____ cuando llegué a casa.',o:['Llovió','Llovía'],a:'Llovía',w:'La escena de fondo = imperfecto; "llegué" interrumpe.'},
- {t:'pas',s:'En la misión siempre ____ a las 6:30.',o:['me levanté','me levantaba'],a:'me levantaba',w:'Siempre = hábito = imperfecto.'},
- {t:'pas',s:'De repente, el teléfono ____.',o:['sonó','sonaba'],a:'sonó',w:'De repente = pretérito.'},
- {t:'sub',s:'Quiero que tú ____ conmigo.',o:['vienes','vengas'],a:'vengas',w:'W (wish) + que + otra persona.'},
- {t:'sub',s:'Creo que ____ verdad.',o:['es','sea'],a:'es',w:'Creer = estás seguro = indicativo.'},
- {t:'sub',s:'Dudo que ____ verdad.',o:['es','sea'],a:'sea',w:'D (duda) = subjuntivo.'},
- {t:'sub',s:'Ojalá que mañana no ____.',o:['llueve','llueva'],a:'llueva',w:'O (ojalá) = subjuntivo.'},
- {t:'sub',s:'Cuando ____ a Provo, llámame.',o:['llegas','llegues'],a:'llegues',w:'Cuando + futuro = subjuntivo.'},
- {t:'sub',s:'Es importante que ____ cada día.',o:['estudias','estudies'],a:'estudies',w:'I (impersonal) + que.'},
- {t:'pro',s:'Compré el carro → ____ compré.',o:['Lo','Le'],a:'Lo',w:'El carro es la cosa = lo.'},
- {t:'pro',s:'Di el libro a Juan → ____ di el libro.',o:['Lo','Le'],a:'Le',w:'Juan es la persona que recibe = le.'},
- {t:'pro',s:'Di el libro a Juan → ____ di.',o:['Le lo','Se lo','Lo le'],a:'Se lo',w:'Le + lo = se lo. Persona primero.'},
- {t:'pro',s:'¿Llamaste a tu mamá? Sí, ____ llamé.',o:['la','le'],a:'la',w:'Llamar lleva lo/la: ella es el objeto directo.'},
- {t:'pro',s:'¿Le dijiste la verdad? Sí, ____ dije.',o:['se la','le la','la le'],a:'se la',w:'La verdad = la; a ella = le → se.'},
- {t:'pro',s:'Quiero ver la película → Quiero ____.',o:['verla','verle','laver'],a:'verla',w:'Se pega al infinitivo: verla.'},
- {t:'gus',s:'Me ____ los tacos.',o:['gusta','gustan'],a:'gustan',w:'Los tacos = plural.'},
- {t:'gus',s:'A mi esposa le ____ la cabeza.',o:['duele','duelen'],a:'duele',w:'La cabeza = una cosa.'},
- {t:'gus',s:'Nos ____ las películas de acción.',o:['encanta','encantan'],a:'encantan',w:'Las películas = plural.'},
- {t:'gen',s:'____ problema es grave.',o:['El','La'],a:'El',w:'-ma griega = masculina.'},
- {t:'gen',s:'____ canción es bonita.',o:['El','La'],a:'La',w:'-ción = femenina.'},
- {t:'gen',s:'____ agua está fría.',o:['El','La'],a:'El',w:'Á tónica: el agua, pero "fría" sigue femenina.'},
- {t:'gen',s:'Levanta ____ mano.',o:['el','la'],a:'la',w:'Excepción: la mano.'},
- {t:'gen',s:'____ idioma español.',o:['El','La'],a:'El',w:'-ma griega: el idioma.'},
- {t:'ace',s:'¿Cuál está bien escrita?',o:['cancion','canción'],a:'canción',w:'Aguda que termina en N = tilde.'},
- {t:'ace',s:'¿Cuál está bien escrita?',o:['arbol','árbol'],a:'árbol',w:'Llana que termina en L (no N, S, vocal) = tilde.'},
- {t:'ace',s:'¿Cuál está bien escrita?',o:['medico','médico'],a:'médico',w:'Esdrújula = siempre tilde.'},
- {t:'ace',s:'¿Cuál está bien escrita?',o:['reloj','relój'],a:'reloj',w:'Aguda que termina en J = sin tilde.'},
- {t:'ace',s:'____ eres mi mejor amigo.',o:['Tu','Tú'],a:'Tú',w:'Tú (pronombre) lleva tilde; tu (posesivo) no.'}
-];
-const K='reglas-misses';
-let miss=new Set(); try{miss=new Set(JSON.parse(localStorage.getItem(K)||'[]'))}catch(e){}
-let cur='se',right=0,done=0;
-const $=id=>document.getElementById(id);
-function save(){try{localStorage.setItem(K,JSON.stringify([...miss]))}catch(e){}}
-function chips(){
-  const c=$('chips');c.innerHTML='';
-  [...T,['miss','Mis errores','var(--bad)']].forEach(([id,name,col])=>{
-    const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=name;b.style.setProperty('--k',col);
-    b.setAttribute('aria-pressed',id===cur);b.onclick=()=>{cur=id;chips();render()};c.appendChild(b)});
-}
-function render(){
-  const w=$('qs');w.innerHTML='';
-  const list=Q.map((q,i)=>[q,i]).filter(([q,i])=>cur==='miss'?miss.has(i):q.t===cur);
-  if(!list.length){w.innerHTML='<p class="ex">No tienes errores guardados. ¡Bien!</p>';return}
-  list.forEach(([q,i])=>{
-    const tt=T.find(t=>t[0]===q.t);
-    const d=document.createElement('div');d.className='q';d.style.setProperty('--k',tt[2]);
-    d.innerHTML='<span class="kind">'+tt[1]+'</span><span class="stem"></span><div class="opts"></div>';
-    d.querySelector('.stem').textContent=q.s;
-    const o=d.querySelector('.opts');
-    q.o.forEach(x=>{const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=x;
-      b.onclick=()=>{
-        [...o.children].forEach(c=>{c.disabled=true;if(c.textContent===q.a)c.classList.add('right')});
-        const ok=x===q.a;if(!ok)b.classList.add('wrong');
-        done++;if(ok){right++;miss.delete(i)}else miss.add(i);save();
-        const f=document.createElement('div');f.className='fb '+(ok?'ok':'no');
-        f.innerHTML='<b>'+(ok?'¡Correcto!':'Es "'+q.a+'".')+'</b> ';f.append(q.w);d.appendChild(f);
-        $('score').textContent=right+' / '+done;
-      };o.appendChild(b)});
-    w.appendChild(d)});
-}
-$('reset').onclick=()=>{right=0;done=0;$('score').textContent='0 / 0';render()};
-chips();render();
-</script>
+<script src="preguntas.js"></script>
+<script src="reglas-page.js"></script>
 
 <script>
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {

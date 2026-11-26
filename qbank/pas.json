@@ -1,0 +1,242 @@
+[
+{
+"s": "De niño, ___ fútbol todos los sábados.",
+"o": [
+"jugaba",
+"jugué",
+"jugó"
+],
+"a": "jugaba",
+"w": "Hábito en el pasado = imperfecto."
+},
+{
+"s": "Ayer ___ al templo con mi esposa.",
+"o": [
+"fui",
+"iba",
+"era"
+],
+"a": "fui",
+"w": "Acción completa en un momento = pretérito."
+},
+{
+"s": "Yo todavía ___ el reporte cuando mi jefe me lo pidió.",
+"o": [
+"escribía",
+"escribí",
+"escribiré"
+],
+"a": "escribía",
+"w": "Acción en progreso que fue interrumpida = imperfecto."
+},
+{
+"s": "___ las tres de la mañana cuando nació mi sobrino.",
+"o": [
+"Eran",
+"Fueron",
+"Son"
+],
+"a": "Eran",
+"w": "La hora en el pasado = imperfecto."
+},
+{
+"s": "Mi abuelo ___ 80 años cuando murió.",
+"o": [
+"tenía",
+"tuvo",
+"tiene"
+],
+"a": "tenía",
+"w": "Edad en el pasado = imperfecto."
+},
+{
+"s": "Conocí al obispo en 2022. Antes de eso, no lo ___.",
+"o": [
+"conocía",
+"conocí",
+"conoció"
+],
+"a": "conocía",
+"w": "Conocía = sabía quién era. Conocí = la vi por primera vez (met)."
+},
+{
+"s": "___ a mi compañero de cuarto en una clase de BYU.",
+"o": [
+"Conocí",
+"Conocía",
+"Conozco"
+],
+"a": "Conocí",
+"w": "Conocer en pretérito = met (por primera vez)."
+},
+{
+"s": "Ayer ___ que pasé el examen; ¡qué alivio!",
+"o": [
+"supe",
+"sabía",
+"sé"
+],
+"a": "supe",
+"w": "Supe = me enteré (found out)."
+},
+{
+"s": "Yo ya ___ que el juez era muy estricto.",
+"o": [
+"sabía",
+"supe",
+"sé"
+],
+"a": "sabía",
+"w": "Sabía = ya tenía la información (knew)."
+},
+{
+"s": "De niño ___ ser astronauta.",
+"o": [
+"quería",
+"quise",
+"quiero"
+],
+"a": "quería",
+"w": "Deseo que duró en el pasado = imperfecto."
+},
+{
+"s": "El testigo no ___ firmar la declaración; dijo «no» y se fue.",
+"o": [
+"quiso",
+"quería",
+"quiere"
+],
+"a": "quiso",
+"w": "No quiso = se negó (refused), en un momento."
+},
+{
+"s": "Por fin ___ terminar mi ensayo a las dos de la mañana.",
+"o": [
+"pude",
+"podía",
+"puedo"
+],
+"a": "pude",
+"w": "Pude = lo logré (managed to)."
+},
+{
+"s": "Cuando era niño, no ___ ver películas de miedo.",
+"o": [
+"podía",
+"pude",
+"puedo"
+],
+"a": "podía",
+"w": "Regla general en el pasado = podía (wasn't allowed)."
+},
+{
+"s": "Mientras yo ___ en el gym, mi esposa cocinaba.",
+"o": [
+"entrenaba",
+"entrené",
+"entreno"
+],
+"a": "entrenaba",
+"w": "Mientras + dos acciones al mismo tiempo = imperfecto."
+},
+{
+"s": "El sábado pasado ___ sentadillas por una hora.",
+"o": [
+"hice",
+"hacía",
+"hago"
+],
+"a": "hice",
+"w": "Acción terminada con tiempo definido = pretérito."
+},
+{
+"s": "La casa de mi abuela en Puebla ___ muy grande.",
+"o": [
+"era",
+"fue",
+"estuvo"
+],
+"a": "era",
+"w": "Descripción en el pasado = imperfecto."
+},
+{
+"s": "Mi tío ___ en Monterrey dos años antes de volver a Utah.",
+"o": [
+"vivió",
+"vivía",
+"vive"
+],
+"a": "vivió",
+"w": "Tiempo cerrado (dos años) = pretérito."
+},
+{
+"s": "En la secundaria, mi hermano ___ a las 6:30 todos los días.",
+"o": [
+"se levantaba",
+"se levantó",
+"se levanta"
+],
+"a": "se levantaba",
+"w": "Rutina en el pasado (todos los días) = imperfecto."
+},
+{
+"s": "De repente mi esposa me ___ mientras yo leía.",
+"o": [
+"llamó",
+"llamaba",
+"llama"
+],
+"a": "llamó",
+"w": "Acción que interrumpe (de repente) = pretérito."
+},
+{
+"s": "___ en la oficina toda la tarde y luego me fui a casa.",
+"o": [
+"Estuve",
+"Estaba",
+"Estoy"
+],
+"a": "Estuve",
+"w": "Tiempo cerrado (toda la tarde) y luego otra acción = pretérito."
+},
+{
+"s": "Mi esposa ___ cansada, así que se acostó temprano.",
+"o": [
+"estaba",
+"estuvo",
+"está"
+],
+"a": "estaba",
+"w": "Estado de fondo (background) = imperfecto."
+},
+{
+"s": "¿Cuál está bien? (una interrupción)",
+"o": [
+"Yo dormía cuando sonó la alarma.",
+"Yo dormí cuando sonó la alarma.",
+"Yo duermo cuando sonó la alarma."
+],
+"a": "Yo dormía cuando sonó la alarma.",
+"w": "Fondo en progreso = imperfecto; lo que interrumpe = pretérito."
+},
+{
+"s": "¿Cuál está bien? (edad y accidente)",
+"o": [
+"Cuando tenía diez años, me rompí el brazo.",
+"Cuando tuve diez años, me rompí el brazo.",
+"Cuando tenía diez años, me rompía el brazo."
+],
+"a": "Cuando tenía diez años, me rompí el brazo.",
+"w": "Edad = imperfecto; el accidente = pretérito."
+},
+{
+"s": "¿Cuál está bien? (conocer)",
+"o": [
+"Anoche conocí al nuevo obispo.",
+"Anoche conocía al nuevo obispo.",
+"Anoche conozco al nuevo obispo."
+],
+"a": "Anoche conocí al nuevo obispo.",
+"w": "Conocer a alguien por primera vez = pretérito (met)."
+}
+]
